@@ -463,10 +463,6 @@ input {
   margin-bottom: 40px !important;
 }
 
-.nav-tabs .nav-link {
-  margin-bottom: 0.8rem !important;
-}
-
 @media (max-width: 500px) {
   input::placeholder {
     font-size: 0.7rem;
@@ -678,10 +674,6 @@ a {
       color: #fff;
     }
   }
-}
-
-.nav.nav-tabs {
-  margin-bottom: 1.4rem;
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
