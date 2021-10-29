@@ -168,26 +168,90 @@
           <!--User link section-->
 
           
-          <!--Button for Adding nww input link-->
-          <div class="d-flex justify-content-center mt-5 mb-5 justify-content-center justify-content-lg-between flex-column flex-sm-row ">
+          <!--Button for Adding new input link-->
+          <div class="new-input-section-wrapper d-flex justify-content-center mt-5 mb-5 justify-content-center justify-content-lg-between flex-column flex-sm-row ">
             <div class="text-center btn-container mr-sm-2 mb-3 mb-sm-0">
-              <a
+              <button
                 id="tambahLink-btn"
                 class="btn btn-fill-light active py-2 px-4"
               >
                 <i class="fa fa-plus ml-0 mr-1"></i> Tambah Link
-              </a>
+              </button>
             </div>
             <div class="text-center btn-container ml-sm-2">
-              <a
+              <button
                 id="tambahLink-btn"
                 class="btn btn-fill-light py-2 px-4"
+                type="button" class="btn btn-primary" data-toggle="modal" data-target="#specialFeatureModal"
               >
                 <i class="fa fa-plus ml-0 mr-1"></i> Fitur Spesial
-              </a>
+              </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade " id="specialFeatureModal" tabindex="-1" role="dialog" aria-labelledby="specialFeatureModal" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body pt-2 pb-3">
+                    <button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-heading"></i></span>
+                      <p class="m-0 ml-2">Header / Section Title
+                      </p>
+                    </button>
+                    <button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-hand-holding-usd"></i></span>
+                      <p class="m-0 ml-2">Terima Dukungan / Donasi
+                      </p>
+                    </button>
+                    <button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-file-download"></i></span>
+                      <p class="m-0 ml-2">Jual Produk / Digital Akses
+                      </p>
+                    </button><button class="btn btn-primary mb-3">
+                      <span><i class="far fa-file-alt"></i></span>
+                      <p class="m-0 ml-2">Konten
+                      </p>
+                    </button><button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-people-arrows"></i></span>
+                      <p class="m-0 ml-2">Paket Jasa
+                      </p>
+                    </button><button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-handshake"></i></span>
+                      <p class="m-0 ml-2">Terima Request Kerjasama
+                      </p>
+                    </button><button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-grin"></i></span>
+                      <p class="m-0 ml-2">Terima Request Video Ucapan
+                      </p>
+                    </button><button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-play-circle"></i></span>
+                      <p class="m-0 ml-2">Embed Video/Musik
+                      </p>
+                    </button><button class="btn btn-primary mb-3">
+                      <span><i class="fab fa-whatsapp"></i></span>
+                      <p class="m-0 ml-2">Whatsapp
+                      </p>
+                    </button><button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-envelope"></i></span>
+                      <p class="m-0 ml-2">Email
+                      </p>
+                    </button>
+                    <button class="btn btn-primary mb-3">
+                      <span><i class="fas fa-user-plus"></i></span>
+                      <p class="m-0 ml-2">Email Collection
+                      </p>
+                    </button>
+                    
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!--Button for Adding nww input link-->
+          <!--Button for Adding new input link-->
           
 
           <!--Circle Link-->

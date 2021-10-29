@@ -94,6 +94,29 @@ h2 {
   }
 }
 
+.new-input-section-wrapper {
+  .modal {
+    .modal-body {
+      button.btn {
+        display: flex;
+        width: 100%;
+        border-radius: $border-radius-input;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+
+        span {
+          display: block;
+          width: 20px;
+        }
+
+        &:hover {
+          background-color: $dark-hover;
+        }
+      }
+    }
+  }
+}
+
 .rounded-link-wrapper {
   .rounded-link-container {
     background: none;
@@ -338,17 +361,17 @@ h2 {
   border: 1px solid #e94151;
 }
 
-.btn-outline-primary:focus,
-.btn-fill-light:focus,
-.btn-edit-sm:focus,
-.btn-outline-primary:active,
-.btn-fill-light:active,
-.btn-edit-sm:active {
-  background-color: #ffeded !important;
-  border: 1px solid #ffeded !important;
-  box-shadow: none !important;
-  color: #fff;
-}
+// .btn-outline-primary:focus,
+// .btn-fill-light:focus,
+// .btn-edit-sm:focus,
+// .btn-outline-primary:active,
+// .btn-fill-light:active,
+// .btn-edit-sm:active {
+//   background-color: #ffeded !important;
+//   border: 1px solid #ffeded !important;
+//   box-shadow: none !important;
+//   color: #fff;
+// }
 
 a.btn.btn-primary {
   display: flex;
