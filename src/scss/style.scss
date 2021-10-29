@@ -1,6 +1,7 @@
 $primary: #e94151;
 $dark-hover: #dd283a;
 $gray: #c2c2c2;
+$border-radius-input: 10px;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -62,6 +63,10 @@ h2 {
   font-weight: 400;
 }
 
+.font-weight-x-bold {
+  font-weight: 800;
+}
+
 .eightpx {
   font-size: 0.7rem !important;
 }
@@ -89,42 +94,109 @@ h2 {
   }
 }
 
-.rounded-link-container {
-  .rounded-link {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 1px solid $gray;
-    position: relative;
+.rounded-link-wrapper {
+  .rounded-link-container {
+    background: none;
+    border: none;
+    .rounded-link {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      border: 1px solid $gray;
+      position: relative;
 
-    button {
-      font-size: 1.5rem;
-      height: 100%;
-      width: 100%;
-      background: none;
+      .icon {
+        font-size: 1.5rem;
+        height: 100%;
+        width: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      img {
+        display: none;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: inherit;
+        border: 0;
+        outline: none;
+        background-position: center center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        object-position: center;
+        pointer-events: none;
+      }
+
+      img[src] {
+        display: block;
+      }
+    }
+  }
+
+  .modal {
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .input-wrapper {
+        width: 100%;
+      }
+
+      .input-container {
+        input {
+          width: 100%;
+          border-radius: $border-radius-input;
+
+          &:focus {
+            border-color: black !important;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
       border: none;
-      outline: none;
-      cursor: pointer;
-    }
 
-    img {
-      display: none;
-      position: absolute;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      border-radius: inherit;
-      border: 0;
-      outline: none;
-      background-position: center center;
-      background-repeat: no-repeat;
-      object-fit: cover;
-      object-position: center;
-      pointer-events: none;
-    }
+      button {
+        width: 100%;
+        border-radius: 25px;
 
-    img[src] {
-      display: block;
+        &:hover {
+          background-color: $dark-hover;
+        }
+      }
+    }
+    .upload-photo-container {
+      border: 1px solid $gray;
+      width: 130px;
+      height: 130px;
+
+      overflow: hidden;
+      border-radius: 50%;
+      position: relative;
+
+      input {
+        height: 100%;
+        width: 100%;
+        display: block;
+        opacity: 0;
+      }
+      p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $primary;
+        pointer-events: none;
+      }
     }
   }
 }
@@ -407,7 +479,7 @@ a.btn.btn-primary {
       }
 
       input {
-        border-radius: 10px;
+        border-radius: $border-radius-input;
         border-color: $gray !important;
       }
 
@@ -430,7 +502,7 @@ a.btn.btn-primary {
           }
 
           select {
-            border-radius: 10px;
+            border-radius: $border-radius-input;
             padding-right: 3rem !important;
             border-color: $gray !important;
 
@@ -1284,7 +1356,7 @@ footer {
     filter: drop-shadow(0 0 4px #ccc);
     width: 45%;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: $border-radius-input;
     z-index: 9999;
   }
 

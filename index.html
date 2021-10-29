@@ -104,7 +104,8 @@
               alt=""
             />
           </div>
-  
+          
+          <!--Feature Page navigation-->
           <ul
             class="nav nav-tabs d-flex justify-content-center"
             id="sbgigsTab"
@@ -155,14 +156,19 @@
               >
             </li>
           </ul>
-  
-  
+          <!--Feature Page navigation-->
+          
+
+          <!--User link section-->
           <div class="card p-4 border-primary user-link">
             <p class="card-text text-center text-primary tenpx font-weight-bold">
               Link Anda: <u><a class="text-primary" href="#">https://sociabuzz.com/xxxxxxxxxxxxxxxxxxxxxx</a></u>
             </p>
           </div>
-  
+          <!--User link section-->
+
+          
+          <!--Button for Adding nww input link-->
           <div class="d-flex justify-content-center mt-5 mb-5 justify-content-center justify-content-lg-between flex-column flex-sm-row ">
             <div class="text-center btn-container mr-sm-2 mb-3 mb-sm-0">
               <a
@@ -181,11 +187,14 @@
               </a>
             </div>
           </div>
-  
-          <div class="d-flex justify-content-center">
+          <!--Button for Adding nww input link-->
+          
+
+          <!--Circle Link-->
+          <div class="d-flex justify-content-center rounded-link-wrapper">
             <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center">
               <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
-                <button class=" text-center text-primary tenpx font-weight-bold  m-0">
+                <button class="icon text-center text-primary tenpx font-weight-bold  m-0" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal">
                   <i class="fa fa-plus"></i>
                 </button>
                 <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png" alt="">
@@ -194,23 +203,68 @@
             </div>
             <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center ml-4 mr-4">
               <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
-                <button class=" text-center text-primary tenpx font-weight-bold  m-0">
+                <button class="icon text-center text-primary tenpx font-weight-bold  m-0" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal">
                   <i class="fa fa-plus"></i>
                 </button>
                 <img  alt="">
               </div>
               <p class="font-weight-bold tenpx">Lorem</p>
             </div>
-            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center">
+            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModa">
               <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
-                <button class=" text-center text-primary tenpx font-weight-bold  m-0">
+                <button class="icon text-center text-primary tenpx font-weight-bold  m-0" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal">
                   <i class="fa fa-plus"></i>
                 </button>
+                
                 <img  alt="">
               </div>
               <p class="font-weight-bold tenpx">Lorem</p>
+              
             </div>
+            <!-- Button trigger modal -->
+            
+            
+
+            <!-- Modal -->
+            <div class="modal fade" id="addCirlceLinkModal" tabindex="-1" role="dialog" aria-labelledby="addCirlceLinkModal" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="upload-photo-container mb-2 font-weight-light">
+                      <input type="file">
+                      <p>Upload Image
+                      </p>
+                    </div>
+                    <p class="eightpx">Hanya format jpg, jpeg, png | Max 1MB
+                    </p>
+                    <div class="input-wrapper">
+                      <div class="input-container">
+                        <p class="tenpx font-weight-bold mb-1">Judul</p>
+                        <input type="text" class="form-control">
+                        <p class="eightpx text-right mb-1">0/9</p>
+                      </div>
+                      <div class="input-container">
+                        <p class="tenpx font-weight-bold mb-1">Link</p>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Simpan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+
           </div>
+          <!--Circle Link-->
 
 
           <!-- All the input form -->
