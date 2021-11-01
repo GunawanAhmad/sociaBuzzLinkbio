@@ -119,6 +119,7 @@
                 role="tab"
                 aria-controls="links"
                 aria-selected="true"
+                font-weight-x-bold
                 >Links</a
               >
             </li>
@@ -130,6 +131,7 @@
                 role="tab"
                 aria-controls="style"
                 aria-selected="true"
+                font-weight-x-bold
                 >Style</a
               >
             </li>
@@ -256,37 +258,39 @@
 
           <!--Circle Link-->
           <div class="d-flex justify-content-center rounded-link-wrapper">
-            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center">
+
+            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center circle-link-btn" id="cirlce-link-1" data-img="circle-img-1" data-link="">
               <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
-                <button class="icon text-center text-primary tenpx font-weight-bold  m-0" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal">
+                <button class="icon text-center text-primary tenpx font-weight-bold  m-0 " type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal" >
                   <i class="fa fa-plus"></i>
                 </button>
-                <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png" alt="">
+                <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png" alt="" id="circle-img-1">
               </div>
-              <p class="font-weight-bold tenpx">Lorem</p>
+              <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
             </div>
-            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center ml-4 mr-4">
+
+
+            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center ml-4 mr-4 circle-link-btn" data-img="circle-img-2" data-link="">
               <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
-                <button class="icon text-center text-primary tenpx font-weight-bold  m-0" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal">
+                <button class="icon text-center text-primary tenpx font-weight-bold  m-0"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal" >
                   <i class="fa fa-plus"></i>
                 </button>
-                <img  alt="">
+                <img  alt="" src="" id="circle-img-2">
               </div>
-              <p class="font-weight-bold tenpx">Lorem</p>
+              <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
             </div>
-            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModa">
+
+
+            <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center circle-link-btn"  class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModa" data-img="circle-img-3" data-link="">
               <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
-                <button class="icon text-center text-primary tenpx font-weight-bold  m-0" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal">
+                <button class="icon text-center text-primary tenpx font-weight-bold  m-0 " type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCirlceLinkModal" >
                   <i class="fa fa-plus"></i>
                 </button>
-                
-                <img  alt="">
+                <img  alt="" src="" id="circle-img-3">
               </div>
-              <p class="font-weight-bold tenpx">Lorem</p>
+              <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
               
             </div>
-            <!-- Button trigger modal -->
-            
             
 
             <!-- Modal -->
@@ -294,33 +298,33 @@
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
                     <div class="upload-photo-container mb-2 font-weight-light">
-                      <input type="file">
+                      <input type="file" id="circle-link-img-input" accept="image/x-png,image/gif,image/jpeg">
                       <p>Upload Image
                       </p>
+                      <img src="" alt="" id="circle-link-modal-img">
                     </div>
-                    <p class="eightpx">Hanya format jpg, jpeg, png | Max 1MB
+                    <p class="eightpx gray-font">Hanya format jpg, jpeg, png | Max 1MB
                     </p>
                     <div class="input-wrapper">
                       <div class="input-container">
                         <p class="tenpx font-weight-bold mb-1">Judul</p>
-                        <input type="text" class="form-control">
-                        <p class="eightpx text-right mb-1">0/9</p>
+                        <input type="text" class="form-control" id="circle-link-title-input" autocomplete="off" maxlength="9">
+                        <p class="eightpx text-right mb-1 circle-title-length gray-font">0 / 9</p>
                       </div>
                       <div class="input-container">
                         <p class="tenpx font-weight-bold mb-1">Link</p>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="circle-link-link-input" autocomplete="off">
                       </div>
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Simpan</button>
+                    <button type="button" class="btn btn-primary" id="circle-link-save-btn" data-dismiss="modal" aria-label="Close">Simpan</button>
                   </div>
                 </div>
               </div>
@@ -340,7 +344,7 @@
                 </button>
               </div>
               <div class="d-flex flex-column input-container p-2 p-sm-3">
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Link">
                 <div class="icon-container d-flex align-items-center">
                   <div class="switch mr-3 mr-sm-4">
@@ -369,7 +373,7 @@
                 <p class="title mb-2 mb-sm-3 elevenpx font-weight-bold">
                   Header / Section Title
                 </p>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 
                 <div class="icon-container d-flex align-items-center">
                   <div class="switch mr-3 mr-sm-4">
@@ -392,7 +396,7 @@
                 <p class="title mb-2 mb-sm-3 elevenpx font-weight-bold">
                   Terima Dukungan / Donasi <a class="font-weight-light text-primary" href=""><u>Settings</u></a>
                 </p>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 
                 <div class="icon-container d-flex align-items-center">
                   <div class="switch mr-3 mr-sm-4">
@@ -437,7 +441,7 @@
                     </span>
                   </div>
                 </div>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 
                 <div class="icon-container d-flex align-items-center">
                   <div class="switch mr-3 mr-sm-4">
@@ -482,7 +486,7 @@
                     </span>
                   </div>
                 </div>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 
                 <div class="icon-container d-flex align-items-center">
                   <div class="switch mr-3 mr-sm-4">
@@ -526,7 +530,7 @@
                     </span>
                   </div>
                 </div>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 
                 <div class="icon-container d-flex align-items-center">
                   <div class="switch mr-3 mr-sm-4">
@@ -570,7 +574,7 @@
                     </span>
                   </div>
                 </div>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 
                 <div class="icon-container d-flex align-items-center">
                   <div class="switch mr-3 mr-sm-4">
@@ -599,7 +603,7 @@
                 <p class="title mb-2 mb-sm-3 elevenpx font-weight-bold">
                   Embed Video/Musik
                 </p>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 <div class="mb-2 mb-sm-3">
                   <input class="form-control tenpx" type="text" placeholder="Link">
                   <span class="eightpx">Masukkan link YouTube / Spotify
@@ -625,15 +629,15 @@
                 <p class="title mb-2 mb-sm-3 elevenpx font-weight-bold">
                   Whatsapp
                 </p>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 <div class="mb-2 mb-sm-3">
-                  <input class="form-control tenpx" type="text" placeholder="No Whatsapp">
+                  <input class="form-control tenpx" type="text" placeholder="Nomor Whatsapp">
                   <span class="eightpx">Awali dengan kode negara | Contoh: <span class="text-primary">62</span>87528371029
 
                   </span>
                 </div>
                 <div class="mb-2 mb-sm-3">
-                  <input class="form-control tenpx" type="text" placeholder="Template Pesan">
+                  <input class="form-control tenpx" type="text" placeholder="Template pesan">
                   <span class="eightpx">Optional
 
                   </span>
@@ -658,8 +662,8 @@
                 <p class="title mb-2 mb-sm-3 elevenpx font-weight-bold">
                   Email
                 </p>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Alamat Email">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Alamat email">
                 
                 <div class="mb-2 mb-sm-3">
                   <input class="form-control tenpx" type="text" placeholder="Template judul email">
@@ -687,7 +691,7 @@
                   Email Collection
                  
                 </p>
-                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada simbol">
+                <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol subscribe
                 ">
                 
@@ -754,6 +758,6 @@
     <script src="src/js/jquery-3.3.1.min.js"></script>
     <script src="src/js/bootstrap.min.js"></script>
 
-    <script></script>
+    <script src="src/js/main.js" ></script>
   </body>
 </html>
