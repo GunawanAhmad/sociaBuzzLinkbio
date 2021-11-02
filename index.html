@@ -4,25 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Socialbuzz Linkbio</title>
-    <link rel="stylesheet" href="src/css/fontawesome.css" />
+    <!-- <link rel="stylesheet" href="src/css/fontawesome.css" /> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/flexselect.css">
+
     <link rel="stylesheet" href="src/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
     <link
       rel="icon"
       href="src/img/favicon.png"
       type="image/gif"
       sizes="16x16"
     />
+    
+
   </head>
   <body>
     <!-- Header Section Start -->
     <header>
+      
       <!-- navbar start -->
       <nav class="navbar navbar-expand-md border-bottom">
         <a class="navbar-brand" href="#"
@@ -357,7 +360,7 @@
                     <i class="fas fa-image"></i>
                   </button>
                   <button class="mr-3 mr-sm-4 chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <i class="fa fa-chart-bar" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -409,7 +412,7 @@
                     <i class="fas fa-image"></i>
                   </button>
                   <button class="mr-3 mr-sm-4 chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <i class="fa fa-chart-bar" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -428,15 +431,20 @@
                 </p>
                 <div class="form-group">
                   <div class="select-container">
-                    <select class="form-control tenpx"  required>
-                      <option  class="placeholder-select" disabled selected hidden value="">Pilih yang ingin ditampilkan
-                      </option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                    <select id="akses" class="flexselect" name="akses"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+                    ">
+                      <option value=""></option>
+                      <option value="1">George Washington</option>
+                      <option value="2">John Adams</option>
+                      <option value="3">Thomas Jefferson</option>
+                      <option value="4">James Madison</option>
+                      <option value="5">James Monroe</option>
+                      <option value="6">John Quincy Adams</option>
+                      <option value="7">Andrew Jackson</option>
+                      <option value="8">Martin Van Buren</option>
+                      <option value="9">William Henry Harrison</option>
                     </select>
-                    <span>
+                    <span class="arrow-icon">
                       <i class="fas fa-chevron-down"></i>
                     </span>
                   </div>
@@ -454,7 +462,7 @@
                     <i class="fas fa-image"></i>
                   </button>
                   <button class="mr-3 mr-sm-4 chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <i class="fa fa-chart-bar" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -473,17 +481,25 @@
                 </p>
                 <div class="form-group">
                   <div class="select-container">
-                    <select class="form-control tenpx"  required >
-                      <option value="" class="placeholder-select" disabled selected hidden>Pilih yang ingin ditampilkan
-                      </option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                    <span>
-                      <i class="fas fa-chevron-down"></i>
-                    </span>
+                    <div class="select-container">
+                      <select id="konten" class="flexselect" name="konten"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+                      ">
+                        <option value=""></option>
+                        <option value="1">George Washington</option>
+                        <option value="2">John Adams</option>
+                        <option value="3">Thomas Jefferson</option>
+                        <option value="4">James Madison</option>
+                        <option value="5">James Monroe</option>
+                        <option value="6">John Quincy Adams</option>
+                        <option value="7">Andrew Jackson</option>
+                        <option value="8">Martin Van Buren</option>
+                        <option value="9">William Henry Harrison</option>
+                      </select>
+                      <span class="arrow-icon">
+                        <i class="fas fa-chevron-down"></i>
+                      </span>
+                    </div>
+                    
                   </div>
                 </div>
                 <input class="form-control mb-2 mb-sm-3 tenpx" type="text" placeholder="Tulisan pada tombol">
@@ -499,7 +515,7 @@
                     <i class="fas fa-image"></i>
                   </button>
                   <button class="mr-3 mr-sm-4 chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <i class="fa fa-chart-bar" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -517,15 +533,20 @@
                 </p>
                 <div class="form-group">
                   <div class="select-container">
-                    <select class="form-control tenpx"  required >
-                      <option value="" class="placeholder-select" disabled selected hidden>Pilih yang ingin ditampilkan
-                      </option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                    <select id="jasa" class="flexselect" name="jasa"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+                    ">
+                      <option value=""></option>
+                      <option value="1">George Washington</option>
+                      <option value="2">John Adams</option>
+                      <option value="3">Thomas Jefferson</option>
+                      <option value="4">James Madison</option>
+                      <option value="5">James Monroe</option>
+                      <option value="6">John Quincy Adams</option>
+                      <option value="7">Andrew Jackson</option>
+                      <option value="8">Martin Van Buren</option>
+                      <option value="9">William Henry Harrison</option>
                     </select>
-                    <span>
+                    <span class="arrow-icon">
                       <i class="fas fa-chevron-down"></i>
                     </span>
                   </div>
@@ -543,7 +564,7 @@
                     <i class="fas fa-image"></i>
                   </button>
                   <button class="mr-3 mr-sm-4 chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <i class="fa fa-chart-bar" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -561,15 +582,20 @@
                 </p>
                 <div class="form-group">
                   <div class="select-container">
-                    <select class="form-control tenpx"  required >
-                      <option value="" class="placeholder-select" disabled selected hidden>Pilih kategori profesi
-                      </option>
-                      <option value="Hei">2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
+                    <select id="requestKerjasama" class="flexselect" name="requestKerjasama"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+                    ">
+                      <option value=""></option>
+                      <option value="1">George Washington</option>
+                      <option value="2">John Adams</option>
+                      <option value="3">Thomas Jefferson</option>
+                      <option value="4">James Madison</option>
+                      <option value="5">James Monroe</option>
+                      <option value="6">John Quincy Adams</option>
+                      <option value="7">Andrew Jackson</option>
+                      <option value="8">Martin Van Buren</option>
+                      <option value="9">William Henry Harrison</option>
                     </select>
-                    <span>
+                    <span class="arrow-icon">
                       <i class="fas fa-chevron-down"></i>
                     </span>
                   </div>
@@ -587,7 +613,7 @@
                     <i class="fas fa-image"></i>
                   </button>
                   <button class="mr-3 mr-sm-4 chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <i class="fa fa-chart-bar" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -706,7 +732,7 @@
                     <i class="fas fa-image"></i>
                   </button>
                   <button class="mr-3 mr-sm-4 chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <i class="fa fa-chart-bar" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
@@ -757,7 +783,8 @@
 
     <script src="src/js/jquery-3.3.1.min.js"></script>
     <script src="src/js/bootstrap.min.js"></script>
-
+    <script src="src/js/liquidmetal.js"></script>
+    <script src="src/js/jquery.flexselect.js"></script>
     <script src="src/js/main.js" ></script>
   </body>
 </html>

@@ -61,7 +61,7 @@ h2 {
 }
 
 .elevenpx {
-  font-size: 0.95rem;
+  font-size: 0.91rem;
 }
 
 .font-weight-light {
@@ -112,6 +112,7 @@ h2 {
         border-radius: $border-radius-input;
         padding: 0.5rem 1rem;
         font-size: 1rem;
+        font-weight: 700;
 
         span {
           display: block;
@@ -258,8 +259,9 @@ h2 {
 }
 
 .phone-container {
-  height: 500px;
-  width: 250px;
+  max-height: 667px;
+  max-width: 325px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   position: sticky;
@@ -455,7 +457,6 @@ a.btn.btn-primary {
     border: 1px solid $gray;
     padding: 0;
     border-radius: 20px;
-    overflow: hidden;
 
     .drag-btn {
       background: none;
@@ -474,108 +475,42 @@ a.btn.btn-primary {
       cursor: pointer;
     }
 
-    .switch {
-      position: relative;
-      width: 30px;
-
-      input[type="checkbox"] {
-        height: 0;
-        width: 0;
-        visibility: hidden;
-      }
-
-      label {
-        cursor: pointer;
-        text-indent: -9999px;
-        width: 30px;
-        height: 20px;
-        background: $gray;
-        display: block;
-        border-radius: 100px;
-        position: absolute;
-        top: 0.3rem;
-        left: 0;
-      }
-
-      label:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 2px;
-        width: 15px;
-        height: 15px;
-        background: #fff;
-        border-radius: 50%;
-        transform: translate(0%, -50%);
-        transition: all 250ms ease;
-      }
-
-      input:checked + label {
-        background: #4dc91c;
-      }
-
-      input:checked + label:after {
-        left: calc(100% - 2px);
-        transform: translate(-100%, -50%);
-      }
-    }
-
     .input-container {
       width: 100%;
-
-      .title {
-        line-height: 11px;
-      }
-
-      input {
-        border-radius: $border-radius-input;
-        border-color: $gray !important;
-      }
-
-      input:focus {
-        border: 1px solid black !important;
-        box-shadow: none !important;
-      }
 
       .form-group {
         .select-container {
           position: relative;
 
-          span {
+          input {
+            display: block;
+            width: 100%;
+            height: calc(2.25rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+
+            &:focus {
+              border: 1px solid $primary;
+              outline: none;
+            }
+          }
+
+          span.arrow-icon {
             pointer-events: none;
             position: absolute;
             right: 1rem;
             top: 50%;
             transform: translateY(-50%);
             color: $gray;
-          }
-
-          select {
-            border-radius: $border-radius-input;
-            padding-right: 3rem !important;
-            border-color: $gray !important;
-
-            // color: $gray;
-            &:invalid {
-              color: $dark-gray !important;
-            }
-
-            &:valid {
-              color: black !important;
-            }
-            option {
-              color: black !important;
-            }
-
-            .placeholder-select {
-              color: $gray !important;
-              display: none;
-            }
-
-            &:focus {
-              border: 1px solid black !important;
-              box-shadow: none !important;
-            }
+            background-color: white;
           }
         }
       }
@@ -584,8 +519,61 @@ a.btn.btn-primary {
         display: flex;
         justify-content: start;
         align-items: center;
-        font-size: 1.2rem;
-        margin-top: -0.5rem;
+        font-size: 1.4rem;
+        height: 20px;
+        // margin-top: -0.5rem;
+
+        .fa-trash-alt {
+          // font-size: 1.2rem !important;
+          transform: scale(0.8, 0.8);
+        }
+
+        .switch {
+          position: relative;
+          width: 30px;
+          height: 100%;
+
+          input[type="checkbox"] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+          }
+
+          label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 30px;
+            height: 100%;
+            background: $gray;
+            display: block;
+            border-radius: 100px;
+            position: absolute;
+            top: 0rem;
+            left: 0;
+          }
+
+          label:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 2px;
+            width: 15px;
+            height: 15px;
+            background: #fff;
+            border-radius: 50%;
+            transform: translate(0%, -50%);
+            transition: all 250ms ease;
+          }
+
+          input:checked + label {
+            background: #4dc91c;
+          }
+
+          input:checked + label:after {
+            left: calc(100% - 2px);
+            transform: translate(-100%, -50%);
+          }
+        }
 
         button {
           background: none;
@@ -593,11 +581,6 @@ a.btn.btn-primary {
           outline: none;
           color: $gray;
           cursor: pointer;
-        }
-
-        .chart {
-          -webkit-transform: scaleX(-1) rotate(-90deg);
-          transform: scaleX(-1) rotate(-90deg);
         }
       }
     }
@@ -981,18 +964,6 @@ a {
       color: #fff;
     }
   }
-}
-
-.custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #e94151;
-  background-color: #e94151;
-}
-
-.custom-switch-green
-  .custom-control-input:checked
-  ~ .custom-control-label::before {
-  border-color: #76cc11;
-  background-color: #76cc11;
 }
 
 .modal-header {

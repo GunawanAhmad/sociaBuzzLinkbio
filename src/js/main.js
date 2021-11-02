@@ -60,3 +60,12 @@ document
 
     selectedCirlceLink.setAttribute("data-link", circelModalLink.value);
   });
+
+$(document).ready(function () {
+  $("select.flexselect").flexselect({
+    allowMismatch: true,
+    inputNameTransform: function (name) {
+      return "new_" + name;
+    },
+  });
+});
