@@ -69,3 +69,14 @@ $(document).ready(function () {
     },
   });
 });
+
+let previewBtn = document.querySelector(".preview-btn");
+let phoneWrapper = document.querySelector(".phone-wrapper");
+let closePreviewBtn = document.querySelector(".close-preview-btn");
+
+function togglePreview() {
+  phoneWrapper.classList.toggle("show");
+}
+
+previewBtn.addEventListener("click", togglePreview);
+closePreviewBtn.addEventListener("click", togglePreview);
