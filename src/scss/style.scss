@@ -585,6 +585,31 @@ a.btn.btn-primary {
       }
     }
   }
+
+  .modal-content {
+    width: auto;
+    padding: 0;
+    .modal-body {
+      padding: 2rem;
+
+      .btn-fill-light {
+        background-color: transparent;
+        min-width: 120px;
+
+        &:hover {
+          background-color: $primary;
+        }
+
+        &.active {
+          background-color: $primary;
+
+          &:hover {
+            background-color: $dark-hover;
+          }
+        }
+      }
+    }
+  }
 }
 
 .btn-edit-sm {
