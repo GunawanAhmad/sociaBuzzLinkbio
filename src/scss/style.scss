@@ -251,10 +251,10 @@ h2 {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 450px) {
   .rounded-link-container .rounded-link {
-    height: 70px;
-    width: 70px;
+    height: 80px !important;
+    width: 80px !important;
   }
 }
 
@@ -278,7 +278,7 @@ h2 {
 
 .phone-container {
   max-height: 667px;
-  max-width: 325px;
+  max-width: 425px;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -286,8 +286,8 @@ h2 {
 
   .close-preview-btn {
     position: absolute;
-    top: -2rem;
-    right: -1rem;
+    top: 1rem;
+    right: 2rem;
     font-size: 1.4rem;
     color: $gray;
     background: none;
@@ -295,6 +295,7 @@ h2 {
     border: none;
     display: none;
     pointer-events: all;
+    z-index: 99;
   }
   img {
     height: 100%;
@@ -370,7 +371,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .phone-wrapper {
     height: 100vh;
     width: 100vw;
@@ -387,6 +388,7 @@ h2 {
 
     &.show {
       background-color: rgba(255, 255, 255, 1);
+      pointer-events: all;
 
       .phone-container {
         display: block;
@@ -402,14 +404,17 @@ h2 {
   }
 
   .phone-container {
+    box-sizing: content-box;
     display: none;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-height: 670px;
-    max-width: 280px;
+    max-width: 320px;
     height: auto;
+    width: auto;
+    padding: 2.5rem;
 
     .close-preview-btn {
       display: block;
@@ -427,7 +432,6 @@ h2 {
 
 .head-logo {
   max-width: 300px;
-  max-height: 40px;
   height: auto;
   width: auto;
 }
@@ -528,7 +532,7 @@ a.btn.btn-primary {
     border: 1px solid $gray;
     padding: 0;
     border-radius: 20px;
-
+    max-width: 100% !important;
     .drag-btn {
       background: none;
       outline: none;
@@ -559,7 +563,7 @@ a.btn.btn-primary {
             height: calc(2.25rem + 2px);
             padding: 0.375rem 0.75rem;
             font-size: 0.85rem;
-            line-height: 1.5;
+            // line-height: 1.5;
             color: #495057;
             background-color: #fff;
             background-clip: padding-box;
@@ -1156,7 +1160,6 @@ ul.nav-tabs {
 }
 
 .links-wrapper {
-  padding: 1rem;
   max-width: 1200px;
   margin: auto;
   min-height: 100vh;

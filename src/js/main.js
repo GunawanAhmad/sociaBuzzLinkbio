@@ -78,5 +78,8 @@ function togglePreview() {
   phoneWrapper.classList.toggle("show");
 }
 
+phoneWrapper.addEventListener("click", function (element) {
+  if (element.target == this) togglePreview();
+});
 previewBtn.addEventListener("click", togglePreview);
 closePreviewBtn.addEventListener("click", togglePreview);

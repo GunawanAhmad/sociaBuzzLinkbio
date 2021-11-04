@@ -133,12 +133,14 @@
       });
 
       this.input.blur(function () {
-        if (!self.dropdownMouseover) {
-          self.hide();
-          if (self.settings.allowMismatchBlank && $.trim($(this).val()) == "")
-            self.setValue("");
-          else if (!self.settings.allowMismatch && !self.picked) self.reset();
-        }
+        self.hide();
+
+        // if (!self.dropdownMouseover) {
+        //   self.hide();
+        //   if (self.settings.allowMismatchBlank && $.trim($(this).val()) == "")
+        //     self.setValue("");
+        //   else if (!self.settings.allowMismatch && !self.picked) self.reset();
+        // }
       });
 
       this.dropdownList.mouseover(function (event) {
