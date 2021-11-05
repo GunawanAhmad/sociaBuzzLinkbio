@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
     <title>Socialbuzz Linkbio</title>
     <!-- <link rel="stylesheet" href="src/css/fontawesome.css" /> -->
 
@@ -312,7 +312,7 @@
                       </p>
                       <img src="" alt="" id="circle-link-modal-img">
                     </div>
-                    <p class="eightpx gray-font">Hanya format jpg, jpeg, png | Max 1MB
+                    <p class="eightpx gray-font">Hanya format jpg, jpeg, png, gif | Max 1MB
                     </p>
                     <div class="input-wrapper">
                       <div class="input-container">
@@ -632,7 +632,7 @@
                 <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 <div class="mb-3">
                   <input class="form-control tenpx" type="text" placeholder="Link">
-                  <span class="eightpx">Masukkan link YouTube / Spotify
+                  <span class="eightpx help-text">Masukkan link YouTube / Spotify
                   </span>
                 </div>
                 <div class="icon-container d-flex align-items-center">
@@ -658,13 +658,12 @@
                 <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
                 <div class="mb-3">
                   <input class="form-control tenpx" type="text" placeholder="Nomor Whatsapp">
-                  <span class="eightpx">Awali dengan kode negara | Contoh: <span class="text-primary">62</span>87528371029
-
+                  <span class="eightpx help-text">Awali dengan kode negara | Contoh: <span class="text-primary" >62</span>87528371029
                   </span>
                 </div>
                 <div class="mb-3">
                   <input class="form-control tenpx" type="text" placeholder="Template pesan">
-                  <span class="eightpx">Optional
+                  <span class="eightpx help-text">Optional
 
                   </span>
                 </div>
@@ -693,7 +692,7 @@
                 
                 <div class="mb-3">
                   <input class="form-control tenpx" type="text" placeholder="Template judul email">
-                  <span class="eightpx">Optional
+                  <span class="eightpx help-text">Optional
                   </span>
                 </div>
                 <div class="icon-container d-flex align-items-center">
@@ -772,7 +771,10 @@
             </button>
            
           </div>
-          <button class="preview-btn eightpx">
+          <button class="preview-btn">
+            <span class="mr-2">
+              <i class="fas fa-eye"></i>
+            </span>
             Preview
           </button>
         </div>

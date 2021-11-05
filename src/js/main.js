@@ -40,7 +40,7 @@ document
   .getElementById("circle-link-img-input")
   .addEventListener("change", function () {
     if (this.files[0].size > 1048576) {
-      alert("File is too big!");
+      alert("Max 1MB");
       this.value = "";
     }
     tempImgSrc = window.URL.createObjectURL(this.files[0]);
