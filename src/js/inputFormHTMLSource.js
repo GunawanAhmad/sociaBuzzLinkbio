@@ -1,5 +1,5 @@
 export function regularInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id=regular-${count}>
+  return `<div class="container d-flex form-group mb-4" id="regular-link-${count}">
     <div >   
       <button class="drag-btn">
         <i class="fas fa-ellipsis-v"></i>
@@ -12,7 +12,7 @@ export function regularInputLink(count) {
         <div class="switch mr-3 mr-sm-4">
           <input type="checkbox" id="switch-1" /><label for="switch-1">Toggle</label>
         </div>
-        <button class="mr-3 mr-sm-4"  data-toggle="modal" data-target="#deleteModal">
+        <button class="mr-3 mr-sm-4" id="del-btn" data-toggle="modal" data-target="#deleteModal">
           <i class="fas fa-trash-alt"></i>
         </button>
         <button class="mr-3 mr-sm-4">
