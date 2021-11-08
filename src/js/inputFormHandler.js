@@ -1,7 +1,16 @@
-import { regularInputLink } from "./inputFormHTMLSource.js";
+import {
+  regularInputLink,
+  headerInputLink,
+  donasiInputLink,
+  digitalAksesInputLink,
+  kontenInputLink,
+  paketJasaInputLink,
+  kerjasamaInputLink,
+} from "./inputFormHTMLSource.js";
 
 let tambahLinkBtn = document.querySelector("#tambahLink-btn");
 let formLinkWrapper = document.querySelector(".form-wrapper");
+let tambahFiturSpesialBtn = document.querySelectorAll(".add-fitur-spesial-btn");
 let arrOfInputLinks = [];
 
 /**
@@ -15,16 +24,85 @@ function htmlToElement(html) {
   return template.content.firstChild;
 }
 
-function addNewInput() {
-  let HTMLString = regularInputLink(regularInputLinkCount);
+function reloadFlexSelect() {
+  $(document).ready(function () {
+    $("select.flexselect").flexselect({
+      allowMismatch: true,
+      inputNameTransform: function (name) {
+        return "new_" + name;
+      },
+    });
+  });
+}
+let regularInputLinkCount = 0;
+let headerInputLinkCount = 0;
+let donasiInputLinkCount = 0;
+let kontenInputLinkCount = 0;
+let digitalAksesInputLinkCount = 0;
+let paketJasaInputLinkCount = 0;
+let kerjasamaInputLinkCount = 0;
+function addNewInput(type) {
+  let HTMLString = null;
+  switch (type) {
+    case "regular":
+      HTMLString = regularInputLink(regularInputLinkCount);
+      regularInputLinkCount++;
+      break;
+    case "header":
+      HTMLString = headerInputLink(headerInputLinkCount);
+      headerInputLinkCount++;
+      break;
+    case "donasi":
+      HTMLString = donasiInputLink(donasiInputLinkCount);
+      donasiInputLinkCount++;
+      break;
+    case "digital-akses":
+      HTMLString = digitalAksesInputLink(digitalAksesInputLinkCount);
+      digitalAksesInputLinkCount++;
+      reloadFlexSelect();
+      break;
+    case "konten":
+      HTMLString = kontenInputLink(kontenInputLinkCount);
+      kontenInputLinkCount++;
+      reloadFlexSelect();
+      break;
+    case "paket-jasa":
+      HTMLString = paketJasaInputLink(paketJasaInputLinkCount);
+      paketJasaInputLinkCount++;
+      reloadFlexSelect();
+      break;
+    case "kerjasama":
+      HTMLString = kerjasamaInputLink(kerjasamaInputLinkCount);
+      kerjasamaInputLinkCount++;
+      reloadFlexSelect();
+      break;
+    default:
+      HTMLString = regularInputLink(regularInputLinkCount);
+      regularInputLinkCount++;
+      break;
+  }
   let HTMLElm = htmlToElement(HTMLString);
   formLinkWrapper.insertBefore(HTMLElm, formLinkWrapper.firstChild);
   arrOfInputLinks.push(new inputForm(HTMLElm));
 }
 
-let regularInputLinkCount = 1;
-tambahLinkBtn.addEventListener("click", addNewInput);
-addNewInput();
+tambahLinkBtn.addEventListener("click", function () {
+  addNewInput("regular");
+});
+
+tambahFiturSpesialBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    let type = btn.getAttribute("data-type");
+    addNewInput(type);
+  });
+});
+addNewInput("kerjasama");
+addNewInput("paket-jasa");
+addNewInput("konten");
+addNewInput("digital-akses");
+addNewInput("donasi");
+addNewInput("header");
+addNewInput("regular");
 
 let selectedDeleteInput = null;
 let isWantToDelete = false;
@@ -39,10 +117,16 @@ function inputForm(elm) {
   deleteBtn.addEventListener("click", selectInputFormForDelete);
 }
 
-let deleteConfirmation = document.querySelector("#delete-selcted-input");
+let deleteConfirmation = document.querySelector("#confirm-delete-btn");
+let cancelDeleteBtn = document.querySelector("#cancel-delete-btn");
 
 deleteConfirmation.addEventListener("click", function () {
   if (isWantToDelete) {
     selectedDeleteInput.remove();
   }
+});
+
+cancelDeleteBtn.addEventListener("click", function () {
+  isWantToDelete = false;
+  selectedDeleteInput = null;
 });
