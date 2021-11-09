@@ -188,6 +188,23 @@ h2 {
       img[src=""] {
         display: none;
       }
+      .arrange-btn {
+        position: absolute;
+        left: -0.3rem;
+        top: 0.2rem;
+        font-size: 0.833rem;
+        padding: 0.1rem 0.4rem;
+        color: white;
+        background-color: rgb(204, 204, 204);
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      img[src=""] + .arrange-btn {
+        display: none;
+      }
     }
   }
 
@@ -309,8 +326,8 @@ h2 {
 
   .close-preview-btn {
     position: absolute;
-    top: 1rem;
-    right: 2rem;
+    top: -1rem;
+    right: -1rem;
     font-size: 1.4rem;
     color: $gray;
     background: none;
@@ -427,17 +444,17 @@ h2 {
   }
 
   .phone-container {
-    box-sizing: content-box;
+    // box-sizing: content-box;
     display: none;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-height: 670px;
-    max-width: 320px;
+    max-height: 560px;
+    max-width: 300px;
     height: auto;
-    width: auto;
-    padding: 2.5rem;
+    width: 70%;
+    // padding: 2.5rem;
 
     .close-preview-btn {
       display: block;
