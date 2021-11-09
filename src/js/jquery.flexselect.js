@@ -378,6 +378,7 @@
       this.input.val(this.abbreviationBeforeFocus);
     },
     focus: function () {
+      return;
       this.input.focus();
     },
     focusAndHide: function () {

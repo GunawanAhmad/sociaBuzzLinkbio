@@ -53,6 +53,7 @@ document
   .addEventListener("click", function () {
     if (tempImgSrc) {
       selectedCirlceLink.querySelector("img").setAttribute("src", tempImgSrc);
+      tempImgSrc = "";
     }
 
     selectedCirlceLink.querySelector(".cirlce-link-title").innerText =
