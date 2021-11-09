@@ -292,3 +292,163 @@ export function kerjasamaInputLink(count) {
   </div>
 </div>`;
 }
+
+export function embedInputLink(count) {
+  return `<div class="container d-flex form-group mb-4" id="embed-link-${count}">
+  <div >   
+    <button class="drag-btn">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <div class="d-flex flex-column input-container p-3">
+    <p class="title  mb-3 elevenpx font-weight-bold">
+      Embed Video/Musik
+    </p>
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <div class="mb-3">
+      <input class="form-control tenpx" type="text" placeholder="Link">
+      <span class="eightpx help-text">Masukkan link YouTube / Spotify
+      </span>
+    </div>
+    <div class="icon-container d-flex align-items-center">
+      <div class="switch mr-3 mr-sm-4">
+        <input type="checkbox" id="switch-8" /><label for="switch-8">Toggle</label>
+      </div>
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
+</div>`;
+}
+
+export function whatsappInputLink(count) {
+  return `<div class="container d-flex form-group mb-4" id="whatsapp-link-${count}">
+  <div >   
+    <button class="drag-btn">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <div class="d-flex flex-column input-container p-3">
+    <p class="title  mb-3 elevenpx font-weight-bold">
+      Whatsapp
+    </p>
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <div class="mb-3">
+      <input class="form-control tenpx" type="text" placeholder="Nomor Whatsapp">
+      <span class="eightpx help-text">Awali dengan kode negara | Contoh: <span class="text-primary" >62</span>87528371029
+      </span>
+    </div>
+    <div class="mb-3">
+      <input class="form-control tenpx" type="text" placeholder="Template pesan">
+      <span class="eightpx help-text">Optional
+
+      </span>
+    </div>
+    <div class="icon-container d-flex align-items-center">
+      <div class="switch mr-3 mr-sm-4">
+        <input type="checkbox" id="switch-9" /><label for="switch-9">Toggle</label>
+      </div>
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
+</div>`;
+}
+
+export function emailInputLink(count) {
+  return `<div class="container d-flex form-group mb-4" id="email-link-${count}">
+  <div >   
+    <button class="drag-btn">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <div class="d-flex flex-column input-container p-3">
+    <p class="title  mb-3 elevenpx font-weight-bold">
+      Email
+    </p>
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Alamat email">
+    
+    <div class="mb-3">
+      <input class="form-control tenpx" type="text" placeholder="Template judul email">
+      <span class="eightpx help-text">Optional
+      </span>
+    </div>
+    <div class="icon-container d-flex align-items-center">
+      <div class="switch mr-3 mr-sm-4">
+        <input type="checkbox" id="switch-10" /><label for="switch-10">Toggle</label>
+      </div>
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
+</div>`;
+}
+
+export function emailColletionInputLink(count) {
+  return `<div class="container d-flex form-group mb-4" id="emailCollection-link-${count}">
+  <div >   
+    <button class="drag-btn">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <div class="d-flex flex-column input-container p-3">
+    <p class="title  mb-3 elevenpx font-weight-bold">
+      Email Collection
+     
+    </p>
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol subscribe
+    ">
+    
+    <div class="icon-container d-flex align-items-center">
+      <div class="switch mr-3 mr-sm-4">
+        <input type="checkbox" id="switch-11" /><label for="switch-11">Toggle</label>
+      </div>
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+      <button class="mr-3 mr-sm-4">
+        <i class="fas fa-image"></i>
+      </button>
+      <button class="mr-3 mr-sm-4 chart">
+        <i class="fa fa-chart-bar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>`;
+}
+
+export function videoRequestInputLink(count) {
+  return `<div class="container d-flex form-group mb-4" id="videoUcapan-link-${count}">
+  <div >   
+    <button class="drag-btn">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </div>
+  <div class="d-flex flex-column input-container p-3">
+    <p class="title  mb-3 elevenpx font-weight-bold">
+      Terima Request Video Ucapan  <a class="font-weight-light text-primary" href=""><u>Settings</u></a>
+    </p>
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    
+    <div class="icon-container d-flex align-items-center">
+      <div class="switch mr-3 mr-sm-4">
+        <input type="checkbox" id="switch-3" /><label for="switch-3">Toggle</label>
+      </div>
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+      <button class="mr-3 mr-sm-4">
+        <i class="fas fa-image"></i>
+      </button>
+      <button class="mr-3 mr-sm-4 chart">
+        <i class="fa fa-chart-bar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>`;
+}

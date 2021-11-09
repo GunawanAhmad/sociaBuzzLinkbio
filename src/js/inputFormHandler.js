@@ -6,6 +6,11 @@ import {
   kontenInputLink,
   paketJasaInputLink,
   kerjasamaInputLink,
+  embedInputLink,
+  whatsappInputLink,
+  emailInputLink,
+  emailColletionInputLink,
+  videoRequestInputLink,
 } from "./inputFormHTMLSource.js";
 
 let tambahLinkBtn = document.querySelector("#tambahLink-btn");
@@ -41,6 +46,11 @@ let kontenInputLinkCount = 0;
 let digitalAksesInputLinkCount = 0;
 let paketJasaInputLinkCount = 0;
 let kerjasamaInputLinkCount = 0;
+let embedInputLinkCount = 0;
+let whatsappInputLinkCount = 0;
+let emailInputLinkCount = 0;
+let emailColletionInputLinkCount = 0;
+let videoRequestInputLinkCount = 0;
 function addNewInput(type) {
   let HTMLString = null;
   switch (type) {
@@ -76,6 +86,26 @@ function addNewInput(type) {
       kerjasamaInputLinkCount++;
       reloadFlexSelect();
       break;
+    case "embed":
+      HTMLString = embedInputLink(embedInputLinkCount);
+      embedInputLinkCount++;
+      break;
+    case "whatsapp":
+      HTMLString = whatsappInputLink(whatsappInputLinkCount);
+      whatsappInputLinkCount++;
+      break;
+    case "email":
+      HTMLString = emailInputLink(emailInputLinkCount);
+      emailInputLinkCount++;
+      break;
+    case "email-collection":
+      HTMLString = emailColletionInputLink(emailColletionInputLinkCount);
+      emailColletionInputLinkCount++;
+      break;
+    case "video-request":
+      HTMLString = videoRequestInputLink(videoRequestInputLinkCount);
+      videoRequestInputLinkCount++;
+      break;
     default:
       HTMLString = regularInputLink(regularInputLinkCount);
       regularInputLinkCount++;
@@ -96,6 +126,10 @@ tambahFiturSpesialBtn.forEach((btn) => {
     addNewInput(type);
   });
 });
+addNewInput("email-collection");
+addNewInput("whatsapp");
+addNewInput("embed");
+addNewInput("video-request");
 addNewInput("kerjasama");
 addNewInput("paket-jasa");
 addNewInput("konten");
