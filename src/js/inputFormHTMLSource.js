@@ -317,6 +317,12 @@ export function embedInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
         <i class="fas fa-trash-alt"></i>
       </button>
+      <button class="mr-3 mr-sm-4">
+      <i class="fas fa-image"></i>
+      </button>
+      <button class="mr-3 mr-sm-4 chart">
+        <i class="fa fa-chart-bar" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 </div>`;
@@ -351,6 +357,12 @@ export function whatsappInputLink(count) {
       </div>
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
         <i class="fas fa-trash-alt"></i>
+      </button>
+      <button class="mr-3 mr-sm-4">
+      <i class="fas fa-image"></i>
+      </button>
+      <button class="mr-3 mr-sm-4 chart">
+        <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
   </div>

@@ -138,17 +138,7 @@
                 >Style</a
               >
             </li>
-            <li class="nav-item mb-3">
-              <a
-                class="nav-link"
-                id="settings​-tab-btn"
-                href=""
-                role="tab"
-                aria-controls=settings​"
-                aria-selected="false"
-                >Settings​</a
-              >
-            </li>
+            
             <li class="nav-item mb-5">
               <a
                 class="nav-link"
@@ -158,6 +148,17 @@
                 aria-controls="Analytics"
                 aria-selected="false"
                 >Analytics</a
+              >
+            </li>
+            <li class="nav-item mb-3">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href=""
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Settings​</a
               >
             </li>
           </ul>
@@ -267,7 +268,7 @@
           
 
           <!--Circle Link-->
-          <div class="d-flex justify-content-center rounded-link-wrapper">
+          <div class="d-flex justify-content-center rounded-link-wrapper mb-5">
 
             <div class="d-flex flex-column rounded-link-container justify-content-center align-items-center circle-link-btn" id="cirlce-link-1" data-img="circle-img-1" data-link="">
               <div class="rounded-link d-flex justify-content-center align-items-center mb-2">
@@ -279,7 +280,15 @@
                   <i class="fas fa-grip-vertical"></i>
                 </button>
               </div>
-              <p class="font-weight-bold tenpx cirlce-link-title mb-5">Lorem</p>
+              <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
+              <div class="icon-container d-flex align-items-center">
+                <div class="switch mr-2">
+                  <input type="checkbox" id="switch-circle-1" /><label for="switch-circle-1">Toggle</label>
+                </div>
+                <button class="" id="del-btn" data-toggle="modal" data-target="#deleteModal">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
             </div>
 
 
@@ -293,7 +302,15 @@
                   <i class="fas fa-grip-vertical"></i>
                 </button>
               </div>
-              <p class="font-weight-bold tenpx cirlce-link-title mb-5">Lorem</p>
+              <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
+              <div class="icon-container d-flex align-items-center">
+                <div class="switch mr-2">
+                  <input type="checkbox" id="switch-circle-2" /><label for="switch-circle-2">Toggle</label>
+                </div>
+                <button class="" id="del-btn" data-toggle="modal" data-target="#deleteModal">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
             </div>
 
 
@@ -307,7 +324,15 @@
                   <i class="fas fa-grip-vertical"></i>
                 </button>
               </div>
-              <p class="font-weight-bold tenpx cirlce-link-title mb-5">Lorem</p>
+              <p class="font-weight-bold tenpx cirlce-link-title">Lorem</p>
+              <div class="icon-container d-flex align-items-center">
+                <div class="switch mr-2">
+                  <input type="checkbox" id="switch-circle-3" /><label for="switch-circle-3">Toggle</label>
+                </div>
+                <button class="" id="del-btn" data-toggle="modal" data-target="#deleteModal">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
               
             </div>
             
@@ -328,7 +353,7 @@
                       </p>
                       <img src="" alt="" id="circle-link-modal-img">
                     </div>
-                    <p class="eightpx gray-font">Hanya format jpg, jpeg, png, gif | Max 1MB
+                    <p class="eightpx gray-font">Hanya format JPG, JPEG, PNG, GIF | Max 1MB
                     </p>
                     <div class="input-wrapper">
                       <div class="input-container">
@@ -426,10 +451,11 @@
     <!---------------- Footer --------------------->
 
     <script src="./src/js/jquery-3.3.1.min.js"></script>
+    <script src="./src/js/Sortable.min.js"></script>
     <script src="./src/js/bootstrap.min.js"></script>
     <script src="./src/js/liquidmetal.js"></script>
     <script src="./src/js/jquery.flexselect.js"></script>
     <script type="module" src="./src/js/inputFormHandler.js"></script>
-    <script src="./src/js/main.js" ></script>
+    <script type="module" src="./src/js/main.js" ></script>
   </body>
 </html>

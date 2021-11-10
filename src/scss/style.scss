@@ -8,6 +8,14 @@ $border-radius-input: 10px;
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 
+.ghost {
+  opacity: 0;
+  background-color: red;
+}
+
+.sortable-fallback {
+  opacity: 1 !important;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -153,6 +161,16 @@ h2 {
   .rounded-link-container {
     background: none;
     border: none;
+
+    p {
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
     .rounded-link {
       height: 100px;
       width: 100px;
@@ -205,6 +223,75 @@ h2 {
 
       img[src=""] + .arrange-btn {
         display: none;
+      }
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      height: 20px;
+      // margin-top: -0.5rem;
+
+      .fa-trash-alt {
+        // font-size: 1.2rem !important;
+        transform: scale(0.8, 0.8);
+      }
+
+      .switch {
+        position: relative;
+        width: 30px;
+        height: 100%;
+
+        input[type="checkbox"] {
+          height: 0;
+          width: 0;
+          visibility: hidden;
+        }
+
+        label {
+          cursor: pointer;
+          text-indent: -9999px;
+          width: 30px;
+          height: 100%;
+          background: $gray;
+          display: block;
+          border-radius: 100px;
+          position: absolute;
+          top: 0rem;
+          left: 0;
+        }
+
+        label:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 2px;
+          width: 15px;
+          height: 15px;
+          background: #fff;
+          border-radius: 50%;
+          transform: translate(0%, -50%);
+          transition: all 250ms ease;
+        }
+
+        input:checked + label {
+          background: #4dc91c;
+        }
+
+        input:checked + label:after {
+          left: calc(100% - 2px);
+          transform: translate(-100%, -50%);
+        }
+      }
+
+      button {
+        background: none;
+        border: none;
+        outline: none;
+        color: $gray;
+        cursor: pointer;
       }
     }
   }
@@ -563,6 +650,7 @@ a.btn.btn-primary {
     padding: 0;
     border-radius: 20px;
     max-width: 100% !important;
+    background-color: white;
     .drag-btn {
       background: none;
       outline: none;
@@ -577,7 +665,7 @@ a.btn.btn-primary {
       justify-content: center;
       align-items: center;
       color: $gray;
-      cursor: pointer;
+      cursor: default;
     }
 
     .help-text {
