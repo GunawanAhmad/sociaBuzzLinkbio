@@ -13,6 +13,14 @@ $border-radius-input: 10px;
   background-color: red;
 }
 
+.d-flex {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+}
+
 .sortable-fallback {
   opacity: 1 !important;
 }
@@ -115,7 +123,13 @@ h2 {
   .modal {
     .modal-body {
       button.btn {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+
         display: flex;
+
         width: 100%;
         border-radius: $border-radius-input;
         padding: 0.5rem 1rem;
@@ -227,6 +241,10 @@ h2 {
     }
 
     .icon-container {
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Chrome */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -236,7 +254,12 @@ h2 {
 
       .fa-trash-alt {
         // font-size: 1.2rem !important;
-        transform: scale(0.8, 0.8);
+
+        -webkit-transform: scale(0.8, 0.8); /* WebKit */
+        -moz-transform: scale(0.8, 0.8); /* Mozilla */
+        -o-transform: scale(0.8, 0.8); /* Opera */
+        -ms-transform: scale(0.8, 0.8); /* Internet Explorer */
+        transform: scale(0.8, 0.8); /* CSS3 */
       }
 
       .switch {
@@ -272,7 +295,11 @@ h2 {
           height: 15px;
           background: #fff;
           border-radius: 50%;
-          transform: translate(0%, -50%);
+          -webkit-transform: translate(0%, -50%); /* WebKit */
+          -moz-transform: translate(0%, -50%); /* Mozilla */
+          -o-transform: translate(0%, -50%); /* Opera */
+          -ms-transform: translate(0%, -50%); /* Internet Explorer */
+          transform: translate(0%, -50%); /* CSS3 */
           transition: all 250ms ease;
         }
 
@@ -281,7 +308,18 @@ h2 {
         }
 
         input:checked + label:after {
+          /* Firefox */
+          left: -moz-calc(100% - 2px);
+          /* WebKit */
+          left: -webkit-calc(100% - 2px);
+          /* Opera */
+          left: -o-calc(100% - 2px);
+          /* Standard */
           left: calc(100% - 2px);
+          -webkit-transform: translate(-100%, -50%); /* WebKit */
+          -moz-transform: translate(-100%, -50%); /* Mozilla */
+          -o-transform: translate(-100%, -50%); /* Opera */
+          -ms-transform: translate(-100%, -50%); /* Internet Explorer */
           transform: translate(-100%, -50%);
         }
       }
@@ -298,6 +336,10 @@ h2 {
 
   .modal {
     .modal-body {
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Chrome */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -351,6 +393,10 @@ h2 {
         position: absolute;
         left: 50%;
         top: 50%;
+        -webkit-transform: translate(-50%, -50%); /* WebKit */
+        -moz-transform: translate(-50%, -50%); /* Mozilla */
+        -o-transform: translate(-50%, -50%); /* Opera */
+        -ms-transform: translate(500%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
         color: $primary;
@@ -390,6 +436,10 @@ h2 {
     position: fixed;
     bottom: 2rem;
     left: 50%;
+    -webkit-transform: translateX(-50%); /* WebKit */
+    -moz-transform: translateX(-50%); /* Mozilla */
+    -o-transform: translateX(-50%); /* Opera */
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     background-color: white;
     padding: 0.5rem 1.5rem;
@@ -443,6 +493,10 @@ h2 {
     width: 98%;
     top: 0.9rem;
     left: 50%;
+    -webkit-transform: translateX(-50%); /* WebKit */
+    -moz-transform: translateX(-50%); /* Mozilla */
+    -o-transform: translateX(-50%); /* Opera */
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     height: 99%;
     /* overflow: auto; */
@@ -480,6 +534,10 @@ h2 {
   }
 
   .content {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -537,6 +595,10 @@ h2 {
     position: relative;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%); /* WebKit */
+    -moz-transform: translate(-50%, -50%); /* Mozilla */
+    -o-transform: translate(-50%, -50%); /* Opera */
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     max-height: 560px;
     max-width: 300px;
@@ -594,6 +656,10 @@ h2 {
 }
 
 a.btn.btn-primary {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -661,6 +727,10 @@ a.btn.btn-primary {
       flex: 1 1 100%;
       align-self: stretch;
       border-right: 1px solid $gray;
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Chrome */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -683,6 +753,13 @@ a.btn.btn-primary {
           input {
             display: block;
             width: 100%;
+            /* Firefox */
+            height: -moz-calc(2.25rem + 2px);
+            /* WebKit */
+            height: -webkit-calc(2.25rem + 2px);
+            /* Opera */
+            height: -o-calc(2.25rem + 2px);
+            /* Standard */
             height: calc(2.25rem + 2px);
             padding: 0.375rem 0.75rem;
             font-size: 0.833rem;
@@ -705,6 +782,10 @@ a.btn.btn-primary {
             position: absolute;
             right: 1rem;
             top: 50%;
+            -webkit-transform: translateY(-50%); /* WebKit */
+            -moz-transform: translateY(-50%); /* Mozilla */
+            -o-transform: translateY(-50%); /* Opera */
+            -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             color: $gray;
             background-color: white;
@@ -713,6 +794,10 @@ a.btn.btn-primary {
       }
 
       .icon-container {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
         display: flex;
         justify-content: start;
         align-items: center;
@@ -722,6 +807,10 @@ a.btn.btn-primary {
 
         .fa-trash-alt {
           // font-size: 1.2rem !important;
+          -webkit-transform: scale(0.8, 0.8); /* WebKit */
+          -moz-transform: scale(0.8, 0.8); /* Mozilla */
+          -o-transform: scale(0.8, 0.8); /* Opera */
+          -ms-transform: scale(0.8, 0.8);
           transform: scale(0.8, 0.8);
         }
 
@@ -758,6 +847,10 @@ a.btn.btn-primary {
             height: 15px;
             background: #fff;
             border-radius: 50%;
+            -webkit-transform: translate(0%, -50%); /* WebKit */
+            -moz-transform: translate(0%, -50%); /* Mozilla */
+            -o-transform: translate(0%, -50%); /* Opera */
+            -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
             transition: all 250ms ease;
           }
@@ -767,7 +860,17 @@ a.btn.btn-primary {
           }
 
           input:checked + label:after {
+            left: -moz-calc(100% - 2px);
+            /* WebKit */
+            left: -webkit-calc(100% - 2px);
+            /* Opera */
+            left: -o-calc(100% - 2px);
+            /* Standard */
             left: calc(100% - 2px);
+            -webkit-transform: translate(-100%, -50%); /* WebKit */
+            -moz-transform: translate(-100%, -50%); /* Mozilla */
+            -o-transform: translate(-100%, -50%); /* Opera */
+            -ms-transform: translate(-100%, -50%);
             transform: translate(-100%, -50%);
           }
         }
@@ -882,6 +985,10 @@ footer {
     opacity: 0;
     height: 0;
     width: 0;
+    -webkit-transform: translateY(20px); /* WebKit */
+    -moz-transform: translateY(20px); /* Mozilla */
+    -o-transform: translateY(20px); /* Opera */
+    -ms-transform: translateY(20px);
     transform: translateY(20px);
   }
 
@@ -921,6 +1028,10 @@ footer {
   opacity: 1;
   height: auto;
   width: auto;
+  -webkit-transform: translateY(0px); /* WebKit */
+  -moz-transform: translateY(0px); /* Mozilla */
+  -o-transform: translateY(0px); /* Opera */
+  -ms-transform: translateY(0px);
   transform: translateY(0px);
   transition: all 0.15s ease-in;
 }
@@ -1073,6 +1184,10 @@ input {
 }
 
 .help-control {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   font-size: 0.7rem;
   justify-content: space-between;
@@ -1146,10 +1261,18 @@ ul.account-details {
 
 @keyframes lds-ring {
   0% {
+    -webkit-transform: rotate(0deg); /* WebKit */
+    -moz-transform: rotate(0deg); /* Mozilla */
+    -o-transform: rotate(0deg); /* Opera */
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
+    -webkit-transform: rotate(360deg); /* WebKit */
+    -moz-transform: rotate(360deg); /* Mozilla */
+    -o-transform: rotate(360deg); /* Opera */
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -1233,6 +1356,10 @@ ul.nav-tabs {
 
 .vbox-prev::after {
   content: "";
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   position: absolute;
   width: 40px;
@@ -1244,6 +1371,10 @@ ul.nav-tabs {
 
 .vbox-next::after {
   content: "";
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   position: absolute;
   width: 40px;
