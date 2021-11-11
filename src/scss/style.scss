@@ -172,6 +172,8 @@ h2 {
 }
 
 .rounded-link-wrapper {
+  max-width: 500px;
+  margin: auto;
   .rounded-link-container {
     background: none;
     border: none;
@@ -233,10 +235,11 @@ h2 {
         border-radius: 5px;
         cursor: pointer;
         font-weight: 400 !important;
+        visibility: visible;
       }
 
       img[src=""] + .arrange-btn {
-        display: none;
+        visibility: hidden;
       }
     }
 
@@ -455,12 +458,16 @@ h2 {
 }
 
 .phone-container {
-  max-height: 667px;
-  max-width: 425px;
+  max-height: 690px;
+  max-width: 336px;
   height: 100vh;
   position: sticky;
   top: 0;
   pointer-events: all;
+  padding: 2.5rem;
+  box-sizing: content-box;
+  margin-top: -2.5rem;
+  min-width: 336px;
 
   .close-preview-btn {
     position: absolute;
@@ -509,10 +516,43 @@ h2 {
   }
 
   .content-box {
-    height: 95%;
+    height: 100%;
     width: 100%;
     overflow: auto;
     border-radius: 20px;
+    position: relative;
+
+    .content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -52%); /* WebKit */
+      -moz-transform: translate(-50%, -52%); /* Mozilla */
+      -o-transform: translate(-50%, -52%); /* Opera */
+      -ms-transform: translate(-50%, -52%);
+      transform: translate(-50%, -52%);
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Chrome */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 85%;
+      width: 82%;
+      overflow: auto;
+
+      button {
+        width: 100%;
+      }
+
+      .link {
+        color: #0044cc;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
   }
 
   /* width */
@@ -531,29 +571,6 @@ h2 {
     border: 2px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
-  }
-
-  .content {
-    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox; /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Chrome */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-
-    button {
-      width: 100%;
-    }
-
-    .link {
-      color: #0044cc;
-      text-decoration: underline;
-      cursor: pointer;
-    }
   }
 }
 
@@ -590,24 +607,27 @@ h2 {
   }
 
   .phone-container {
-    // box-sizing: content-box;
     display: none;
     position: relative;
     top: 50%;
     left: 50%;
+    margin-top: 0;
+    min-width: 0px;
+
     -webkit-transform: translate(-50%, -50%); /* WebKit */
     -moz-transform: translate(-50%, -50%); /* Mozilla */
     -o-transform: translate(-50%, -50%); /* Opera */
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    max-height: 560px;
-    max-width: 300px;
+    max-height: 690px;
+    max-width: 336px;
     height: auto;
     width: 70%;
-    // padding: 2.5rem;
 
     .close-preview-btn {
       display: block;
+      top: 1.5rem;
+      right: 1.5rem;
     }
   }
 }

@@ -25,10 +25,22 @@ phoneWrapper.addEventListener("click", function (element) {
 previewBtn.addEventListener("click", togglePreview);
 closePreviewBtn.addEventListener("click", togglePreview);
 
-let container = document.querySelector(".form-wrapper");
-new Sortable(container, {
-  animation: 150,
-  handle: ".drag-btn",
-  ghostClass: "ghost",
-  forceFallback: true,
-});
+function reOrderHandler() {
+  let inputFormContainer = document.querySelector(".form-wrapper");
+  new Sortable(inputFormContainer, {
+    animation: 150,
+    handle: ".drag-btn",
+    ghostClass: "ghost",
+    forceFallback: true,
+  });
+
+  let circleLinkContainer = document.querySelector(".rounded-link-wrapper");
+  new Sortable(circleLinkContainer, {
+    animation: 150,
+    handle: ".arrange-btn",
+    ghostClass: "ghost",
+    forceFallback: true,
+  });
+}
+
+reOrderHandler();
