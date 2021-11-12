@@ -1,3 +1,5 @@
+import { deleteHandler } from "./deleteHandler.js";
+
 let cirlceLinkList = document.querySelectorAll(".circle-link-btn");
 let circleModalImg = document.getElementById("circle-link-modal-img");
 let circelModalTitle = document.getElementById("circle-link-title-input");
@@ -6,36 +8,16 @@ let circleTitleLength = document.querySelector(".circle-title-length");
 const MAX_LENGTH = 9;
 let currentLength = 0;
 
-const CircleLink = [
-  {
-    imgSrc: "",
-    link: "",
-    title: "",
-    active: false,
-  },
-  {
-    imgSrc: "",
-    link: "",
-    title: "",
-    active: false,
-  },
-  {
-    imgSrc: "",
-    link: "",
-    title: "",
-    active: false,
-  },
-];
+const ArrOfCircleLinkObj = [];
 
 export function circleLinkHandler() {
   getAllCircleValue();
   let selectedCirlceLink = null;
-  let circleLinkImg = null;
-
   let circleImg = {
     src: "",
     index: "",
   };
+
   cirlceLinkList.forEach((element, index) => {
     element.addEventListener("click", function () {
       selectedCirlceLink = cirlceLinkList[index];
@@ -92,13 +74,37 @@ export function circleLinkHandler() {
 
 function getAllCircleValue() {
   cirlceLinkList.forEach((elm, idx) => {
-    let imgSrc = elm.querySelector(`#circle-img-${idx}`);
-    let title = elm.querySelector(".cirlce-link-title");
+    let img = elm.querySelector(`#circle-img-${idx + 1}`).getAttribute("src");
+    let title = elm.querySelector(".cirlce-link-title").innerHTML;
     let link = elm.getAttribute("data-link");
-    let active = elm.querySelector("input[type='checkbox']");
-    elm.imgSrc = imgSrc;
-    elm.title = title;
-    elm.link = link;
-    elm.active = active.checked;
+    let active = elm.querySelector("input[type='checkbox']").checked;
+
+    ArrOfCircleLinkObj.push(
+      new CircleLinkObj(active, title, img, link, elm, idx)
+    );
   });
+}
+
+function CircleLinkObj(active, title, imgSrc, link, elm, index) {
+  this.link = link;
+  this.title = title;
+  this.imgSrc = imgSrc;
+  this.active = active;
+  this.elm = elm;
+  this.index = index;
+  var _this = this;
+
+  this.deleteBtn = elm.querySelector("#del-btn");
+  this.deleteBtn.addEventListener("click", function () {
+    deleteHandler(_this.elm, "circle", _this, updateCircleLinkElm);
+  });
+}
+
+function updateCircleLinkElm(index) {
+  cirlceLinkList[index].querySelector(".cirlce-link-title").innerHTML = "";
+  cirlceLinkList[index].querySelector("input[type='checkbox']").checked = false;
+  cirlceLinkList[index]
+    .querySelector(`#circle-img-${index + 1}`)
+    .setAttribute("src", "");
+  cirlceLinkList[index].setAttribute("data-link", "");
 }

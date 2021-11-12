@@ -182,6 +182,7 @@ h2 {
       margin-bottom: 0.5rem;
       display: inline-block;
       max-width: 120px;
+      min-height: 1.5rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -460,14 +461,12 @@ h2 {
 .phone-container {
   max-height: 690px;
   max-width: 336px;
-  height: 100vh;
   position: sticky;
   top: 0;
   pointer-events: all;
   padding: 2.5rem;
   box-sizing: content-box;
   margin-top: -2.5rem;
-  min-width: 336px;
 
   .close-preview-btn {
     position: absolute;
