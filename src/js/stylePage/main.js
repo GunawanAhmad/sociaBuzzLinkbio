@@ -1,4 +1,4 @@
-$("input#input_text, textarea#textarea1").characterCounter();
+// $("input#input_text, textarea#textarea1").characterCounter();
 
 $("#colorPicker").spectrum({
   showPalette: true,
