@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <title>Socialbuzz Linkbio</title>
+    <!-- <link rel="stylesheet" href="./src/css/fontawesome.css" /> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/spectrum.css">
+
+    
+    <link rel="stylesheet" href="./src/css/flexselect.css">
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <link
+      rel="icon"
+      href="./src/img/favicon.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    
+
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header>
+      
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-md border-bottom">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./src/img/Logo SociaBuzz Pro.png"
+            class="header-pro-logo d-block"
+            alt="Sociabuzz Pro Logo"
+        /></a>
+
+        <div class="nav-bar-link ml-auto d-flex align-items-center">
+          <div class="bell-icon mr-2 mr-lg-3">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="navigation-bar">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item px-2 active">
+                  <a class="nav-link" href="profile.html"
+                    >Profil <span class="sr-only">(current)</span></a
+                  >
+                </li>
+
+                <li class="nav-item px-2">
+                  <a class="nav-link" href="saldo.html"> Saldo </a>
+                </li>
+
+                <li class="nav-item px-2">
+                  <a class="nav-link" href="#"> Tawaran Job </a>
+                </li>
+
+                <li class="nav-item px-2">
+                  <a class="nav-link" href="#">Job Saya</a>
+                </li>
+
+                <li class="nav-item dropdown px-2">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Lainnya</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item nav-link" href="#">Pesan</a>
+                    <a class="dropdown-item nav-link" href="#">Logout</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+    </header>
+    <!-- Header Section End -->
+
+    <!---------------- main--------------------->
+    <main class="">
+      <section class="links-wrapper d-flex justify-content-center justify-content-lg-between pt-5">
+        <div class="col-sm-10 col-lg-8">
+          <div class="d-flex justify-content-center mb-5">
+            <img
+              class="head-logo "
+              src="./src/img/logo-sociabuzz-linkbio.png"
+              alt=""
+            />
+          </div>
+          
+          <!--Feature Page navigation-->
+          <ul
+            class="nav nav-tabs d-flex justify-content-center"
+            id="sbgigsTab"
+            role="tablist"
+          >
+            <li class="nav-item mb-3">
+              <a
+                class="nav-link "
+                id="links-tab-btn"
+                href="./index.html"
+                role="tab"
+                aria-controls="links"
+                aria-selected="true"
+                font-weight-x-bold
+                >Links</a
+              >
+            </li>
+            <li class="nav-item mb-3">
+              <a
+                class="nav-link active"
+                id="style-tab-btn"
+                href=""
+                role="tab"
+                aria-controls="style"
+                aria-selected="true"
+                font-weight-x-bold
+                >Style</a
+              >
+            </li>
+            
+            <li class="nav-item mb-3">
+              <a
+                class="nav-link"
+                id="analytics-tab-btn"
+                href=""
+                role="tab"
+                aria-controls="Analytics"
+                aria-selected="false"
+                >Analytics</a
+              >
+            </li>
+            <li class="nav-item mb-5">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href=""
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Settings​</a
+              >
+            </li>
+          </ul>
+          <!--Feature Page navigation-->
+          
+
+          <section class="profile-section section">
+              <h2 class="section-title text-primary mb-4">Profile</h2>
+              <div class="user-image-wrapper mb-4">
+                <img src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg" alt="">
+                <div class="user-image-setting">
+                  <div class="input-container">
+                    <input type="file">
+                    <button class="btn btn-fill-light tenpx">Upload image</button>
+                  </div>
+                  <div class="setting">
+                    <div class="switch mr-3 ">
+                      <input type="checkbox" id="switch-3" /><label for="switch-3">Toggle</label>
+                    </div>
+                    <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-wrapper">
+                <form action="">
+                  <div class="form-group">
+                    <label for="nama_profil" class="elevenpx label">Email address</label>
+                    <input class="form-control" id="nama_profil" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted text-right eightpx">0/60</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="nama_profil" class="elevenpx label">Deskripsi 
+                      <span class="text-secondary font-weight-light">(optional)</span>
+                    </label>
+                    <input class="form-control" id="nama_profil" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted text-right eightpx">0/160</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="nama_profil" class="elevenpx label">Lokasi / Kota <span class="text-secondary font-weight-light">(optional)</span>
+                    </label>
+                    <input class="form-control" id="nama_profil" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted text-right eightpx"></small>
+                  </div>
+                </form>
+                <div class="icon-container">
+                  <p class="elevenpx label">Social icons
+                    <u class="text-primary setting" type="button">Edit</u>
+                  </p>
+                  <div class="icon-list">
+                    <a href="">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="">
+                      <i class="fab fa-twitch"></i>
+                    </a>
+                  </div>
+                  <div class="select-container">
+                    <select id="akses" class="custom-select" name="akses"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+                    ">
+                      <option value="Posisi di atas
+                      ">Posisi di atas</option>
+                      <option value="Posisi di bawah
+                      ">Posisi di bawah</option>
+                    </select>
+                    <span class="arrow-icon">
+                      <i class="fas fa-chevron-down"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="color-input-wrapper">
+                  <p class="label elevenpx">Profile & social icons color
+                  </p>  
+                  <div class="color-input-container">
+                    <div class="preview"></div>
+                    <input type="color" id="colorPicker">
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          
+          
+          
+
+
+        </div>
+        
+        <!--Phone preview-->
+        <div class="phone-wrapper">
+          <div class="phone-container show">
+            <img src="./src/img/phone.png" alt="" />
+            <div class="content-wrapper">
+              <div class="content-box">
+                <div class="content">
+                  <p class="text-center">Show preview here <a class="link" src="https://linkbio-azure.vercel.app">(https://linkbio-azure.vercel.app/)</a>
+                  </p>
+                
+                </div>
+              </div>
+            </div>
+            <button class="close-preview-btn">
+              <i class="fas fa-times"></i>
+            </button>
+           
+          </div>
+          <button class="preview-btn">
+            <span class="mr-2">
+              <i class="fas fa-eye"></i>
+            </span>
+            Preview
+          </button>
+        </div>
+          <!--Phone preview-->
+         
+        
+      </section>
+    </main>
+
+    <!---------------- main--------------------->
+
+    <!---------------- Footer --------------------->
+    <div class="d-block" style="min-height: 70px"></div>
+    <!-- footer start -->
+    <footer class="bg-dark text-center p-5">
+      <img
+        src="./src/img/logo-white.png"
+        class="mb-4 mx-auto d-block"
+        alt="footer image"
+      />
+      <a href="" class="text-white d-block mb-2">Hubungi Support</a>
+      <a href="" class="text-white d-block mb-2">FAQ</a>
+      <a href="" class="text-white d-block mb-2"> Ketentuan Penggunaan </a>
+      <a href="" class="text-white d-block mb-4"> Kebijakan Privasi </a>
+
+      <p class="text-secondary">&copy; PT Komunika Lintas Maya</p>
+    </footer>
+    <!-- footer end -->
+    <!---------------- Footer --------------------->
+
+    <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./src/js/lib/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <script src="./src/js/stylePage/main.js"></script>
+  </body>
+</html>
