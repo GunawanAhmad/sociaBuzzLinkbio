@@ -96,7 +96,7 @@ export function digitalAksesInputLink(count) {
     </p>
     <div class="form-group">
       <div class="select-container">
-        <select id="akses" class="select2" name="akses"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+        <select id="akses-${count}" class="select2" name="akses-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
         ">
           <option value=""></option>
           <option value="1">George Washington</option>
@@ -149,7 +149,7 @@ export function kontenInputLink(count) {
     <div class="form-group">
       <div class="select-container">
         <div class="select-container">
-          <select id="konten" class="select2" name="konten"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+          <select id="konten-${count}" class="select2" name="konten-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
           ">
             <option value=""></option>
             <option value="1">George Washington</option>
@@ -203,7 +203,7 @@ export function paketJasaInputLink(count) {
     </p>
     <div class="form-group">
       <div class="select-container">
-        <select id="jasa" class="select2" name="jasa"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+        <select id="jasa-${count}" class="select2" name="jasa-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
         ">
           <option value=""></option>
           <option value="1">George Washington</option>
@@ -255,7 +255,7 @@ export function kerjasamaInputLink(count) {
     </p>
     <div class="form-group">
       <div class="select-container">
-        <select id="requestKerjasama" class="select2" name="requestKerjasama"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
+        <select id="requestKerjasama-${count}" class="select2" name="requestKerjasama-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
         ">
           <option value=""></option>
           <option value="1">George Washington</option>
