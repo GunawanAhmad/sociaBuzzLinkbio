@@ -7,3 +7,8 @@ circleLinkHandler();
 inputFormHandler();
 rearrangeHandler();
 previewHandler();
+
+//activate tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
