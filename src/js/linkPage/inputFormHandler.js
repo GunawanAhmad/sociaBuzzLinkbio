@@ -31,15 +31,14 @@ function htmlToElement(html) {
   return template.content.firstChild;
 }
 
-function reloadFlexSelect() {
-  $(document).ready(function () {
-    $("select.flexselect").flexselect({
-      allowMismatch: true,
-      inputNameTransform: function (name) {
-        return "new_" + name;
-      },
+function reloadFlexSelect(elm) {
+  if (elm) {
+    $(document).ready(function () {
+      $(elm).select2({
+        tags: true,
+      });
     });
-  });
+  }
 }
 
 function inputForm(elm) {
@@ -82,22 +81,22 @@ export function inputFormHandler() {
       case "digital-akses":
         HTMLString = digitalAksesInputLink(digitalAksesInputLinkCount);
         digitalAksesInputLinkCount++;
-        reloadFlexSelect();
+        // reloadFlexSelect();
         break;
       case "konten":
         HTMLString = kontenInputLink(kontenInputLinkCount);
         kontenInputLinkCount++;
-        reloadFlexSelect();
+        // reloadFlexSelect();
         break;
       case "paket-jasa":
         HTMLString = paketJasaInputLink(paketJasaInputLinkCount);
         paketJasaInputLinkCount++;
-        reloadFlexSelect();
+        // reloadFlexSelect();
         break;
       case "kerjasama":
         HTMLString = kerjasamaInputLink(kerjasamaInputLinkCount);
         kerjasamaInputLinkCount++;
-        reloadFlexSelect();
+        // reloadFlexSelect();
         break;
       case "embed":
         HTMLString = embedInputLink(embedInputLinkCount);
@@ -126,6 +125,7 @@ export function inputFormHandler() {
     }
     let HTMLElm = htmlToElement(HTMLString);
     formLinkWrapper.insertBefore(HTMLElm, formLinkWrapper.firstChild);
+    reloadFlexSelect(HTMLElm.querySelector("select"));
     arrOfInputLinks.push(new inputForm(HTMLElm));
   }
 
