@@ -7,7 +7,3 @@ circleLinkHandler();
 inputFormHandler();
 rearrangeHandler();
 previewHandler();
-
-// $(document).ready(function () {
-//   $(".select2").select2();
-// });
