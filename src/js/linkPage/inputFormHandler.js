@@ -31,7 +31,7 @@ function htmlToElement(html) {
   return template.content.firstChild;
 }
 
-function reloadFlexSelect(elm) {
+function reloadCustomSelect(elm) {
   if (elm) {
     $(document).ready(function () {
       $(elm).select2({
@@ -42,12 +42,13 @@ function reloadFlexSelect(elm) {
 }
 
 function inputForm(elm) {
-  let containerElm = elm;
-  let deleteBtn = containerElm.querySelector("#del-btn");
-  let selectInputFormForDelete = function () {
-    deleteHandler(containerElm, "form-link");
+  this.containerElm = elm;
+  this.deleteBtn = this.containerElm.querySelector("#del-btn");
+  this.tombolInput = this.containerElm.querySelector("#tombol-input");
+  this.selectInputFormForDelete = function () {
+    deleteHandler(elm, "form-link");
   };
-  deleteBtn.addEventListener("click", selectInputFormForDelete);
+  $(this.deleteBtn).click(this.selectInputFormForDelete);
 }
 
 export function inputFormHandler() {
@@ -63,7 +64,8 @@ export function inputFormHandler() {
   let emailInputLinkCount = 0;
   let emailColletionInputLinkCount = 0;
   let videoRequestInputLinkCount = 0;
-  function addNewInput(type) {
+
+  function addNewInput(type, isNewElm = false) {
     let HTMLString = null;
     switch (type) {
       case "regular":
@@ -81,22 +83,18 @@ export function inputFormHandler() {
       case "digital-akses":
         HTMLString = digitalAksesInputLink(digitalAksesInputLinkCount);
         digitalAksesInputLinkCount++;
-        // reloadFlexSelect();
         break;
       case "konten":
         HTMLString = kontenInputLink(kontenInputLinkCount);
         kontenInputLinkCount++;
-        // reloadFlexSelect();
         break;
       case "paket-jasa":
         HTMLString = paketJasaInputLink(paketJasaInputLinkCount);
         paketJasaInputLinkCount++;
-        // reloadFlexSelect();
         break;
       case "kerjasama":
         HTMLString = kerjasamaInputLink(kerjasamaInputLinkCount);
         kerjasamaInputLinkCount++;
-        // reloadFlexSelect();
         break;
       case "embed":
         HTMLString = embedInputLink(embedInputLinkCount);
@@ -125,20 +123,40 @@ export function inputFormHandler() {
     }
     let HTMLElm = htmlToElement(HTMLString);
     formLinkWrapper.insertBefore(HTMLElm, formLinkWrapper.firstChild);
-    reloadFlexSelect(HTMLElm.querySelector("select"));
-    arrOfInputLinks.push(new inputForm(HTMLElm));
+    let HTMLObj = new inputForm(HTMLElm);
+
+    reloadCustomSelect(HTMLElm.querySelector("select"));
+    arrOfInputLinks.push(HTMLObj);
+
+    if (isNewElm) {
+      scrollToElm(HTMLObj.containerElm);
+      focusInput(HTMLObj.tombolInput);
+    }
   }
 
-  tambahLinkBtn.addEventListener("click", function () {
-    addNewInput("regular");
+  function scrollToElm(elm) {
+    window.scrollTo(0, $(elm).offset().top / 2);
+  }
+
+  function focusInput(elm) {
+    setTimeout(() => {
+      $(elm).focus();
+    }, 10);
+  }
+
+  $(tambahLinkBtn).click(function () {
+    addNewInput("regular", true);
   });
 
   tambahFiturSpesialBtn.forEach((btn) => {
-    btn.addEventListener("click", function () {
+    $(btn).click(function () {
       let type = btn.getAttribute("data-type");
-      addNewInput(type);
+      $("#specialFeatureModal").on("hide.bs.modal", function () {
+        addNewInput(type, true);
+      });
     });
   });
+
   addNewInput("email-collection");
   addNewInput("whatsapp");
   addNewInput("embed");

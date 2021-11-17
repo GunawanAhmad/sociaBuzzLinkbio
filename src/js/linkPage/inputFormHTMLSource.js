@@ -6,7 +6,7 @@ export function regularInputLink(count) {
       </button>
     </div>
     <div class="d-flex flex-column input-container p-3">
-      <input class="form-control  mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+      <input class="form-control  mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
       <input class="form-control  mb-3 tenpx" type="text" placeholder="Link">
       <div class="icon-container d-flex align-items-center">
         <div class="switch mr-3 mr-sm-4">
@@ -37,7 +37,7 @@ export function headerInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Header / Section Title
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -62,7 +62,7 @@ export function donasiInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Terima Dukungan / Donasi <a class="font-weight-light text-primary" href=""><u>Settings</u></a>
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -114,7 +114,7 @@ export function digitalAksesInputLink(count) {
         </span>
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -169,7 +169,7 @@ export function kontenInputLink(count) {
         
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -221,7 +221,7 @@ export function paketJasaInputLink(count) {
         </span>
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -273,7 +273,7 @@ export function kerjasamaInputLink(count) {
         </span>
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -304,7 +304,7 @@ export function embedInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Embed Video/Musik
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     <div class="mb-3">
       <input class="form-control tenpx" type="text" placeholder="Link">
       <span class="eightpx help-text">Masukkan link YouTube / Spotify
@@ -339,7 +339,7 @@ export function whatsappInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Whatsapp
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     <div class="mb-3">
       <input class="form-control tenpx" type="text" placeholder="Nomor Whatsapp">
       <span class="eightpx help-text">Awali dengan kode negara | Contoh: <span class="text-primary" >62</span>87528371029
@@ -380,7 +380,7 @@ export function emailInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Email
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     <input class="form-control mb-3 tenpx" type="text" placeholder="Alamat email">
     
     <div class="mb-3">
@@ -412,7 +412,7 @@ export function emailColletionInputLink(count) {
       Email Collection
      
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol subscribe
     ">
     
@@ -445,7 +445,7 @@ export function videoRequestInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Terima Request Video Ucapan  <a class="font-weight-light text-primary" href=""><u>Settings</u></a>
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol">
+    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
