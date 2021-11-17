@@ -192,11 +192,14 @@ h2 {
   .rounded-link-container {
     background: none;
     border: none;
+    max-width: 100px;
 
     p {
       margin-bottom: 0.5rem;
       display: inline-block;
-      max-width: 120px;
+      // max-width: 120px;
+      text-align: center;
+      width: 100%;
       min-height: 1.5rem;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -378,6 +381,16 @@ h2 {
         display: none;
       }
     }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .rounded-link-wrapper .rounded-link-container {
+    max-width: 80px;
+  }
+  .rounded-link-container .rounded-link {
+    height: 80px !important;
+    width: 80px !important;
   }
 }
 
