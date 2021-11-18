@@ -20,21 +20,17 @@ export function circleLinkHandler() {
 
   cirlceLinkList.forEach((element, index) => {
     element.addEventListener("click", function () {
-      selectedCirlceLink = cirlceLinkList[index];
-
-      circleModalImg.src = selectedCirlceLink
-        .querySelector("img")
-        .getAttribute("src");
+      selectedCirlceLink = ArrOfCircleLinkObj[index];
+      circleModalImg.src = selectedCirlceLink.imgSrc;
 
       circleImg.src = circleModalImg.src;
       circleImg.index = index;
 
-      circelModalTitle.value =
-        selectedCirlceLink.querySelector(".cirlce-link-title").innerText;
+      circelModalTitle.value = selectedCirlceLink.title;
       currentLength = circelModalTitle.value.length;
       circleTitleLength.textContent = currentLength + " / " + MAX_LENGTH;
 
-      circelModalLink.value = selectedCirlceLink.getAttribute("data-link");
+      circelModalLink.value = selectedCirlceLink.link;
     });
   });
 
@@ -51,24 +47,37 @@ export function circleLinkHandler() {
       if (this.files[0].size > 1048576) {
         alert("Max 1MB");
         this.value = "";
+      } else {
+        tempImgSrc = window.URL.createObjectURL(this.files[0]);
+        circleModalImg.src = tempImgSrc;
+        this.value = "";
       }
-      tempImgSrc = window.URL.createObjectURL(this.files[0]);
-      circleModalImg.src = tempImgSrc;
-      this.value = "";
     });
 
   document
     .getElementById("circle-link-save-btn")
     .addEventListener("click", function () {
+      selectedCirlceLink.imgSrc = tempImgSrc;
+      selectedCirlceLink.title = circelModalTitle.value;
+      selectedCirlceLink.link = circelModalLink.value;
       if (tempImgSrc) {
-        selectedCirlceLink.querySelector("img").setAttribute("src", tempImgSrc);
+        selectedCirlceLink.elm
+          .querySelector("img")
+          .setAttribute("src", tempImgSrc);
         tempImgSrc = "";
       }
 
-      selectedCirlceLink.querySelector(".cirlce-link-title").innerText =
+      selectedCirlceLink.elm.querySelector(".cirlce-link-title").innerText =
         circelModalTitle.value;
 
-      selectedCirlceLink.setAttribute("data-link", circelModalLink.value);
+      selectedCirlceLink.elm.setAttribute("data-link", circelModalLink.value);
+      if (tempImgSrc || circelModalTitle.value || circelModalLink.value) {
+        toggleCheckboxAndDelBtn(
+          selectedCirlceLink.deleteBtn,
+          selectedCirlceLink.switch,
+          false
+        );
+      }
     });
 }
 
@@ -86,17 +95,25 @@ function getAllCircleValue() {
 }
 
 function CircleLinkObj(active, title, imgSrc, link, elm, index) {
+  this.elm = elm;
   this.link = link;
   this.title = title;
   this.imgSrc = imgSrc;
   this.active = active;
-  this.elm = elm;
   this.index = index;
+  this.deleteBtn = elm.querySelector("#del-btn");
+  this.checkbox = elm.querySelector("input[type='checkbox']");
+  this.switch = elm.querySelector(".switch");
   var _this = this;
 
-  this.deleteBtn = elm.querySelector("#del-btn");
   this.deleteBtn.addEventListener("click", function () {
-    deleteHandler(_this.elm, "circle", _this, updateCircleLinkElm);
+    deleteHandler(
+      _this.elm,
+      "circle",
+      _this,
+      updateCircleLinkElm,
+      toggleCheckboxAndDelBtn
+    );
   });
 }
 
@@ -107,4 +124,14 @@ function updateCircleLinkElm(index) {
     .querySelector(`#circle-img-${index + 1}`)
     .setAttribute("src", "");
   cirlceLinkList[index].setAttribute("data-link", "");
+}
+
+function toggleCheckboxAndDelBtn(delIcon, checkbox, isHide = true) {
+  if (isHide) {
+    delIcon.classList.add("hide");
+    checkbox.classList.add("hide");
+  } else {
+    checkbox.classList.remove("hide");
+    delIcon.classList.remove("hide");
+  }
 }

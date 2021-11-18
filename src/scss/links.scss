@@ -301,6 +301,14 @@ h2 {
         color: $gray;
         cursor: pointer;
       }
+
+      #del-btn.hide {
+        visibility: hidden;
+      }
+
+      .switch.hide {
+        visibility: hidden;
+      }
     }
   }
 
