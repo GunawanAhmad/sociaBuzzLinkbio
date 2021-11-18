@@ -11,4 +11,13 @@ export function previewHandler() {
   });
   previewBtn.addEventListener("click", togglePreview);
   closePreviewBtn.addEventListener("click", togglePreview);
+  var fixed = document.getElementById("fixed");
+
+  fixed.addEventListener(
+    "touchmove",
+    function (e) {
+      e.preventDefault();
+    },
+    false
+  );
 }

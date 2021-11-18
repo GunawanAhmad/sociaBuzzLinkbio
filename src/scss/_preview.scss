@@ -1,9 +1,7 @@
 @import "_variable.scss";
 
 .phone-wrapper {
-  transform: translate3d(0, 0, 0);
   .preview-btn {
-    transform: translate3d(0, 0, 0);
     position: fixed;
     bottom: 2rem;
     left: 50%;
@@ -22,11 +20,11 @@
     pointer-events: all;
     color: $dark-gray;
     font-size: 0.91rem;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
 .phone-container {
-  transform: translate3d(0, 0, 0);
   min-height: 710px;
   min-width: 366px;
   position: sticky;
@@ -38,8 +36,8 @@
 
   .close-preview-btn {
     position: absolute;
-    top: 5rem;
-    right: 4rem;
+    top: 3rem;
+    right: 3rem;
     font-size: 1.4rem;
     color: white;
     background: rgba(0, 0, 0, 0.2);
@@ -128,7 +126,7 @@
 
   /* width */
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
   }
 
   /* Track */
@@ -147,12 +145,6 @@
 
 @media screen and (max-width: 1250px) {
   .phone-wrapper {
-    // padding: 2rem 0;
-    -webkit-overflow-scrolling: touch;
-    height: 100vh;
-    width: 100vw;
-    min-height: -webkit-fill-available;
-    min-width: -webkit-fill-available;
     background-color: rgba(255, 255, 255, 0);
     position: fixed;
     top: 0;
@@ -163,7 +155,6 @@
     pointer-events: none;
     overflow-x: hidden;
     overflow-y: auto;
-    transform: translate3d(0, 0, 0);
 
     &.show {
       background-color: rgba(255, 255, 255, 1);
@@ -185,28 +176,41 @@
   .phone-container {
     display: none;
     position: relative;
-    top: 50%;
-    left: 50%;
     margin-top: 0;
     min-width: 0px;
 
-    -webkit-transform: translate(-50%, -50%); /* WebKit */
-    -moz-transform: translate(-50%, -50%); /* Mozilla */
-    -o-transform: translate(-50%, -50%); /* Opera */
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     height: auto;
     width: 100%;
+    padding: 0;
+    // max-height: 100vh;
     height: 100%;
 
     img {
       display: none;
     }
+    .content-wrapper {
+      // max-height: 100vh;
+      // height: 100%;
+      position: relative;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      border-radius: 0;
+    }
 
     .content-box {
+      // max-height: 100vh;
+      border-radius: 0;
       .content {
-        height: 100vh;
+        height: 100%;
         width: 100vw;
+        position: static;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
       }
     }
 

@@ -11,6 +11,10 @@
   opacity: 0;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 .d-flex {
   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
@@ -32,6 +36,12 @@
 html {
   line-height: 1.5;
   scroll-behavior: smooth;
+}
+.draggable-cursor * {
+  cursor: move !important; /* fallback: no `url()` support or images disabled */
+  cursor: -webkit-grabbing !important; /* Chrome 1-21, Safari 4+ */
+  cursor: -moz-grabbing !important; /* Firefox 1.5-26 */
+  cursor: grabbing !important; /* W3C standards syntax, should come least */
 }
 
 body {
@@ -252,7 +262,7 @@ h2 {
         border: none;
         outline: none;
         border-radius: 5px;
-        cursor: pointer;
+        cursor: grab;
         font-weight: 400 !important;
         visibility: visible;
       }
@@ -517,7 +527,7 @@ a.btn.btn-primary {
       justify-content: center;
       align-items: center;
       color: $gray;
-      cursor: default;
+      cursor: grab;
     }
 
     .help-text {

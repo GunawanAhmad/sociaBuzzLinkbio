@@ -6,6 +6,16 @@ export function rearrangeHandler() {
     handle: ".drag-btn",
     ghostClass: "ghost",
     forceFallback: true,
+    onStart: function (evt) {
+      document.documentElement.classList.add("draggable-cursor");
+      $("[data-toggle=tooltip]").tooltip("hide");
+      $("[data-toggle=tooltip]").tooltip("disable");
+    },
+    // Restores default page cursor
+    onEnd: function (evt) {
+      document.documentElement.classList.remove("draggable-cursor");
+      $("[data-toggle=tooltip]").tooltip("enable");
+    },
   });
 
   //for circle link
@@ -15,5 +25,15 @@ export function rearrangeHandler() {
     handle: ".arrange-btn",
     ghostClass: "ghost",
     forceFallback: true,
+    onStart: function (evt) {
+      document.documentElement.classList.add("draggable-cursor");
+      $("[data-toggle=tooltip]").tooltip("hide");
+      $("[data-toggle=tooltip]").tooltip("disable");
+    },
+    // Restores default page cursor
+    onEnd: function (evt) {
+      document.documentElement.classList.remove("draggable-cursor");
+      $("[data-toggle=tooltip]").tooltip("enable");
+    },
   });
 }
