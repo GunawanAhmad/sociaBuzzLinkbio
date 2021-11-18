@@ -6,7 +6,7 @@ $("#colorPicker").spectrum({
   preferredFormat: "hex",
   color: "black",
   palette: [
-    ["#000", "#444", "#666", "#999", "#ccc", "#eee"],
+    ["#000", "#444", "#666", "#999", "#ccc", "#fff"],
     ["#f00", "#f90", "#ff0", "#0f0", "#0ff", "#00f"],
     ["#f4cccc", "#fce5cd", "#fff2cc", "#d9ead3", "#d0e0e3", "#cfe2f3"],
     ["#ea9999", "#f9cb9c", "#ffe599", "#b6d7a8", "#a2c4c9", "#9fc5e8"],

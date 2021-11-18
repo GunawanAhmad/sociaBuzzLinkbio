@@ -25,19 +25,18 @@
 }
 
 .phone-container {
-  min-height: 710px;
-  min-width: 366px;
+  min-height: 690px;
+  min-width: 407px;
   position: sticky;
   top: 0;
   pointer-events: all;
-  padding: 2.5rem;
-  box-sizing: content-box;
-  margin-top: -2.5rem;
+
+  // margin-top: -2.5rem;
 
   .close-preview-btn {
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: 2rem;
+    right: 2rem;
     font-size: 1.4rem;
     color: white;
     background: rgba(0, 0, 0, 0.2);
@@ -90,16 +89,18 @@
     overflow: auto;
     border-radius: 20px;
     position: relative;
+    border: 15px solid black;
+    border-radius: 50px;
 
     .content {
       position: absolute;
       left: 50%;
       top: 50%;
-      -webkit-transform: translate(-50%, -52%); /* WebKit */
-      -moz-transform: translate(-50%, -52%); /* Mozilla */
-      -o-transform: translate(-50%, -52%); /* Opera */
-      -ms-transform: translate(-50%, -52%);
-      transform: translate(-50%, -52%);
+      -webkit-transform: translate(-50%, -50%); /* WebKit */
+      -moz-transform: translate(-50%, -50%); /* Mozilla */
+      -o-transform: translate(-50%, -50%); /* Opera */
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
       display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
       display: -ms-flexbox; /* TWEENER - IE 10 */
@@ -108,8 +109,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 86%;
-      width: 84%;
+      height: 100%;
+      width: 100%;
       overflow: auto;
 
       button {
@@ -202,6 +203,7 @@
 
     .content-box {
       // max-height: 100vh;
+      border: none;
       border-radius: 0;
       .content {
         height: 100%;

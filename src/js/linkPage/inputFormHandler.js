@@ -135,7 +135,11 @@ export function inputFormHandler() {
   }
 
   function scrollToElm(elm) {
-    window.scrollTo(0, $(elm).offset().top / 2);
+    let top = $(elm).offset().top / 2;
+    setTimeout(function () {
+      window.scrollTo(0, top);
+      console.log(top);
+    }, 2);
   }
 
   function focusInput(elm) {
@@ -151,9 +155,7 @@ export function inputFormHandler() {
   tambahFiturSpesialBtn.forEach((btn) => {
     $(btn).click(function () {
       let type = btn.getAttribute("data-type");
-      $("#specialFeatureModal").on("hide.bs.modal", function () {
-        addNewInput(type, true);
-      });
+      addNewInput(type, true);
     });
   });
 
