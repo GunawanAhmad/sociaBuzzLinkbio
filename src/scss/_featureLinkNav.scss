@@ -1,0 +1,19 @@
+.nav-tabs {
+  border-bottom: none;
+
+  .nav-link {
+    border: 1px solid #e94151;
+    margin: 0 0.3rem;
+    border-radius: 1.8rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #e94151;
+
+    &.active,
+    &:hover {
+      border: 1px solid #e94151;
+      background: #e94151;
+      color: #fff;
+    }
+  }
+}

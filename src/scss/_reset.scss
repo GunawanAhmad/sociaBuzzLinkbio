@@ -1,0 +1,83 @@
+html,
+body {
+  -webkit-overflow-scrolling: touch !important;
+  height: 100% !important;
+  position: relative;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  color: #000;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+input:focus,
+textarea:focus {
+  border-color: $primary !important;
+  box-shadow: 0 0 0 2px rgba(238, 126, 51, 0.07) !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+}
+
+::placeholder {
+  color: $dark-gray !important;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+input {
+  color: #000 !important;
+
+  &[type="text"] + p {
+    margin-top: 0.25rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  input::placeholder {
+    font-size: 0.7rem;
+  }
+}
+
+main {
+  min-height: calc(100vh - 40px);
+  padding-bottom: 2rem;
+}

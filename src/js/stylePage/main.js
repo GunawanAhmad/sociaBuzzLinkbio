@@ -1,3 +1,4 @@
+//color input lib
 $("#colorPicker").spectrum({
   showPalette: true,
   showInput: true,
@@ -16,3 +17,5 @@ $("#colorPicker").spectrum({
     ["#600", "#783f04", "#7f6000", "#274e13", "#0c343d", "#073763"],
   ],
 });
+
+//input counter number

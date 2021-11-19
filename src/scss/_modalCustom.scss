@@ -1,0 +1,24 @@
+.modal-header {
+  border-bottom: none;
+  padding: 0;
+}
+
+.modal-heading h2 {
+  font-weight: 700;
+}
+
+.modal-content {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.modal-body {
+  padding: 0 1rem 1rem;
+}
+
+.modal form label {
+  font-weight: 700;
+}
+.modal {
+  overflow: auto !important;
+}

@@ -19,6 +19,8 @@ gulp.task(
 
     gulp.watch("src/scss/*.scss", gulp.series("sass"));
     gulp.watch("./*.html").on("change", browserSync.reload);
+    gulp.watch("src/js/stylePage/*.js", browserSync.reload);
+    gulp.watch("src/js/linkPage/*.js", browserSync.reload);
   })
 );
 
