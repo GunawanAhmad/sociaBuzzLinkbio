@@ -5,10 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 
 @import "./_reset.scss";
-@import "./select2.scss";
-@import "./preview.scss";
-@import "./spectrumCustom.scss";
-@import "./customClass.scss";
+@import "./_select2.scss";
+@import "./_preview.scss";
+@import "./_spectrumCustom.scss";
+@import "./_customClass.scss";
 @import "./_footer.scss";
 @import "./_navbar.scss";
 @import "./_featureLinkNav.scss";
@@ -30,6 +30,53 @@
   }
 }
 
+.modal-body {
+  .croppie-container .cr-boundary {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 1;
+    // width: 80%;
+    height: 350px;
+  }
+
+  .file-input-container {
+    position: relative;
+    // max-width: 120px;
+    display: flex;
+    align-items: center;
+
+    label {
+      border: 1px solid black;
+      font-size: $tenpx;
+      // height: 100%;
+      // width: 100%;
+      min-width: 105px;
+      max-height: 40px;
+      background-color: transparent;
+      border-radius: 30px;
+      padding: 0.5rem 1rem;
+      margin-right: 1rem;
+      margin-bottom: 0;
+    }
+    input[type="file"] {
+      margin-top: 1rem;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1px solid green;
+      width: 0;
+      height: 0;
+    }
+
+    p {
+      font-size: $tenpx;
+      margin-bottom: 0;
+    }
+  }
+}
+
 .profile-section {
   .user-image-wrapper {
     display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
@@ -37,7 +84,7 @@
     display: -ms-flexbox; /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-
+    height: 100px;
     align-items: center;
 
     .user-image-setting {
@@ -53,28 +100,17 @@
           color: white !important;
         }
 
-        input {
-          opacity: 0;
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
-          width: 100%;
-          z-index: 2;
-        }
-        input[type=file], /* FF, IE7+, chrome (except button) */
-input[type=file]::-webkit-file-upload-button {
-          /* chromes and blink button */
-          cursor: pointer;
-        }
-
         .btn {
           position: relative;
           font-weight: 400;
           font-size: $tenpx;
           padding: 0.3rem 0.7rem;
           cursor: pointer;
-          pointer-events: none;
+
+          &:hover {
+            background-color: $primary;
+            color: white !important;
+          }
         }
       }
     }
@@ -98,6 +134,7 @@ input[type=file]::-webkit-file-upload-button {
         -ms-transform: scale(0.8, 0.8); /* Internet Explorer */
         transform: scale(0.8, 0.8); /* CSS3 */
         line-height: 1rem;
+        cursor: pointer;
       }
 
       label {
@@ -105,17 +142,28 @@ input[type=file]::-webkit-file-upload-button {
       }
     }
 
-    img {
+    .profile-img-container {
       height: 100px;
       width: 100px;
+      background-color: $gray;
       border-radius: 50%;
-      border: 0;
-      outline: none;
-      background-position: center center;
-      background-repeat: no-repeat;
-      object-fit: cover;
-      object-position: center;
-      pointer-events: none;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        border: 0;
+        outline: none;
+        background-position: center center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        object-position: center;
+        pointer-events: none;
+      }
+
+      img[src=""] {
+        display: none;
+      }
     }
   }
   .form-wrapper {
@@ -128,6 +176,7 @@ input[type=file]::-webkit-file-upload-button {
       }
     }
     form {
+      margin-bottom: 1.5rem;
       .form-group {
         margin-bottom: 0;
 
@@ -142,7 +191,12 @@ input[type=file]::-webkit-file-upload-button {
     }
 
     .icon-container {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+
+      .label {
+        margin: 0;
+        line-height: 1.2;
+      }
 
       .select-container {
         position: relative;
@@ -167,8 +221,9 @@ input[type=file]::-webkit-file-upload-button {
         }
       }
       .icon-list {
-        margin-bottom: 1rem;
+        margin: 0.6rem 0 0.8rem 0;
         font-size: 1.2rem;
+        line-height: 1;
 
         a {
           margin-right: 0.5rem;

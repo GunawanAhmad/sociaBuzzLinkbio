@@ -19,3 +19,72 @@ $("#colorPicker").spectrum({
 });
 
 //input counter number
+$("#nama-profil-input").keyup(function (e) {
+  $("#nama-profil-input-help").html(this.value.length + " / " + 60);
+});
+$("#deskripsi-input").keyup(function (e) {
+  $("#deskripsi-input-help").html(this.value.length + " / " + 160);
+});
+
+//input profile image
+function demoUpload() {
+  var $uploadCrop;
+  var isValidSize = true;
+  function readFile(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      if (input.files[0].size > 1048576) {
+        isValidSize = false;
+        alert("Max 1MB");
+        return;
+      }
+      isValidSize = true;
+      reader.onload = function (e) {
+        $(".upload-profile-img").addClass("ready");
+        $uploadCrop
+          .croppie("bind", {
+            url: e.target.result,
+          })
+          .then(function () {
+            console.log("jQuery bind complete");
+          });
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    } else {
+      alert("Sorry - you're browser doesn't support the FileReader API");
+    }
+  }
+
+  $uploadCrop = $("#upload-profile-img").croppie({
+    viewport: {
+      width: 300,
+      height: 300,
+      type: "circle",
+    },
+    enableExif: true,
+  });
+
+  $("#upload").on("change", function (e) {
+    readFile(this);
+    if (isValidSize) {
+      $(".file-name").html(this.files[0].name);
+    }
+  });
+
+  $(".get-cropped-img").on("click", function (ev) {
+    $uploadCrop
+      .croppie("result", {
+        type: "canvas",
+        size: "viewport",
+      })
+      .then(function (resp) {
+        $("#profile-img").attr("src", resp);
+        fetch(resp)
+          .then((res) => res.blob())
+          .then((res) => console.log(res));
+      });
+  });
+}
+
+demoUpload();

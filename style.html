@@ -6,9 +6,9 @@
     <title>Sociabuzz Linkbio</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" integrity="sha512-KuSX+43gVS5MEIJD2ewtrFPOHqC1PJnL8o2f5ciggPC0JUZ8XV0QXlfArO1mSzKkVFdRjsBDfrTU96C5SuRfqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./src/css/style.css" />
 
@@ -164,18 +164,54 @@
           <!--Feature Page navigation-->
           
 
+          <!--Image input Modal-->
+          <!-- Button trigger modal -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="profile-img-modal" tabindex="-1" role="dialog" aria-labelledby="profile-img-modal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="crop-container">
+                    <div class="upload-profile-img-wrap">
+                      <div id="upload-profile-img"></div>
+                    </div>
+                  </div>
+                  <div class="file-input-container">
+                    <label for="upload">Choose file</label>
+                    <input type="file" name='cropped' id="upload">
+                    <p class="file-name">No file selected</p>
+                  </div>
+                  <p class="tenpx gray-font mb-0 mt-2">Hanya format JPG, JPEG, PNG | Max 1MB | Min width 300px | Min height 300px</p>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="get-cropped-img btn btn-primary btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Image input Modal-->
+
+
           <section class="profile-section section">
               <h2 class="section-title text-primary mb-4">Profile</h2>
               <div class="user-image-wrapper mb-4">
-                <img src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg" alt="">
+                <div class="profile-img-container">
+                  <img src="" alt="" id="profile-img">
+                </div>
                 <div class="user-image-setting">
                   <div class="input-container">
-                    <input type="file">
-                    <button class="btn btn-fill-light tenpx">Upload image</button>
+                    <button class="btn btn-fill-light tenpx" data-toggle="modal" data-target="#profile-img-modal">Upload image</button>
                   </div>
                   <div class="setting">
-                    <div class="switch mr-3 ">
-                      <input type="checkbox" id="switch-3" /><label for="switch-3">Toggle</label>
+                    <div class="switch mr-2">
+                      <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
                     </div>
                     <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
                       <i class="fas fa-trash-alt"></i>
@@ -187,22 +223,21 @@
               <div class="form-wrapper">
                 <form action="">
                   <div class="form-group">
-                    <label for="nama_profil" class="elevenpx label">Email address</label>
-                    <input class="form-control" id="nama_profil" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted text-right eightpx">0/60</small>
+                    <label for="nama-profil-input" class="elevenpx label">Nama Profil</label>
+                    <input class="form-control" id="nama-profil-input" aria-describedby="nama-profil-input" maxlength="60">
+                    <small id="nama-profil-input-help" class="form-text text-muted text-right eightpx">0 / 60</small>
                   </div>
                   <div class="form-group">
-                    <label for="nama_profil" class="elevenpx label">Deskripsi 
+                    <label for="deskripsi-input" class="elevenpx label">Deskripsi 
                       <span class="text-secondary font-weight-light">(optional)</span>
                     </label>
-                    <input class="form-control" id="nama_profil" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted text-right eightpx">0/160</small>
+                    <input class="form-control" id="deskripsi-input" aria-describedby="deskripsi-input-help" maxlength="160">
+                    <small id="deskripsi-input-help" class="form-text text-muted text-right eightpx">0 / 160</small>
                   </div>
                   <div class="form-group">
-                    <label for="nama_profil" class="elevenpx label">Lokasi / Kota <span class="text-secondary font-weight-light">(optional)</span>
+                    <label for="lokasi-input" class="elevenpx label">Lokasi / Kota <span class="text-secondary font-weight-light">(optional)</span>
                     </label>
-                    <input class="form-control" id="nama_profil" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted text-right eightpx"></small>
+                    <input class="form-control" id="nama_profil" aria-describedby="lokasi-input">
                   </div>
                 </form>
                 <div class="icon-container">
@@ -270,12 +305,12 @@
             <div class="content-wrapper">
               <div class="content-box">
                 <div class="content">
-                  <iframe
+                  <!-- <iframe
                   src="https://linkbio-azure.vercel.app/"
                   frameborder="0"
                   width="100%"
                   height="100%"
-                ></iframe>
+                ></iframe> -->
                 </div>
               </div>
             </div>
@@ -320,6 +355,8 @@
     <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
     <script src="./src/js/lib/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./src/js/stylePage/main.js"></script>
   </body>
 </html>
