@@ -58,8 +58,8 @@ function demoUpload() {
 
   $uploadCrop = $("#upload-profile-img").croppie({
     viewport: {
-      width: 300,
-      height: 300,
+      width: 250,
+      height: 250,
       type: "circle",
     },
     enableExif: true,
