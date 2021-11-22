@@ -165,7 +165,6 @@
           
 
           <!--Image input Modal-->
-          <!-- Button trigger modal -->
 
           <!-- Modal -->
           <div class="modal fade" id="profile-img-modal" tabindex="-1" role="dialog" aria-labelledby="profile-img-modal" aria-hidden="true">
@@ -188,7 +187,6 @@
                     <p class="file-name">No file selected</p>
                   </div>
                   <p class="tenpx gray-font mb-0 mt-2">Hanya format JPG, JPEG, PNG | Max 1MB | Min width 300px | Min height 300px</p>
-
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="get-cropped-img btn btn-primary btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
@@ -197,6 +195,83 @@
             </div>
           </div>
           <!--Image input Modal-->
+
+
+          <!--Delete Modal-->
+          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <button type="button" class="btn btn-fill-light active mb-3" data-dismiss="modal" id="confirm-delete-btn">Hapus</button>
+                  <button type="button" class="btn btn-fill-light" data-dismiss="modal" id="cancel-delete-btn">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Delete Modal-->
+
+          <!--Edit Social Icons Modal-->
+          <div class="modal fade" id="socialIconsEditModal" tabindex="-1" role="dialog" aria-labelledby="socialIconsEditModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body pt-2 pb-3">
+                  
+                  <div class="input-container">
+                    <span><i class="fab fa-instagram fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link Instagram di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span><i class="fab fa-youtube fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link Youtube di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span><i class="fab fa-tiktok fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link TikTok di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span> <i class="fab fa-facebook-square fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link Facebook di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span><i class="fab fa-twitter fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link Twitter di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span><i class="fab fa-linkedin fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link LinkedIn di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span><i class="fab fa-spotify fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link Spotify di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span><i class="fab fa-discord fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link Discord di sini
+                    ">
+                  </div>
+                  <div class="input-container">
+                    <span><i class="fab fa-twitch fa-fw"></i></span>
+                    <input type="text" class="form-control tenpx" placeholder="Masukkan link Twitch di sini
+                    ">
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Edit Social Icons Modal-->
 
 
           <section class="profile-section section">
@@ -242,36 +317,36 @@
                 </form>
                 <div class="icon-container">
                   <p class="elevenpx label">Social icons
-                    <u class="text-primary setting">Edit</u>
+                    <u class="text-primary setting edit-btn" role="button" type="button"  data-toggle="modal" data-target="#socialIconsEditModal">Edit</u>
                   </p>
                   <div class="icon-list">
-                    <a href="">
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-discord"></i>
-                    </a>
-                    <a href="">
+                    </buton>
+                    <button data-toggle="modal" data-target="#socialIconsEditModal">
                       <i class="fab fa-twitch"></i>
-                    </a>
+                    </buton>
                   </div>
                   <div class="select-container">
                     <select id="akses" class="custom-select" name="akses"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
@@ -357,6 +432,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./src/js/stylePage/main.js"></script>
+    <script type="module" src="./src/js/stylePage/main.js"></script>
   </body>
 </html>
