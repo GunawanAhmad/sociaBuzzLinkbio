@@ -28,8 +28,8 @@ export function profileSection() {
   });
 
   //input profile image
-  function demoUpload() {
-    var $uploadCrop;
+  let $uploadCrop;
+  function uploadProfileImg() {
     var isValidSize = true;
     function readFile(input) {
       if (input.files && input.files[0]) {
@@ -50,10 +50,9 @@ export function profileSection() {
               console.log("jQuery bind complete");
             });
         };
-
         reader.readAsDataURL(input.files[0]);
       } else {
-        alert("Sorry - you're browser doesn't support the FileReader API");
+        return false;
       }
     }
 
@@ -68,6 +67,7 @@ export function profileSection() {
 
     $("#upload").on("change", function (e) {
       readFile(this);
+      console.log("hei");
       if (isValidSize) {
         $(".file-name").html(this.files[0].name);
       }
@@ -88,5 +88,26 @@ export function profileSection() {
     });
   }
 
-  demoUpload();
+  uploadProfileImg();
+
+  //delete profile imag
+  $(".profile-section #del-btn").click(function (e) {
+    deleteConfirmation();
+  });
+
+  function deleteConfirmation() {
+    document
+      .querySelector("#confirm-delete-btn")
+      .addEventListener("click", removeAtr);
+
+    document
+      .querySelector("#confirm-delete-btn")
+      .removeEventListener("click", removeAtr, true);
+    function removeAtr() {
+      $("#profile-img").attr("src", "");
+      $("#upload-profile-img").croppie("destroy");
+      $(".file-name").html("No file selected");
+      uploadProfileImg();
+    }
+  }
 }
