@@ -321,14 +321,28 @@
   width: auto;
 }
 
+.form-wrapper div.container:last-child {
+  margin-bottom: 0rem !important;
+}
+
 .form-wrapper {
   padding: 0;
+
+  &.container:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+  }
   .container {
     border: 1px solid $gray;
     padding: 0;
     border-radius: 20px;
     max-width: 100% !important;
     background-color: white;
+    margin-bottom: 1.5rem;
+
     .drag-btn {
       background: none;
       outline: none;
@@ -433,31 +447,6 @@
           outline: none;
           color: $gray;
           cursor: pointer;
-        }
-      }
-    }
-  }
-
-  .modal-content {
-    width: auto;
-    padding: 0;
-    .modal-body {
-      padding: 2rem;
-
-      .btn-fill-light {
-        background-color: transparent;
-        min-width: 120px;
-
-        &:hover {
-          background-color: $primary;
-        }
-
-        &.active {
-          background-color: $primary;
-
-          &:hover {
-            background-color: $dark-hover;
-          }
         }
       }
     }

@@ -1,5 +1,5 @@
 export function regularInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="regular-link-${count}">
+  return `<div class="container d-flex form-group " id="regular-link-${count}">
     <div >   
       <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
         <i class="fas fa-ellipsis-v"></i>
@@ -27,7 +27,7 @@ export function regularInputLink(count) {
 }
 
 export function headerInputLink(count) {
-  return ` <div class="container d-flex form-group mb-4" id="header-link-${count}">
+  return ` <div class="container d-flex form-group " id="header-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -52,7 +52,7 @@ export function headerInputLink(count) {
 }
 
 export function donasiInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="donasi-link-${count}">
+  return `<div class="container d-flex form-group " id="donasi-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -83,7 +83,7 @@ export function donasiInputLink(count) {
 }
 
 export function digitalAksesInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="akses-link-${count}">
+  return `<div class="container d-flex form-group " id="akses-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -135,7 +135,7 @@ export function digitalAksesInputLink(count) {
 }
 
 export function kontenInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="konten-link-${count}">
+  return `<div class="container d-flex form-group " id="konten-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -190,7 +190,7 @@ export function kontenInputLink(count) {
 }
 
 export function paketJasaInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="paketJasa-link-${count}">
+  return `<div class="container d-flex form-group " id="paketJasa-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -242,7 +242,7 @@ export function paketJasaInputLink(count) {
 }
 
 export function kerjasamaInputLink(count) {
-  return `<div class="container d-flex form-group mb-4"  id="kerjasama-link-${count}">
+  return `<div class="container d-flex form-group "  id="kerjasama-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -294,7 +294,7 @@ export function kerjasamaInputLink(count) {
 }
 
 export function embedInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="embed-link-${count}">
+  return `<div class="container d-flex form-group " id="embed-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -329,7 +329,7 @@ export function embedInputLink(count) {
 }
 
 export function whatsappInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="whatsapp-link-${count}">
+  return `<div class="container d-flex form-group " id="whatsapp-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -370,7 +370,7 @@ export function whatsappInputLink(count) {
 }
 
 export function emailInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="email-link-${count}">
+  return `<div class="container d-flex form-group " id="email-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -401,7 +401,7 @@ export function emailInputLink(count) {
 }
 
 export function emailColletionInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="emailCollection-link-${count}">
+  return `<div class="container d-flex form-group " id="emailCollection-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -435,7 +435,7 @@ export function emailColletionInputLink(count) {
 }
 
 export function videoRequestInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="videoUcapan-link-${count}">
+  return `<div class="container d-flex form-group " id="videoUcapan-link-${count}">
   <div >   
     <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>

@@ -20,15 +20,9 @@
   min-height: 100vh;
 }
 
-#deleteModal {
-  width: auto;
-
+.modal {
   .modal-content {
-    width: auto !important;
-
-    .btn-fill-light {
-      min-width: 120px;
-    }
+    border-radius: 20px;
   }
 }
 
