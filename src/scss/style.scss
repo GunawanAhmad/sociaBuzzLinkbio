@@ -399,8 +399,13 @@
 
 .theme-section {
   .card-list-wrapper {
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+
     .card-container {
-      max-width: 150px;
+      margin: 0 1rem;
+      flex: 1 0 19%;
+      max-width: 19%;
 
       .card {
         border-radius: 20px;
@@ -462,15 +467,28 @@
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 735px) {
   .theme-section .card-list-wrapper .card-container {
-    // max-width: 120px;
+    max-width: 50%;
+    flex: 1 0 28%;
+  }
+
+  .theme-section {
+    .pagination {
+      .page-item {
+        font-size: $tenpx;
+        .page-link {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .theme-section .card-list-wrapper .card-container {
-    max-width: 150px;
+    margin: 0 0.5rem;
   }
 }
 
