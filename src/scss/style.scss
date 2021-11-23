@@ -71,6 +71,13 @@
 
   .section-title {
     font-weight: 700;
+    font-size: $sixteen;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .section {
+    padding: 1rem;
   }
 }
 
@@ -387,6 +394,83 @@
   .alert {
     border-radius: 10px;
     border: 1px solid $gray;
+  }
+}
+
+.theme-section {
+  .card-list-wrapper {
+    .card-container {
+      max-width: 150px;
+
+      .card {
+        border-radius: 20px;
+        overflow: hidden;
+        border: none;
+        width: 100%;
+
+        &.active {
+          outline: 2px solid red;
+          outline-offset: 3px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .pagination {
+    .page-item {
+      font-size: $elevenpx;
+
+      &.chevron {
+        font-size: 10px;
+      }
+
+      &.active {
+        .page-link {
+          color: white;
+          z-index: 0;
+        }
+      }
+
+      .page-link {
+        color: $dark-gray;
+        padding: 0;
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span.double-chevron {
+          margin-top: -0.15rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .theme-section .card-list-wrapper .card-container {
+    // max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .theme-section .card-list-wrapper .card-container {
+    max-width: 150px;
   }
 }
 
