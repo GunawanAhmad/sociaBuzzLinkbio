@@ -4,4 +4,15 @@ export function extraPageSection() {
       tags: true,
     });
   });
+
+  var prevCardSelected = null;
+  $(".card").click(function (e) {
+    if (!prevCardSelected) {
+      prevCardSelected = e.currentTarget;
+    } else {
+      prevCardSelected.classList.remove("active");
+      prevCardSelected = e.currentTarget;
+    }
+    e.currentTarget.classList.add("active");
+  });
 }
