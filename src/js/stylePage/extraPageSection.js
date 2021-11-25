@@ -6,7 +6,7 @@ export function extraPageSection() {
   });
 
   var prevCardSelected = null;
-  $(".card").click(function (e) {
+  $(".theme-section .card").click(function (e) {
     if (!prevCardSelected) {
       prevCardSelected = e.currentTarget;
     } else {

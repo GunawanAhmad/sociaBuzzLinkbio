@@ -1,12 +1,11 @@
 export function profileSection() {
   //color input lib
-  $("#colorPicker").spectrum({
+  $(".colorPicker").spectrum({
     showPalette: true,
     showInput: true,
     showAlpha: true,
     allowEmpty: true,
     preferredFormat: "hex",
-    color: "black",
     palette: [
       ["#000", "#444", "#666", "#999", "#ccc", "#fff"],
       ["#f00", "#f90", "#ff0", "#0f0", "#0ff", "#00f"],
@@ -36,7 +35,7 @@ export function profileSection() {
         var reader = new FileReader();
         if (input.files[0].size > 1048576) {
           isValidSize = false;
-          alert("Max 1MB");
+          $(".modal .image-error-msg").html("Max 1MB");
           return;
         }
         isValidSize = true;
@@ -66,10 +65,26 @@ export function profileSection() {
     });
 
     $("#upload").on("change", function (e) {
-      readFile(this);
-      console.log("hei");
-      if (isValidSize) {
-        $(".file-name").html(this.files[0].name);
+      var _this = this;
+      if (this.files) {
+        var file, img;
+        img = new Image();
+        var objectUrl = URL.createObjectURL(this.files[0]);
+        img.onload = function () {
+          if (this.height > 300 && this.width > 300) {
+            readFile(_this);
+            URL.revokeObjectURL(objectUrl);
+            if (isValidSize && this.height > 300 && this.width > 300) {
+              $(".file-name").html(_this.files[0].name);
+              $(".modal .image-error-msg").html("");
+            }
+          } else {
+            $(".modal .image-error-msg").html(
+              "Min height 300px dan min width 300px"
+            );
+          }
+        };
+        img.src = objectUrl;
       }
     });
 

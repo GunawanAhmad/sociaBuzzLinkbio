@@ -181,10 +181,11 @@
                   </div>
                   <div class="file-input-container">
                     <label for="upload">Choose file</label>
-                    <input type="file" name='cropped' id="upload">
+                    <input type="file" name='cropped' id="upload" accept="image/x-png,image/gif,image/jpeg">
                     <p class="file-name">No file selected</p>
                   </div>
                   <p class="tenpx gray-font mb-0 mt-2">Hanya format JPG, JPEG, PNG | Max 1MB | Min width 300px | Min height 300px</p>
+                  <p class="image-error-msg mb-0 text-primary"></p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="get-cropped-img btn btn-primary btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
@@ -315,7 +316,7 @@
                 </form>
                 <div class="icon-container">
                   <p class="elevenpx label">Social icons
-                    <u class="text-primary setting edit-btn" role="button" type="button"  data-toggle="modal" data-target="#socialIconsEditModal">Edit</u>
+                    <u class="text-primary setting edit-btn pointer"  data-toggle="modal" data-target="#socialIconsEditModal">Edit</u>
                   </p>
                   <div class="icon-list">
                     <button data-toggle="modal" data-target="#socialIconsEditModal">
@@ -364,7 +365,7 @@
                   </p>  
                   <div class="color-input-container">
                     <div class="preview"></div>
-                    <input type="text" id="colorPicker">
+                    <input type="text" id="colorPicker-profile" class="colorPicker" value="black">
                   </div>
                 </div>
               </div>
@@ -533,6 +534,80 @@
             </ul>
           </nav>
         </section>
+
+        <section class="background-section section">
+          <h2 class="section-title text-primary mb-4">Background</h2>
+          <div class="card-list-wrapper d-flex justify-content-lg-around justify-content-sm-between justify-content-center">
+            <div class="card-container">
+              <div class="card mb-2 flat-background">
+                <img src="./src/img/card.png" alt="">
+              </div>
+              <p class="ninepx text-center mb-0">Flat
+              </p>
+              <div class="color-input-wrapper d-flex justify-content-center"> 
+                <div class="color-input-container">
+                  <div class="preview"></div>
+                  <input type="text" id="colorPicker-background" class="colorPicker" value="#FFEDED
+                  ">
+                </div>
+              </div>
+            </div>
+            <div class="card-container">
+              <div class="card mb-2 gradient-background">
+                <img src="./src/img/card.png" alt="">
+              </div>
+              <p class="ninepx text-center mb-0">Gradient
+              </p>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="color-input-wrapper d-flex justify-content-center"> 
+                  <div class="color-input-container">
+                    <div class="preview"></div>
+                    <input type="text" value="#e94151" id="colorPicker-background" class="colorPicker">
+                  </div>
+                </div>
+                <div class="color-input-wrapper d-flex justify-content-center"> 
+                  <div class="color-input-container">
+                    <div class="preview"></div>
+                    <input type="text" value="#FFEDED
+                    " id="colorPicker-background" class="colorPicker">
+                  </div>
+                </div>
+                <div class="rotated-img">
+                  <img src="./src/img/rotated.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="card-container">
+              <div class="card mb-2">
+                <img src="./src/img/card.png" alt="">
+                <div class="content d-flex justify-content-center align-items-center">
+                  <i class="fas fa-image"></i>
+                </div>
+              </div>
+              <p class="ninepx text-center mb-0">Image
+              </p>
+              <div class="text-center">
+                <a type="button" class="text-primary ninepx mr-2"><u>Edit</u></a>
+                <a type="button" class="text-primary ninepx ml-2"><u>Hapus</u></a>
+              </div>
+            </div>
+            <div class="card-container">
+              <div class="card mb-2">
+                <div class="content d-flex justify-content-center align-items-center">
+                  <i class="fas fa-video"></i>
+                </div>
+                <img src="./src/img/card.png" alt="">
+              </div>
+              <p class="ninepx text-center mb-0">Video
+              </p>
+              <div class="text-center">
+                <a type="button" class="text-primary ninepx mr-2"><u>Edit</u></a>
+                <a type="button" class="text-primary ninepx ml-2"><u>Hapus</u></a>
+              </div>
+
+            </div>
+          </div>
+        </section>
         </div>
         
         <!--Phone preview-->
@@ -542,12 +617,12 @@
             <div class="content-wrapper">
               <div class="content-box">
                 <div class="content">
-                  <!-- <iframe
+                  <iframe
                   src="https://linkbio-azure.vercel.app/"
                   frameborder="0"
                   width="100%"
                   height="100%"
-                ></iframe> -->
+                ></iframe>
                 </div>
               </div>
             </div>

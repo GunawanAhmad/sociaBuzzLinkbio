@@ -95,7 +95,7 @@ export function digitalAksesInputLink(count) {
       </u></a>
     </p>
     <div class="form-group">
-      <div class="select-container">
+      <div class="select-container mb-3">
         <select id="akses-${count}" class="select2" name="akses-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
         ">
           <option value=""></option>
@@ -147,8 +147,8 @@ export function kontenInputLink(count) {
       </u></a>
     </p>
     <div class="form-group">
-      <div class="select-container">
-        <div class="select-container">
+      <div class="select-container mb-3">
+        <div class="select-container mb-3">
           <select id="konten-${count}" class="select2" name="konten-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
           ">
             <option value=""></option>
@@ -202,7 +202,7 @@ export function paketJasaInputLink(count) {
       </u></a>
     </p>
     <div class="form-group">
-      <div class="select-container">
+      <div class="select-container mb-3">
         <select id="jasa-${count}" class="select2" name="jasa-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
         ">
           <option value=""></option>
@@ -254,7 +254,7 @@ export function kerjasamaInputLink(count) {
       </u></a>
     </p>
     <div class="form-group">
-      <div class="select-container">
+      <div class="select-container mb-3">
         <select id="requestKerjasama-${count}" class="select2" name="requestKerjasama-${count}"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
         ">
           <option value=""></option>
