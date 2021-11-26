@@ -512,10 +512,10 @@
         }
 
         &.flat-background {
-          background: $gray;
+          background: $pink;
         }
         &.gradient-background {
-          background: linear-gradient($dark-gray, $gray);
+          background: linear-gradient(0deg, $pink, $primary);
         }
       }
 

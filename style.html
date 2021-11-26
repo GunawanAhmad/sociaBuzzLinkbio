@@ -539,7 +539,7 @@
           <h2 class="section-title text-primary mb-4">Background</h2>
           <div class="card-list-wrapper d-flex justify-content-lg-around justify-content-sm-between justify-content-center">
             <div class="card-container">
-              <div class="card mb-2 flat-background">
+              <div class="card mb-2 flat-background" id="flat-background">
                 <img src="./src/img/card.png" alt="">
               </div>
               <p class="ninepx text-center mb-0">Flat
@@ -547,32 +547,32 @@
               <div class="color-input-wrapper d-flex justify-content-center"> 
                 <div class="color-input-container">
                   <div class="preview"></div>
-                  <input type="text" id="colorPicker-background" class="colorPicker" value="#FFEDED
+                  <input type="text" id="colorPicker-background-flat" class="colorPicker" value="#FFEDED
                   ">
                 </div>
               </div>
             </div>
             <div class="card-container">
-              <div class="card mb-2 gradient-background">
+              <div class="card mb-2 gradient-background" id="gradient-background">
                 <img src="./src/img/card.png" alt="">
               </div>
               <p class="ninepx text-center mb-0">Gradient
               </p>
               <div class="d-flex justify-content-center align-items-center">
                 <div class="color-input-wrapper d-flex justify-content-center"> 
-                  <div class="color-input-container">
+                  <div class="color-input-container" >
                     <div class="preview"></div>
-                    <input type="text" value="#e94151" id="colorPicker-background" class="colorPicker">
+                    <input type="text" value="#e94151" id="colorPicker-background-grad1" class="colorPicker">
                   </div>
                 </div>
                 <div class="color-input-wrapper d-flex justify-content-center"> 
                   <div class="color-input-container">
                     <div class="preview"></div>
                     <input type="text" value="#FFEDED
-                    " id="colorPicker-background" class="colorPicker">
+                    " id="colorPicker-background-grad2" class="colorPicker">
                   </div>
                 </div>
-                <div class="rotated-img">
+                <div class="rotated-img pointer" id="rotate-gradient-btn">
                   <img src="./src/img/rotated.png" alt="">
                 </div>
               </div>
@@ -617,12 +617,12 @@
             <div class="content-wrapper">
               <div class="content-box">
                 <div class="content">
-                  <iframe
+                  <!-- <iframe
                   src="https://linkbio-azure.vercel.app/"
                   frameborder="0"
                   width="100%"
                   height="100%"
-                ></iframe>
+                ></iframe> -->
                 </div>
               </div>
             </div>
