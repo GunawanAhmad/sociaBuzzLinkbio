@@ -1,7 +1,7 @@
 export function regularInputLink(count) {
   return `<div class="container d-flex form-group " id="regular-link-${count}">
     <div >   
-      <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+      <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
         <i class="fas fa-ellipsis-v"></i>
       </button>
     </div>
@@ -12,13 +12,13 @@ export function regularInputLink(count) {
         <div class="switch mr-3 mr-sm-4">
           <input type="checkbox" id="switch-1" /><label for="switch-1">Toggle</label>
         </div>
-        <button class="mr-3 mr-sm-4" id="del-btn" data-toggle="modal" data-target="#deleteModal">
+        <button class="mr-3 mr-sm-4" id="del-btn" data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete" data-tooltip="tooltip" data-placement="top" title="Delete">
           <i class="fas fa-trash-alt"></i>
         </button>
-        <button class="mr-3 mr-sm-4">
+        <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
           <i class="fas fa-image"></i>
         </button>
-        <button class="mr-3 mr-sm-4 chart">
+        <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
           <i class="fa fa-chart-bar" aria-hidden="true"></i>
         </button>
       </div>
@@ -29,7 +29,7 @@ export function regularInputLink(count) {
 export function headerInputLink(count) {
   return ` <div class="container d-flex form-group " id="header-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -43,7 +43,7 @@ export function headerInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-2" /><label for="switch-2">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" data-target="#deleteModal" id="del-btn">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete" id="del-btn">
         <i class="fas fa-trash-alt"></i>
       </button>
     </div>
@@ -54,7 +54,7 @@ export function headerInputLink(count) {
 export function donasiInputLink(count) {
   return `<div class="container d-flex form-group " id="donasi-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -68,13 +68,13 @@ export function donasiInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-3" /><label for="switch-3">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
         <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -85,7 +85,7 @@ export function donasiInputLink(count) {
 export function digitalAksesInputLink(count) {
   return `<div class="container d-flex form-group " id="akses-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -120,13 +120,13 @@ export function digitalAksesInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-4" /><label for="switch-4">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
         <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -137,7 +137,7 @@ export function digitalAksesInputLink(count) {
 export function kontenInputLink(count) {
   return `<div class="container d-flex form-group " id="konten-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -175,13 +175,13 @@ export function kontenInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-5" /><label for="switch-5">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
         <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -192,7 +192,7 @@ export function kontenInputLink(count) {
 export function paketJasaInputLink(count) {
   return `<div class="container d-flex form-group " id="paketJasa-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -227,13 +227,13 @@ export function paketJasaInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-6" /><label for="switch-6">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
         <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -244,7 +244,7 @@ export function paketJasaInputLink(count) {
 export function kerjasamaInputLink(count) {
   return `<div class="container d-flex form-group "  id="kerjasama-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -279,13 +279,13 @@ export function kerjasamaInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-7" /><label for="switch-7">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
         <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -296,7 +296,7 @@ export function kerjasamaInputLink(count) {
 export function embedInputLink(count) {
   return `<div class="container d-flex form-group " id="embed-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -314,13 +314,13 @@ export function embedInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-8" /><label for="switch-8">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
       <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -331,7 +331,7 @@ export function embedInputLink(count) {
 export function whatsappInputLink(count) {
   return `<div class="container d-flex form-group " id="whatsapp-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -355,13 +355,13 @@ export function whatsappInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-9" /><label for="switch-9">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
       <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -372,7 +372,7 @@ export function whatsappInputLink(count) {
 export function emailInputLink(count) {
   return `<div class="container d-flex form-group " id="email-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -392,8 +392,14 @@ export function emailInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-10" /><label for="switch-10">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
+      </button>
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+        <i class="fas fa-image"></i>
+      </button>
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
+        <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
   </div>
@@ -403,7 +409,7 @@ export function emailInputLink(count) {
 export function emailColletionInputLink(count) {
   return `<div class="container d-flex form-group " id="emailCollection-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -420,13 +426,13 @@ export function emailColletionInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-11" /><label for="switch-11">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
         <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>
@@ -437,7 +443,7 @@ export function emailColletionInputLink(count) {
 export function videoRequestInputLink(count) {
   return `<div class="container d-flex form-group " id="videoUcapan-link-${count}">
   <div >   
-    <button class="drag-btn" data-toggle="tooltip" data-placement="left" title="Drag to reorder">
+    <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
     </button>
   </div>
@@ -451,13 +457,13 @@ export function videoRequestInputLink(count) {
       <div class="switch mr-3 mr-sm-4">
         <input type="checkbox" id="switch-3" /><label for="switch-3">Toggle</label>
       </div>
-      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+      <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
         <i class="fas fa-image"></i>
       </button>
-      <button class="mr-3 mr-sm-4 chart">
+      <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
         <i class="fa fa-chart-bar" aria-hidden="true"></i>
       </button>
     </div>

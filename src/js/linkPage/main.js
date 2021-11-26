@@ -19,7 +19,7 @@ function isTouchDevice() {
 }
 
 if (isTouchDevice() === false) {
-  $('[data-toggle="tooltip"]').tooltip({ trigger: "hover" });
+  $('[data-tooltip="tooltip"]').tooltip({ trigger: "hover" });
 }
 
 (function () {

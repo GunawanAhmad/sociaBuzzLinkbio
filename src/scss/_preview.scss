@@ -1,6 +1,7 @@
 @import "_variable.scss";
 
 .phone-wrapper {
+  transform: translate3d(0, 0, 0);
   .preview-btn {
     position: fixed;
     bottom: 2rem;
@@ -93,8 +94,10 @@
     position: relative;
     border: 15px solid black;
     border-radius: 50px;
+    transform: translate3d(0, 0, 0);
 
     .content {
+      transform: translate3d(0, 0, 0);
       position: absolute;
       left: 50%;
       top: 50%;

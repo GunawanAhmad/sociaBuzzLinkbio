@@ -185,7 +185,7 @@
                     <p class="file-name">No file selected</p>
                   </div>
                   <p class="tenpx gray-font mb-0 mt-2">Hanya format JPG, JPEG, PNG | Max 1MB | Min width 300px | Min height 300px</p>
-                  <p class="image-error-msg mb-0 text-primary"></p>
+                  <p class="image-error-msg mb-0 text-primary tenpx"></p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="get-cropped-img btn btn-primary btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
@@ -287,7 +287,7 @@
                     <div class="switch mr-2">
                       <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
                     </div>
-                    <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+                    <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
                       <i class="fas fa-trash-alt"></i>
                     </button>
                   </div>
@@ -423,7 +423,7 @@
                 <button class="btn btn-fill-light tenpx">Upload image
                   <input type="file">
                 </button>
-                <button class="mr-3 mr-sm-4 trash-btn"  data-toggle="modal" id="del-btn" data-target="#deleteModal">
+                <button class="mr-3 mr-sm-4 trash-btn"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
                   <i class="fas fa-trash-alt"></i>
                 </button>
                 <p class="eightpx mt-1 mb-0">Hanya format JPG, JPEG, PNG, GIF | Max 5MB
@@ -572,7 +572,7 @@
                     " id="colorPicker-background-grad2" class="colorPicker">
                   </div>
                 </div>
-                <div class="rotated-img pointer" id="rotate-gradient-btn">
+                <div class="rotated-img pointer" id="rotate-gradient-btn" data-tooltip="tooltip" data-placement="top" title="Rotate">
                   <img src="./src/img/rotated.png" alt="">
                 </div>
               </div>
@@ -617,12 +617,12 @@
             <div class="content-wrapper">
               <div class="content-box">
                 <div class="content">
-                  <!-- <iframe
+                  <iframe
                   src="https://linkbio-azure.vercel.app/"
                   frameborder="0"
                   width="100%"
                   height="100%"
-                ></iframe> -->
+                ></iframe>
                 </div>
               </div>
             </div>
@@ -665,6 +665,7 @@
     <!---------------- Footer --------------------->
 
     <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./src/js/lib/popper.min.js"></script>
     <script src="./src/js/lib/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>

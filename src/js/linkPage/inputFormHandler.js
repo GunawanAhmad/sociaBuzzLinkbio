@@ -45,6 +45,8 @@ function inputForm(elm) {
   this.containerElm = elm;
   this.deleteBtn = this.containerElm.querySelector("#del-btn");
   this.tombolInput = this.containerElm.querySelector("#tombol-input");
+  this.thumbnailBtn = this.containerElm.querySelector("#thumbnail-btn");
+  this.analyticsBtn = this.containerElm.querySelector("#analytics-btn");
   this.selectInputFormForDelete = function () {
     deleteHandler(elm, "form-link");
   };
@@ -124,9 +126,9 @@ export function inputFormHandler() {
     let HTMLElm = htmlToElement(HTMLString);
     formLinkWrapper.insertBefore(HTMLElm, formLinkWrapper.firstChild);
     let HTMLObj = new inputForm(HTMLElm);
-
+    activateTooltip(HTMLObj);
     reloadCustomSelect(HTMLElm.querySelector("select"));
-    arrOfInputLinks.push(HTMLObj);
+    // arrOfInputLinks.push(HTMLObj);
 
     if (isNewElm) {
       scrollToElm(HTMLObj.containerElm);
@@ -138,7 +140,6 @@ export function inputFormHandler() {
     let top = $(elm).offset().top / 2;
     setTimeout(function () {
       window.scrollTo(0, top);
-      console.log(top);
     }, 2);
   }
 
@@ -146,6 +147,22 @@ export function inputFormHandler() {
     setTimeout(() => {
       $(elm).focus();
     }, 10);
+  }
+
+  function activateTooltip(Obj) {
+    function isTouchDevice() {
+      return (
+        true ==
+        ("ontouchstart" in window ||
+          (window.DocumentTouch && document instanceof DocumentTouch))
+      );
+    }
+
+    if (isTouchDevice() === false) {
+      $(Obj.deleteBtn).tooltip({ trigger: "hover" });
+      $(Obj.thumbnailBtn).tooltip({ trigger: "hover" });
+      $(Obj.analyticsBtn).tooltip({ trigger: "hover" });
+    }
   }
 
   $(tambahLinkBtn).click(function () {
@@ -160,6 +177,7 @@ export function inputFormHandler() {
   });
 
   addNewInput("email-collection");
+  addNewInput("email");
   addNewInput("whatsapp");
   addNewInput("embed");
   addNewInput("video-request");

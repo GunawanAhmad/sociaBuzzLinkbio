@@ -137,15 +137,15 @@
     display: -ms-flexbox; /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    height: 100px;
     align-items: center;
+    height: 100px;
 
     .user-image-setting {
       margin-left: 1rem;
 
       .input-container {
         position: relative;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
         cursor: pointer !important;
 
         &:hover .btn {
@@ -174,6 +174,7 @@
       display: -ms-flexbox; /* TWEENER - IE 10 */
       display: -webkit-flex; /* NEW - Chrome */
       display: flex;
+      align-items: center;
 
       button {
         background: none;
@@ -185,7 +186,6 @@
         -o-transform: scale(0.8, 0.8); /* Opera */
         -ms-transform: scale(0.8, 0.8); /* Internet Explorer */
         transform: scale(0.8, 0.8); /* CSS3 */
-        line-height: 1rem;
         cursor: pointer;
         outline: none;
       }
@@ -383,7 +383,6 @@
       -o-transform: scale(0.8, 0.8);
       -ms-transform: scale(0.8, 0.8);
       transform: scale(0.8, 0.8);
-      line-height: 1rem;
       cursor: pointer;
       outline: none;
       vertical-align: middle;
@@ -532,6 +531,13 @@
         word-wrap: break-word;
       }
     }
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 350px;
+    margin: 1.75rem auto;
   }
 }
 
