@@ -72,11 +72,7 @@ export function circleLinkHandler() {
 
       selectedCirlceLink.elm.setAttribute("data-link", circelModalLink.value);
       if (tempImgSrc || circelModalTitle.value || circelModalLink.value) {
-        toggleCheckboxAndDelBtn(
-          selectedCirlceLink.deleteBtn,
-          selectedCirlceLink.switch,
-          false
-        );
+        toggleTitleAndIcon(selectedCirlceLink.elm, false);
       }
     });
 }
@@ -112,7 +108,7 @@ function CircleLinkObj(active, title, imgSrc, link, elm, index) {
       "circle",
       _this,
       updateCircleLinkElm,
-      toggleCheckboxAndDelBtn
+      toggleTitleAndIcon
     );
   });
 }
@@ -126,12 +122,6 @@ function updateCircleLinkElm(index) {
   cirlceLinkList[index].setAttribute("data-link", "");
 }
 
-function toggleCheckboxAndDelBtn(delIcon, checkbox, isHide = true) {
-  if (isHide) {
-    delIcon.classList.add("hide");
-    checkbox.classList.add("hide");
-  } else {
-    checkbox.classList.remove("hide");
-    delIcon.classList.remove("hide");
-  }
+function toggleTitleAndIcon(elm) {
+  elm.classList.toggle("hide");
 }

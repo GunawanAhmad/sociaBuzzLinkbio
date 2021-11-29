@@ -2,7 +2,7 @@ import {
   regularInputLink,
   headerInputLink,
   donasiInputLink,
-  digitalAksesInputLink,
+  produkDigitalInputLink,
   kontenInputLink,
   paketJasaInputLink,
   kerjasamaInputLink,
@@ -58,7 +58,7 @@ export function inputFormHandler() {
   let headerInputLinkCount = 0;
   let donasiInputLinkCount = 0;
   let kontenInputLinkCount = 0;
-  let digitalAksesInputLinkCount = 0;
+  let produkDigitalInputLinkCount = 0;
   let paketJasaInputLinkCount = 0;
   let kerjasamaInputLinkCount = 0;
   let embedInputLinkCount = 0;
@@ -82,9 +82,9 @@ export function inputFormHandler() {
         HTMLString = donasiInputLink(donasiInputLinkCount);
         donasiInputLinkCount++;
         break;
-      case "digital-akses":
-        HTMLString = digitalAksesInputLink(digitalAksesInputLinkCount);
-        digitalAksesInputLinkCount++;
+      case "produk-digital":
+        HTMLString = produkDigitalInputLink(produkDigitalInputLinkCount);
+        produkDigitalInputLinkCount++;
         break;
       case "konten":
         HTMLString = kontenInputLink(kontenInputLinkCount);
@@ -184,7 +184,7 @@ export function inputFormHandler() {
   addNewInput("kerjasama");
   addNewInput("paket-jasa");
   addNewInput("konten");
-  addNewInput("digital-akses");
+  addNewInput("produk-digital");
   addNewInput("donasi");
   addNewInput("header");
   addNewInput("regular");

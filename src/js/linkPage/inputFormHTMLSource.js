@@ -82,8 +82,8 @@ export function donasiInputLink(count) {
 </div>`;
 }
 
-export function digitalAksesInputLink(count) {
-  return `<div class="container d-flex form-group " id="akses-link-${count}">
+export function produkDigitalInputLink(count) {
+  return `<div class="container d-flex form-group" id="produk-digital-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -91,7 +91,7 @@ export function digitalAksesInputLink(count) {
   </div>
   <div class="d-flex flex-column input-container p-3">
     <p class="title  mb-3 elevenpx font-weight-bold">
-      Jual Produk Digital / Akses  <a class="font-weight-light text-primary" href=""><u>Edit/Add
+    Jual Produk Digital (File/Link)  <a class="font-weight-light text-primary" href=""><u>Edit/Add
       </u></a>
     </p>
     <div class="form-group">

@@ -98,6 +98,18 @@
     border: none;
     max-width: 100px;
 
+    &.hide {
+      .icon-container {
+        display: none !important;
+      }
+      p {
+        display: none;
+      }
+      .rounded-link {
+        margin-bottom: 0 !important;
+      }
+    }
+
     p {
       margin-bottom: 0.5rem;
       display: inline-block;
@@ -194,14 +206,6 @@
         outline: none;
         color: $gray;
         cursor: pointer;
-      }
-
-      #del-btn.hide {
-        visibility: hidden;
-      }
-
-      .switch.hide {
-        visibility: hidden;
       }
     }
   }
