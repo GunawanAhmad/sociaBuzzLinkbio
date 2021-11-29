@@ -39,7 +39,7 @@
         top: 0;
         height: 100%;
         width: 100%;
-        padding-left: 1.8rem;
+        padding-left: 2rem;
       }
 
       span {
@@ -295,6 +295,15 @@
         }
       }
     }
+
+    .color-input-wrapper {
+      .label {
+        margin-bottom: 0.4rem;
+      }
+      .sp-replacer {
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -405,10 +414,9 @@
       margin: 0 1rem;
       flex: 1 0 19%;
       max-width: 19%;
-      border-radius: 20px;
 
       .card {
-        border-radius: 20px;
+        border-radius: $border-radius-input;
         overflow: hidden;
         border: none;
         width: 100%;
@@ -448,8 +456,8 @@
         color: $dark-gray;
         padding: 0;
         display: inline-block;
-        height: 35px;
-        width: 35px;
+        height: 45px;
+        width: 45px;
         display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
         display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
         display: -ms-flexbox; /* TWEENER - IE 10 */
@@ -462,6 +470,31 @@
           margin-top: -0.15rem;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .theme-section .pagination .page-item .page-link {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .theme-section .pagination .page-item .page-link {
+    height: 37px;
+    width: 37px;
+  }
+}
+@media screen and (max-width: 335px) {
+  .theme-section .pagination .page-item .page-link {
+    height: 30px;
+    width: 30px;
+    font-size: $tenpx;
+
+    span.chevron {
+      font-size: 10px;
     }
   }
 }
@@ -484,7 +517,7 @@
 
       .card {
         border: 1px solid $dark-gray;
-        border-radius: 20px;
+        border-radius: $border-radius-input;
         position: relative;
         overflow: hidden;
 
@@ -503,6 +536,36 @@
           border-radius: 20px;
           font-size: 3.5rem;
           color: $gray;
+
+          input[type="file"] {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            z-index: 2;
+          }
+
+          img,
+          video {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            visibility: visible;
+            background-position: center center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            object-position: center;
+          }
+
+          img[src=""],
+          video[src=""] {
+            visibility: hidden;
+          }
         }
 
         &.active {
@@ -601,18 +664,6 @@
       img {
         height: 100%;
         width: 100%;
-      }
-    }
-  }
-
-  .theme-section {
-    .pagination {
-      .page-item {
-        font-size: $tenpx;
-        .page-link {
-          height: 30px;
-          width: 30px;
-        }
       }
     }
   }

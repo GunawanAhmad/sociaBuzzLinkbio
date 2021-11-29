@@ -3,12 +3,13 @@ let obj_global;
 let inputType_global;
 let updateCircleElm_global;
 let toggleTitleAndIconBtn_global;
+let backgroundElm_global;
 export function deleteHandler(
   elm,
   inputType,
-  obj,
-  updateCirlceElm,
-  toggleTitleAndIconBtn
+  obj = null,
+  updateCirlceElm = null,
+  toggleTitleAndIconBtn = null
 ) {
   elm_global = elm;
   inputType_global = inputType;
@@ -29,5 +30,7 @@ function deleteFunc() {
     updateCircleElm_global(obj_global.index);
   } else if (inputType_global == "form-link") {
     elm_global.remove();
+  } else if (inputType_global == "background") {
+    $(elm_global).attr("src", "");
   }
 }

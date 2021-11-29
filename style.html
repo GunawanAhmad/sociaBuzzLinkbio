@@ -377,7 +377,7 @@
               <input type="checkbox" id="switch-extra" /><label for="switch-extra">Toggle</label>
             </div>
             <div class="form">
-              <div class="select-container mb-4">
+              <div class="select-container mb-3">
                 <select id="select2-1" class="select2" name="select2-1"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
                 ">
                   <option value=""></option>
@@ -395,7 +395,7 @@
                   <i class="fas fa-chevron-down"></i>
                 </span>
               </div>
-              <div class="select-container mb-4">
+              <div class="select-container mb-3">
                 <select id="select2-2" class="select2" name="select2-2"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
                 ">
                   <option value=""></option>
@@ -413,13 +413,13 @@
                   <i class="fas fa-chevron-down"></i>
                 </span>
               </div>
-              <input class="form-control tenpx mb-4" id="judul-tab" aria-describedby="judul-tab" placeholder="Judul tab">
-              <div class="form-group mb-4">
+              <input class="form-control tenpx mb-3" id="judul-tab" aria-describedby="judul-tab" placeholder="Judul tab">
+              <div class="form-group mb-3">
                 <input class="form-control tenpx" id="link" aria-describedby="link" maxlength="160" placeholder="Link">
                 <small id="deskripsi-input-help" class="form-text text-left eightpx">Masukkan link YouTube / Spotify
                 </small>
               </div>
-              <div class="image-option mb-4">
+              <div class="image-option mb-3">
                 <button class="btn btn-fill-light tenpx">Upload image
                   <input type="file">
                 </button>
@@ -429,7 +429,7 @@
                 <p class="eightpx mt-1 mb-0">Hanya format JPG, JPEG, PNG, GIF | Max 5MB
                 </p>
               </div>
-              <div class="form-group mb-4">
+              <div class="form-group mb-3">
                 <input class="form-control tenpx" id="link" aria-describedby="link" maxlength="160" placeholder="Link">
                 <small id="deskripsi-input-help" class="form-text text-left eightpx">Optional
                 </small>
@@ -513,7 +513,7 @@
               </li>
               <li class="page-item chevron">
                 <a class="page-link" href="#" aria-label="Previous">
-                  <span><i class="fas fa-chevron-left"></i></span>
+                  <span class="chevron"><i class="fas fa-chevron-left"></i></span>
                 </a>
               </li>
               <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -522,7 +522,7 @@
               <li class="page-item"><a class="page-link" href="#">4</a></li>
               <li class="page-item chevron">
                 <a class="page-link" href="#" aria-label="Previous">
-                  <span><i class="fas fa-chevron-right"></i></span>
+                  <span class="chevron"><i class="fas fa-chevron-right"></i></span>
                 </a>
               </li>
               <li class="page-item">
@@ -578,33 +578,37 @@
               </div>
             </div>
             <div class="card-container">
-              <div class="card mb-2">
+              <div class="card mb-2 image-background">
                 <img src="./src/img/card.png" alt="">
                 <div class="content d-flex justify-content-center align-items-center">
                   <i class="fas fa-image"></i>
+                  <input type="file" accept="image/png, image/gif, image/jpeg" id="background-image-input">
+                  <img src="" alt="">
                 </div>
               </div>
               <p class="ninepx text-center mb-0">Image
               </p>
               <div class="text-center">
-                <a class="text-primary ninepx mr-2 pointer"><u>Edit</u></a>
-                <a class="text-primary ninepx ml-2 pointer"><u>Hapus</u></a>
+                <a class="text-primary ninepx mr-2 pointer" id="edit-image-background"><u>Edit</u></a>
+                <a class="text-primary ninepx ml-2 pointer" id="delete-image-background" data-toggle="modal" data-target="#deleteModal"><u>Hapus</u></a>
               </div>
             </div>
             <div class="card-container">
-              <div class="card mb-2">
+              <div class="card mb-2 video-background">
+                <img src="./src/img/card.png" alt="">
                 <div class="content d-flex justify-content-center align-items-center">
                   <i class="fas fa-video"></i>
+                  <input type="file" accept="video/mp4,video/x-m4v,video/*" id="background-video-input">
+                  
+                  <video src="" controls muted autoplay loop></video>
                 </div>
-                <img src="./src/img/card.png" alt="">
               </div>
               <p class="ninepx text-center mb-0">Video
               </p>
               <div class="text-center">
-                <a class="text-primary ninepx mr-2 pointer"><u>Edit</u></a>
-                <a class="text-primary ninepx ml-2 pointer"><u>Hapus</u></a>
+                <a class="text-primary ninepx mr-2 pointer" id="edit-video-background"><u>Edit</u></a>
+                <a class="text-primary ninepx ml-2 pointer" data-toggle="modal" id="delete-video-background" data-target="#deleteModal"><u>Hapus</u></a>
               </div>
-
             </div>
           </div>
         </section>

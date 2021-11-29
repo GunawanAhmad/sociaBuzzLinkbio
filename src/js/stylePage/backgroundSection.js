@@ -1,3 +1,5 @@
+import { deleteHandler } from "../linkPage/deleteHandler.js";
+
 export function backgroundSection() {
   var prevCardSelected = null;
   $(".background-section .card").click(function (e) {
@@ -44,6 +46,51 @@ export function backgroundSection() {
     }
     gradientRotationAngle += 45;
     changeGradientBackground();
+    e.preventDefault();
+  });
+
+  var backgroundImageInput = $("#background-image-input");
+  var backgroundVideoInput = $("#background-video-input");
+  var backgroundImage = $(".card.image-background .content img");
+  var backgroundVideo = $(".card.video-background .content video");
+  var backgroundImageDelBtn = $("#delete-image-background");
+  var backgroundVideoDelBtn = $("#delete-video-background");
+
+  $("#edit-image-background").click(function (e) {
+    backgroundImageInput.click();
+    e.preventDefault();
+  });
+
+  $("#edit-video-background").click(function (e) {
+    backgroundVideoInput.click();
+    e.preventDefault();
+  });
+
+  $(backgroundVideoInput).change(changeBackgroundVideo);
+
+  $(backgroundImageInput).change(changeBackgroundImage);
+
+  function changeBackgroundImage() {
+    if (this.files) {
+      let imgSrc = URL.createObjectURL(this.files[0]);
+      $(backgroundImage).attr("src", imgSrc);
+    }
+  }
+
+  function changeBackgroundVideo() {
+    if (this.files) {
+      let vidSrc = URL.createObjectURL(this.files[0]);
+      $(backgroundVideo).attr("src", vidSrc);
+    }
+  }
+
+  $(backgroundImageDelBtn).click(function (e) {
+    deleteHandler(backgroundImage, "background");
+    e.preventDefault();
+  });
+
+  $(backgroundVideoDelBtn).click(function (e) {
+    deleteHandler(backgroundVideo, "background");
     e.preventDefault();
   });
 }
