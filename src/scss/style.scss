@@ -59,6 +59,18 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  #socialIconsEditModal .modal-body .input-container input {
+    font-size: $elevenpx;
+  }
+
+  #socialIconsEditModal {
+    ::placeholder {
+      font-size: $elevenpx;
+    }
+  }
+}
+
 .section {
   border: 1px solid $gray;
   border-radius: 20px;
@@ -364,6 +376,7 @@
       color: $primary;
       font-size: $tenpx;
       vertical-align: middle;
+      line-height: 1;
 
       span {
         font-size: 0.6rem;
