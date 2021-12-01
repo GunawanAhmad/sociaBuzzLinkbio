@@ -1,6 +1,8 @@
 import { profileSection } from "./profileSection.js";
-import { extraPageSection } from "./extraPageSection.js";
+import { extraPageSection } from "./extraPageAndThemeSection.js";
+import { themeSection } from "./extraPageAndThemeSection.js";
 import { backgroundSection } from "./backgroundSection.js";
+import { buttonSection } from "./buttonSection.js";
 
 //color input lib
 $(".colorPicker").spectrum({
@@ -23,7 +25,9 @@ $(".colorPicker").spectrum({
 
 profileSection();
 extraPageSection();
+themeSection();
 backgroundSection();
+buttonSection();
 
 function isTouchDevice() {
   return (

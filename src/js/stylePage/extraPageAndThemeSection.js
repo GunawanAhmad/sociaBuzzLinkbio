@@ -4,7 +4,9 @@ export function extraPageSection() {
       tags: true,
     });
   });
+}
 
+export function themeSection() {
   var prevCardSelected = null;
   $(".theme-section .card").click(function (e) {
     if (!prevCardSelected) {

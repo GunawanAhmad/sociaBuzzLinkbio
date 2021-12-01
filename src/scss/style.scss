@@ -359,6 +359,16 @@
         font-size: $eightpx;
       }
     }
+
+    .tambah-link-btn {
+      color: $primary;
+      font-size: $tenpx;
+      vertical-align: middle;
+
+      span {
+        font-size: 0.6rem;
+      }
+    }
   }
 
   .image-option {
@@ -474,10 +484,131 @@
   }
 }
 
+.button-section {
+  .btn-list-wrapper {
+    margin: 0 -1rem;
+    .btn-style {
+      background-color: $gray;
+      height: 3rem;
+      width: 28.86%;
+      min-width: 210px;
+      margin: 1rem 1rem;
+
+      &.style-1 {
+        &.active {
+          box-shadow: 0 0 0 2px white, 0 0 0 5px $primary;
+        }
+      }
+
+      &.style-2 {
+        border-radius: 10px;
+        &.active {
+          box-shadow: 0 0 0 2px white, 0 0 0 5px $primary;
+        }
+      }
+
+      &.style-3 {
+        border-radius: 30px;
+        &.active {
+          box-shadow: 0 0 0 2px white, 0 0 0 5px $primary;
+        }
+      }
+
+      &.style-4 {
+        background: transparent;
+        border: 4px solid $gray;
+        &.active {
+          box-shadow: 0 0 0 2px white, 0 0 0 5px $primary;
+        }
+      }
+
+      &.style-5 {
+        background: transparent;
+        border: 4px solid $gray;
+        border-radius: 10px;
+        &.active {
+          box-shadow: 0 0 0 2px white, 0 0 0 5px $primary;
+        }
+      }
+      &.style-6 {
+        background: transparent;
+        border: 4px solid $gray;
+        border-radius: 30px;
+        &.active {
+          box-shadow: 0 0 0 2px white, 0 0 0 5px $primary;
+        }
+      }
+      &.style-7 {
+        background: transparent;
+        border: 2px solid $gray;
+        box-shadow: 5px 5px 0px $gray;
+        &.active {
+          box-shadow: 5px 5px 0px $gray, 0 0 0 9px white, 0 0 0 12px $primary;
+        }
+      }
+
+      &.style-8 {
+        background: transparent;
+        border: 2px solid $gray;
+        border-radius: 10px;
+        box-shadow: 5px 5px 0px $gray;
+        &.active {
+          box-shadow: 5px 5px 0px $gray, 0 0 0 9px white, 0 0 0 12px $primary;
+        }
+      }
+      &.style-9 {
+        background: transparent;
+        border: 2px solid $gray;
+        border-radius: 30px;
+        box-shadow: 5px 5px 0px $gray;
+        &.active {
+          box-shadow: 5px 5px 0px $gray, 0 0 0 9px white, 0 0 0 12px $primary;
+        }
+      }
+      &.style-10 {
+        background: transparent;
+        border: 2px solid $gray;
+        box-shadow: 0px 0px 8px $gray;
+
+        &.active {
+          box-shadow: 0px 0px 8px $gray, 0 0 0 6px white, 0 0 0 9px $primary;
+        }
+      }
+
+      &.style-11 {
+        background: transparent;
+        border: 2px solid $gray;
+        border-radius: 10px;
+        box-shadow: 0px 0px 8px $gray;
+        &.active {
+          box-shadow: 0px 0px 8px $gray, 0 0 0 6px white, 0 0 0 9px $primary;
+        }
+      }
+      &.style-12 {
+        background: transparent;
+        border: 2px solid $gray;
+        border-radius: 30px;
+        box-shadow: 0px 0px 8px $gray;
+        &.active {
+          box-shadow: 0px 0px 8px $gray, 0 0 0 6px white, 0 0 0 9px $primary;
+        }
+      }
+    }
+  }
+
+  .sp-replacer {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .theme-section .pagination .page-item .page-link {
     height: 40px;
     width: 40px;
+  }
+
+  .button-section .btn-list-wrapper .btn-style {
+    min-width: 250px;
   }
 }
 
