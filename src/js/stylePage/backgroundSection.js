@@ -1,4 +1,4 @@
-import { deleteHandler } from "../linkPage/deleteHandler.js";
+import { deleteHandler } from "../globalHandler/deleteHandler.js";
 
 export function backgroundSection() {
   var prevCardSelected = null;

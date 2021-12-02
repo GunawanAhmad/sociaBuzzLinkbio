@@ -1,7 +1,7 @@
 import { circleLinkHandler } from "./circleLinkHandler.js";
 import { inputFormHandler } from "./inputFormHandler.js";
 import { rearrangeHandler } from "./rearrangeHandler.js";
-import { previewHandler } from "./previewHandler.js";
+import { previewHandler } from "../globalHandler/previewHandler.js";
 
 circleLinkHandler();
 inputFormHandler();

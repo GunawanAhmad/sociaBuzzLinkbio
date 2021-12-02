@@ -3,7 +3,7 @@ import { extraPageSection } from "./extraPageAndThemeSection.js";
 import { themeSection } from "./extraPageAndThemeSection.js";
 import { backgroundSection } from "./backgroundSection.js";
 import { buttonSection } from "./buttonSection.js";
-import { previewHandler } from "../linkPage/previewHandler.js";
+import { previewHandler } from "../globalHandler/previewHandler.js";
 
 //color input lib
 $(".colorPicker").spectrum({

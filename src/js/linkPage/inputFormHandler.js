@@ -13,7 +13,7 @@ import {
   videoRequestInputLink,
 } from "./inputFormHTMLSource.js";
 
-import { deleteHandler } from "./deleteHandler.js";
+import { deleteHandler } from "../globalHandler/deleteHandler.js";
 
 let tambahLinkBtn = document.querySelector("#tambahLink-btn");
 let formLinkWrapper = document.querySelector(".form-wrapper");

@@ -1,4 +1,4 @@
-import { deleteHandler } from "./deleteHandler.js";
+import { deleteHandler } from "../globalHandler/deleteHandler.js";
 
 let cirlceLinkList = document.querySelectorAll(".circle-link-btn");
 let circleModalImg = document.getElementById("circle-link-modal-img");
