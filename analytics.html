@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <title>Sociabuzz Linkbio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" integrity="sha512-KuSX+43gVS5MEIJD2ewtrFPOHqC1PJnL8o2f5ciggPC0JUZ8XV0QXlfArO1mSzKkVFdRjsBDfrTU96C5SuRfqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./src/css/analytics.css" />
+
+    <link
+      rel="icon"
+      href="./src/img/favicon.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    
+
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header>
+      
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-md border-bottom">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./src/img/Logo SociaBuzz Pro.png"
+            class="header-pro-logo d-block"
+            alt="Sociabuzz Pro Logo"
+        /></a>
+
+        <div class="nav-bar-link ml-auto d-flex align-items-center">
+          <div class="bell-icon mr-2 mr-lg-3">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="navigation-bar">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item px-2 active">
+                  <a class="nav-link" href="profile.html"
+                    >Profil <span class="sr-only">(current)</span></a
+                  >
+                </li>
+
+                <li class="nav-item px-2">
+                  <a class="nav-link" href="saldo.html"> Saldo </a>
+                </li>
+
+                <li class="nav-item px-2">
+                  <a class="nav-link" href="#"> Tawaran Job </a>
+                </li>
+
+                <li class="nav-item px-2">
+                  <a class="nav-link" href="#">Job Saya</a>
+                </li>
+
+                <li class="nav-item dropdown px-2">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Lainnya</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item nav-link" href="#">Pesan</a>
+                    <a class="dropdown-item nav-link" href="#">Logout</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+    </header>
+    <!-- Header Section End -->
+
+    <!---------------- main--------------------->
+    <main class="">
+      <section class="style-wrapper d-flex justify-content-center">
+        <div class="col-sm-10 col-lg-8">
+          <div class="d-flex justify-content-center mb-5">
+            <img
+              class="head-logo "
+              src="./src/img/feature-linkbio.png"
+              alt=""
+            />
+          </div>
+          
+          <!--Feature Page navigation-->
+          <ul
+            class="nav nav-tabs d-flex justify-content-center"
+            id="sbgigsTab"
+            role="tablist"
+          >
+            <li class="nav-item mb-3">
+              <a
+                class="nav-link "
+                id="links-tab-btn"
+                href="./index.html"
+                role="tab"
+                aria-controls="links"
+                aria-selected="true"
+                font-weight-x-bold
+                >Links</a
+              >
+            </li>
+            <li class="nav-item mb-3">
+              <a
+                class="nav-link"
+                id="style-tab-btn"
+                href="style.html"
+                role="tab"
+                aria-controls="style"
+                aria-selected="true"
+                font-weight-x-bold
+                >Style</a
+              >
+            </li>
+            
+            <li class="nav-item mb-3">
+              <a
+                class="nav-link active"
+                id="analytics-tab-btn"
+                href="analytics.html"
+                role="tab"
+                aria-controls="Analytics"
+                aria-selected="false"
+                >Analytics</a
+              >
+            </li>
+            <li class="nav-item mb-5">
+              <a
+                class="nav-link"
+                id="settings​-tab-btn"
+                href="settings.html"
+                role="tab"
+                aria-controls=settings​"
+                aria-selected="false"
+                >Settings​</a
+              >
+            </li>
+          </ul>
+          <!--Feature Page navigation-->
+          
+
+      
+
+
+          <!--Delete Modal-->
+          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <button type="button" class="btn btn-fill-light active mb-3" data-dismiss="modal" id="confirm-delete-btn">Hapus</button>
+                  <button type="button" class="btn btn-fill-light" data-dismiss="modal" id="cancel-delete-btn">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Delete Modal-->
+
+         
+
+
+          <section class="sejak-awal-section section">
+              <h2 class="section-title text-primary mb-4">Sejak awal</h2>
+              <div class="content-wrapper d-flex flex-wrap">
+                  <div class="content views d-flex align-items-center">
+                      <div class="block-color"></div>
+                      <div class="stats">
+                          <p class="label mb-0 elevenpx">Views</p>
+                          <p class="result mb-0 sixteenpx font-weight-bold">128,385,483
+                        </p>
+                      </div>
+                  </div>
+                  <div class="content clicks d-flex align-items-center">
+                    <div class="block-color"></div>
+                    <div class="stats">
+                        <p class="label mb-0 elevenpx">Clicks</p>
+                        <p class="result mb-0 sixteenpx font-weight-bold">54,387,281
+                      </p>
+                    </div>
+                </div>
+                <div class="content ctr d-flex align-items-center">
+                    <div class="block-color"></div>
+                    <div class="stats">
+                        <p class="label mb-0 elevenpx">CTR</p>
+                        <p class="result mb-0 sixteenpx font-weight-bold">11.34%
+                      </p>
+                    </div>
+                </div>
+                <div class="content avg-click d-flex align-items-center">
+                    <div class="block-color"></div>
+                    <div class="stats">
+                        <p class="label mb-0 elevenpx">Avg. Time to Click</p>
+                        <p class="result mb-0 sixteenpx font-weight-bold">20.19 detik
+                      </p>
+                    </div>
+                </div>
+              </div>
+
+              
+          </section>
+          
+         
+
+        </div>
+        
+        
+         
+        
+      </section>
+    </main>
+
+    <!---------------- main--------------------->
+
+    <!---------------- Footer --------------------->
+    <!-- footer start -->
+    <footer class="bg-dark text-center p-5">
+      <img
+        src="./src/img/logo-white.png"
+        class="mb-4 mx-auto d-block"
+        alt="footer image"
+      />
+      <a href="" class="text-white d-block mb-2">Hubungi Support</a>
+      <a href="" class="text-white d-block mb-2">FAQ</a>
+      <a href="" class="text-white d-block mb-2"> Ketentuan Penggunaan </a>
+      <a href="" class="text-white d-block mb-4"> Kebijakan Privasi </a>
+
+      <p class="text-secondary">&copy; PT Komunika Lintas Maya</p>
+    </footer>
+    <!-- footer end -->
+    <!---------------- Footer --------------------->
+
+    <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="./src/js/lib/popper.min.js"></script>
+    <script src="./src/js/lib/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/js/lib/select2.full.min.js"></script>
+
+    <script type="module" src="./src/js/stylePage/main.js"></script>
+  </body>
+</html>

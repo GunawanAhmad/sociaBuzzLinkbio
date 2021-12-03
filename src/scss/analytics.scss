@@ -1,0 +1,111 @@
+@import "_variable.scss";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+@import "./_reset.scss";
+@import "./_customClass.scss";
+@import "./_footer.scss";
+@import "./_navbar.scss";
+@import "./_featureLinkNav.scss";
+@import "./_modalCustom.scss";
+
+.style-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.modal {
+  .modal-content {
+    border-radius: 20px;
+  }
+}
+
+.section {
+  border: 1px solid $gray;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    font-weight: 700;
+    font-size: $sixteen;
+  }
+}
+
+.sejak-awal-section {
+  .content-wrapper {
+    margin-bottom: -1.5rem;
+    .content {
+      flex-basis: 50%;
+      height: 50px;
+      margin-bottom: 1.5rem;
+
+      .block-color {
+        height: 100%;
+        width: 15px;
+        background-color: red;
+        margin-right: 0.5rem;
+      }
+
+      &.views {
+        .block-color {
+          background-color: #8ccb59;
+        }
+      }
+      &.clicks {
+        .block-color {
+          background-color: #5daadd;
+        }
+      }
+      &.ctr {
+        .block-color {
+          background-color: $primary;
+        }
+      }
+      &.avg-click {
+        .block-color {
+          background-color: $gray;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .sejak-awal-section .content-wrapper .content {
+    height: 40px;
+    .result {
+      font-size: 1rem;
+    }
+    .label {
+      font-size: $tenpx;
+    }
+  }
+}
+
+.user-link {
+  border-radius: 20px;
+
+  a:hover {
+    color: $dark-hover;
+  }
+}
+
+.head-logo {
+  max-width: 300px;
+  max-height: 35px;
+  height: auto;
+  width: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
