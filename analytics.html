@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" integrity="sha512-KuSX+43gVS5MEIJD2ewtrFPOHqC1PJnL8o2f5ciggPC0JUZ8XV0QXlfArO1mSzKkVFdRjsBDfrTU96C5SuRfqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/daterangepicker.css">
 
     <link rel="stylesheet" href="./src/css/analytics.css" />
 
@@ -219,13 +220,97 @@
                     </div>
                 </div>
               </div>
-
-              
           </section>
-          
-         
 
-        </div>
+          <section class="periode-ini-section section">
+            <h2 class="section-title text-primary mb-4">Saat periode ini</h2>
+            <div id="reportrange-sejak-awal" class="pull-right date-pick mb-5 ">
+              <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+              <span></span> <b class="caret"></b>
+            </div>
+            <div class="content-wrapper d-flex flex-wrap mb-5">
+                <div class="content views d-flex align-items-center">
+                    <div class="block-color"></div>
+                    <div class="stats">
+                        <p class="label mb-0 elevenpx">Views</p>
+                        <p class="result mb-0 sixteenpx font-weight-bold">128,385,483
+                      </p>
+                    </div>
+                </div>
+                <div class="content clicks d-flex align-items-center">
+                  <div class="block-color"></div>
+                  <div class="stats">
+                      <p class="label mb-0 elevenpx">Clicks</p>
+                      <p class="result mb-0 sixteenpx font-weight-bold">54,387,281
+                    </p>
+                  </div>
+              </div>
+              <div class="content ctr d-flex align-items-center">
+                  <div class="block-color"></div>
+                  <div class="stats">
+                      <p class="label mb-0 elevenpx">CTR</p>
+                      <p class="result mb-0 sixteenpx font-weight-bold">11.34%
+                    </p>
+                  </div>
+              </div>
+              <div class="content avg-click d-flex align-items-center">
+                  <div class="block-color"></div>
+                  <div class="stats">
+                      <p class="label mb-0 elevenpx">Avg. Time to Click</p>
+                      <p class="result mb-0 sixteenpx font-weight-bold">20.19 detik
+                    </p>
+                  </div>
+              </div>
+            </div>
+            <canvas id="myChart" height="200"></canvas>
+        </section>
+        <!-- <section class="clicks-section section">
+          <h2 class="section-title text-primary mb-4">Clicks</h2>
+          <div id="reportrange-clicks" class="pull-right date-pick mb-5 ">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+            <span></span> <b class="caret"></b>
+          </div>
+          <div class="stats-wrapper">
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label font-weight-bold mb-0">Total</p>
+                <p class="number-count font-weight-bold mb-0">11.2m</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, temporibus! Aut repellat corrupti aspernatur dolores nisi provident repudiandae quam tenetur unde libero. Fugiat nihil laborum expedita obcaecati laboriosam illo magni delectus sint? Neque esse quos incidunt placeat accusamus, minima praesentium, enim debitis, blanditiis atque recusandae iusto delectus ipsum consequatur. Repudiandae sunt molestiae quidem id dicta rem officia ea tempora consequatur quo, sint eum unde voluptatem numquam, necessitatibus obcaecati adipisci! Culpa est fugit tempore voluptatum ipsa error earum iusto beatae vel ipsum praesentium officiis sint vero quae quisquam sunt provident, minus voluptatibus eum saepe possimus. Vero explicabo minima modi cupiditate veritatis!</p>
+                <p class="number-count mb-0">146.2k</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et.</p>
+                <p class="number-count mb-0">1.2m</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et.</p>
+                <p class="number-count mb-0">1.2m</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et.</p>
+                <p class="number-count mb-0">1.2m</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et.</p>
+                <p class="number-count mb-0">1.2m</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et.</p>
+                <p class="number-count mb-0">1.2m</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et.</p>
+                <p class="number-count mb-0">1.2m</p>
+              </div>
+              <div class="stat d-flex justify-content-between tenpx">
+                <p class="label mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, et.</p>
+                <p class="number-count mb-0">1.2m</p>
+              </div>
+          </div>
+        </section> -->
+
+        
         
         
          
@@ -254,13 +339,15 @@
     <!---------------- Footer --------------------->
 
     <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
-    <script src="./src/js/lib/popper.min.js"></script>
     <script src="./src/js/lib/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./src/js/lib/select2.full.min.js"></script>
-
-    <script type="module" src="./src/js/stylePage/main.js"></script>
+    <script src="./src/js/lib/moment.min.js"></script>
+    <script src="./src/js/lib/daterangepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.1/chart.min.js" integrity="sha512-O2fWHvFel3xjQSi9FyzKXWLTvnom+lOYR/AUEThL/fbP4hv1Lo5LCFCGuTXBRyKC4K4DJldg5kxptkgXAzUpvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./src/js/analyticsPage/main.js"></script>
+    
   </body>
 </html>

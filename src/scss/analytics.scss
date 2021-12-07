@@ -38,40 +38,83 @@
   }
 }
 
-.sejak-awal-section {
-  .content-wrapper {
-    margin-bottom: -1.5rem;
-    .content {
-      flex-basis: 50%;
-      height: 50px;
-      margin-bottom: 1.5rem;
+//number stats
+.content-wrapper {
+  margin-bottom: -1.5rem;
+  .content {
+    flex-basis: 50%;
+    height: 50px;
+    margin-bottom: 1.5rem;
 
+    .block-color {
+      height: 100%;
+      width: 15px;
+      background-color: red;
+      margin-right: 0.5rem;
+    }
+
+    &.views {
       .block-color {
-        height: 100%;
-        width: 15px;
-        background-color: red;
-        margin-right: 0.5rem;
+        background-color: #8ccb59;
+      }
+    }
+    &.clicks {
+      .block-color {
+        background-color: #5daadd;
+      }
+    }
+    &.ctr {
+      .block-color {
+        background-color: $primary;
+      }
+    }
+    &.avg-click {
+      .block-color {
+        background-color: $gray;
+      }
+    }
+  }
+}
+
+.date-pick {
+  width: 100%;
+  border: 1px solid $gray;
+  padding: 5px 10px;
+  font-size: $elevenpx;
+  border-radius: 5px;
+}
+
+.sejak-awal-section {
+}
+
+.periode-ini-section {
+  .date-pick {
+    width: 100%;
+    border: 1px solid $gray;
+    padding: 5px 10px;
+    font-size: $elevenpx;
+    border-radius: 5px;
+  }
+}
+
+.clicks-section {
+  .stats-wrapper {
+    .stat {
+      margin: 0.5rem 0;
+      align-items: center;
+
+      .label {
+        background-color: $pink;
+        flex: 90%;
+        padding: 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
-      &.views {
-        .block-color {
-          background-color: #8ccb59;
-        }
-      }
-      &.clicks {
-        .block-color {
-          background-color: #5daadd;
-        }
-      }
-      &.ctr {
-        .block-color {
-          background-color: $primary;
-        }
-      }
-      &.avg-click {
-        .block-color {
-          background-color: $gray;
-        }
+      .number-count {
+        flex-basis: 8%;
+        text-align: end;
       }
     }
   }
@@ -82,7 +125,7 @@
     padding: 1rem;
   }
 
-  .sejak-awal-section .content-wrapper .content {
+  .content {
     height: 40px;
     .result {
       font-size: 1rem;
