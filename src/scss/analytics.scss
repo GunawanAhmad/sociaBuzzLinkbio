@@ -126,6 +126,14 @@
         flex-basis: 8%;
         text-align: end;
       }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -142,6 +150,17 @@
     }
     .label {
       font-size: $tenpx;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .clicks-section {
+    .stats-wrapper .stat .label {
+      flex: 80%;
+    }
+    .stats-wrapper .stat .number-count {
+      flex: 10%;
     }
   }
 }
