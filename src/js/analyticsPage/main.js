@@ -152,3 +152,16 @@ $(function () {
 
   cb(start, end);
 });
+
+var numberBars = document.querySelectorAll(".stats-wrapper .stat");
+var total = document
+  .querySelector(".stats-wrapper .total .number-count")
+  .getAttribute("data-number");
+numberBars.forEach((elm) => {
+  var labelBg = elm.querySelector(".bg");
+  var numberCount = elm
+    .querySelector(".number-count")
+    .getAttribute("data-number");
+  var percentage = (numberCount / total) * 100;
+  labelBg.style.width = percentage + "%";
+});
