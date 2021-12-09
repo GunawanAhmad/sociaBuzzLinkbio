@@ -61,7 +61,7 @@ var chartData = {
   ],
 };
 var ctx = document.getElementById("myChart").getContext("2d");
-window.myMixedChart = new Chart(ctx, {
+new Chart(ctx, {
   type: "bar",
   data: chartData,
   options: {
