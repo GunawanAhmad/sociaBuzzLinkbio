@@ -437,6 +437,10 @@
   .alert {
     border-radius: 10px;
     border: 1px solid $gray;
+
+    &.hide {
+      display: none;
+    }
   }
 }
 
@@ -718,6 +722,12 @@
 
       p {
         word-wrap: break-word;
+      }
+
+      &.empty {
+        .btn-container {
+          display: none;
+        }
       }
     }
   }

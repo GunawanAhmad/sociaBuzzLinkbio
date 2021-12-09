@@ -86,13 +86,12 @@
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 800;
-  background-color: #e94151;
-  border-color: #e94151;
+  background-color: $primary;
+  border-color: $primary;
   color: #fff !important;
 
   &:hover {
-    background-color: #ec7322;
-    border: 1px solid #ec7322;
+    background-color: $dark-hover;
   }
 
   &:focus,
@@ -111,12 +110,12 @@
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 800;
-  border-color: #e94151;
-  color: #e94151;
+  border-color: $primary;
+  color: $primary;
 }
 
 .btn-fill-light.active {
-  background-color: #e94151;
+  background-color: $primary;
   color: #fff !important;
 }
 
@@ -127,8 +126,8 @@
 .btn-outline-primary:hover,
 .btn-fill-light:hover,
 .btn-edit-sm:hover {
-  background-color: #e94151;
-  border: 1px solid #e94151;
+  background-color: $primary;
+  border: 1px solid $primary;
 }
 
 a.btn.btn-primary {
@@ -150,7 +149,7 @@ a.btn.btn-primary {
   border-radius: 3rem;
   min-height: unset;
   padding: 0.375rem 0.75rem;
-  color: #e94151 !important;
+  color: $primary !important;
   width: 100%;
 
   &:hover {

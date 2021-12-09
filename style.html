@@ -218,8 +218,7 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body pt-2 pb-3">
-                  
+                <div class="modal-body pb-0">
                   <div class="input-container">
                     <span><i class="fab fa-instagram fa-fw"></i></span>
                     <input type="text" class="form-control tenpx" placeholder="Masukkan link Instagram di sini
@@ -266,6 +265,9 @@
                     ">
                   </div>
                   
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn  btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
                 </div>
               </div>
             </div>
@@ -373,9 +375,13 @@
           
           <section class="extra-tab-section section">
             <h2 class="section-title text-primary mb-1">Extra Tab <span class="gray-font elevenpx font-weight-light">(optional)</span></h2>
-            <div class="switch mb-4">
+            <div class="switch mb-3">
               <input type="checkbox" id="switch-extra" /><label for="switch-extra">Toggle</label>
             </div>
+            <div class="alert alert-secondary tenpx hide" role="alert">
+                <span class="font-weight-bold">Extra tab</span>
+                 adalah tambahan tab untuk menampilkan hal lain selain tombol-tombol link.
+              </div>
             <div class="form">
               <div class="select-container mb-3">
                 <select id="select2-extra-1" class="select2" name="select2-1"  tabindex="2" data-placeholder="Pilih yang ingin ditampilkan
@@ -414,15 +420,17 @@
                 </span>
               </div>
               <input class="form-control tenpx mb-3" id="judul-tab" aria-describedby="judul-tab" placeholder="Judul tab">
-              <div class="form-group mb-3">
-                <input class="form-control tenpx" id="link" aria-describedby="link" maxlength="160" placeholder="Link">
-                <small id="deskripsi-input-help" class="form-text text-left eightpx mb-0">Masukkan link YouTube / Spotify
-                </small>
+              <div class="link-container">
+                <div class="form-group mb-3">
+                  <input class="form-control tenpx" id="link" aria-describedby="link" maxlength="160" placeholder="Link">
+                  <small id="deskripsi-input-help" class="form-text text-left eightpx mb-0">Masukkan link YouTube / Spotify
+                  </small>
+                </div>
               </div>
-              <p class="tambah-link-btn mb-3 font-weight-bold pointer">
+              <button class="tambah-link-btn mb-3 font-weight-bold pointer text-btn">
                 <span><i class="fa fa-plus ml-0 mr-1"></i></span>
                 Tambah link
-              </p>
+              </button>
               <div class="image-option mb-3">
                 <button class="btn btn-fill-light tenpx">Upload image
                   <input type="file">
@@ -438,10 +446,7 @@
                 <small id="deskripsi-input-help" class="form-text text-left eightpx">Optional
                 </small>
               </div>
-              <div class="alert alert-secondary tenpx" role="alert">
-                <span class="font-weight-bold">Extra tab</span>
-                 adalah tambahan tab untuk menampilkan hal lain selain tombol-tombol link.
-              </div>
+              
             </div>
 
             
@@ -581,7 +586,7 @@
                 </div>
               </div>
             </div>
-            <div class="card-container">
+            <div class="card-container card-container-img empty">
               <div class="card mb-2 image-background">
                 <img src="./src/img/card.png" alt="">
                 <div class="content d-flex justify-content-center align-items-center">
@@ -592,12 +597,12 @@
               </div>
               <p class="ninepx text-center mb-0">Image
               </p>
-              <div class="text-center">
+              <div class="text-center btn-container">
                 <a class="text-primary ninepx mr-2 pointer" id="edit-image-background"><u>Edit</u></a>
                 <a class="text-primary ninepx ml-2 pointer" id="delete-image-background" data-toggle="modal" data-target="#deleteModal"><u>Hapus</u></a>
               </div>
             </div>
-            <div class="card-container">
+            <div class="card-container card-container-vid empty">
               <div class="card mb-2 video-background">
                 <img src="./src/img/card.png" alt="">
                 <div class="content d-flex justify-content-center align-items-center">
@@ -609,7 +614,7 @@
               </div>
               <p class="ninepx text-center mb-0">Video
               </p>
-              <div class="text-center">
+              <div class="text-center btn-container">
                 <a class="text-primary ninepx mr-2 pointer" id="edit-video-background"><u>Edit</u></a>
                 <a class="text-primary ninepx ml-2 pointer" data-toggle="modal" id="delete-video-background" data-target="#deleteModal"><u>Hapus</u></a>
               </div>

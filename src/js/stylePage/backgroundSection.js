@@ -74,23 +74,51 @@ export function backgroundSection() {
     if (this.files) {
       let imgSrc = URL.createObjectURL(this.files[0]);
       $(backgroundImage).attr("src", imgSrc);
+      URL.revokeObjectURL(this.files[0]);
     }
+    toggleEmptyClassFromMediaBg(".card-container-img", backgroundImage);
   }
 
   function changeBackgroundVideo() {
     if (this.files) {
       let vidSrc = URL.createObjectURL(this.files[0]);
       $(backgroundVideo).attr("src", vidSrc);
+      URL.revokeObjectURL(this.files[0]);
     }
+    toggleEmptyClassFromMediaBg(".card-container-vid", backgroundVideo);
   }
 
   $(backgroundImageDelBtn).click(function (e) {
-    deleteHandler(backgroundImage, "background");
+    deleteHandler(
+      backgroundImage,
+      "background",
+      null,
+      addEmptyClassFromMediaBg.bind(null, ".card-container-img"),
+      null
+    );
     e.preventDefault();
   });
 
   $(backgroundVideoDelBtn).click(function (e) {
-    deleteHandler(backgroundVideo, "background");
+    deleteHandler(
+      backgroundVideo,
+      "background",
+      null,
+      addEmptyClassFromMediaBg.bind(null, ".card-container-vid"),
+      null
+    );
     e.preventDefault();
   });
+}
+
+function addEmptyClassFromMediaBg(selector) {
+  $(selector).addClass("empty");
+}
+
+function toggleEmptyClassFromMediaBg(selector, mediaCard) {
+  if ($(mediaCard).attr("src") != "") {
+    $(selector).removeClass("empty");
+  } else {
+    $(selector).addClass("empty");
+  }
 }
