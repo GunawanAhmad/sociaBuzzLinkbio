@@ -63,61 +63,92 @@ var chartData = {
 var ctx = document.getElementById("myChart").getContext("2d");
 new Chart(ctx, {
   type: "bar",
-  data: chartData,
+  data: {
+    labels: ["category 1", "category 2", "category 3", "category 4"],
+    datasets: [
+      {
+        label: "A",
+        yAxisID: "B",
+        type: "bar",
+        backgroundColor: "#5daadd",
+        hoverBackgroundColor: "#5daadd",
+        data: [10, 40, 70, 80, 100],
+        order: 3,
+      },
+      {
+        label: "B",
+        yAxisID: "A",
+        data: [200000, 200000, 300000, 500000],
+        hoverBackgroundColor: "#8ccb59",
+        backgroundColor: "#8ccb59",
+        type: "bar",
+        order: 2,
+      },
+      {
+        label: "C",
+        data: [200000, 200000, 300000, 500000],
+        type: "line",
+        backgroundColor: "#e94151",
+        borderColor: "#e94151",
+        fill: false,
+        order: 1,
+        lineTension: 0,
+      },
+    ],
+  },
   options: {
-    responsive: true,
-    title: {
-      display: true,
-      text: "Chart.js Combo Bar Line Chart",
-    },
-    tooltips: {
-      mode: "index",
-      intersect: true,
-    },
     scales: {
-      "left-y-axis": {
-        type: "linear",
-        position: "left",
-        suggestedMin: 0,
-        suggestedMax: 600000,
-        grid: {
-          drawBorder: false,
-        },
-        display: true,
-        title: {
-          display: true,
-          text: "VIEWS & CLICKS",
-          font: {
-            size: 14,
-            family: "'Open Sans', sans-serif",
+      yAxes: [
+        {
+          id: "A",
+          type: "linear",
+          position: "left",
+          ticks: {
+            max: 600000,
+            min: 0,
+          },
+          scaleLabel: {
+            display: true,
+            labelString: "VIEWS & CLICKS",
+            font: {
+              size: 14,
+              family: "'Open Sans', sans-serif",
+            },
           },
         },
-      },
-      "right-y-axis": {
-        type: "linear",
-        position: "right",
-        grid: {
-          display: false,
-          drawBorder: false,
-        },
-        suggestedMin: 0,
-        suggestedMax: 100,
-        drawBorder: false,
-        title: {
-          display: true,
-          text: "CLICK THROUGH RATE",
-          font: {
-            size: 14,
-            family: "'Open Sans', sans-serif",
+        {
+          id: "B",
+          type: "linear",
+          position: "right",
+          ticks: {
+            max: 100,
+            min: 0,
+          },
+          gridLines: {
+            color: "rgba(0, 0, 0, 0)",
+          },
+          scaleLabel: {
+            display: true,
+            labelString: "CLICK THROUGH RATE",
+            font: {
+              size: 14,
+              family: "'Open Sans', sans-serif",
+            },
           },
         },
-      },
-      x: {
-        grid: {
-          display: false,
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            color: "rgba(0, 0, 0, 0)",
+          },
         },
-      },
+      ],
     },
+  },
+  tooltips: {
+    mode: "index",
+    intersect: true,
   },
 });
 
