@@ -6,12 +6,7 @@
         <title>Sociabuzz Linkbio</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" integrity="sha512-KuSX+43gVS5MEIJD2ewtrFPOHqC1PJnL8o2f5ciggPC0JUZ8XV0QXlfArO1mSzKkVFdRjsBDfrTU96C5SuRfqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./src/css/daterangepicker.css">
-
-        <link rel="stylesheet" href="./src/css/analytics.css" />
+        <link rel="stylesheet" href="./src/css/settings.css" />
 
         <link
         rel="icon"
@@ -98,7 +93,7 @@
 
     <!---------------- main--------------------->
     <main class="">
-        <section class="style-wrapper d-flex justify-content-center">
+        <section class="settings-wrapper d-flex justify-content-center">
             <div class="col-sm-10 col-lg-8">
             <div class="d-flex justify-content-center mb-5">
                 <img
@@ -174,12 +169,12 @@
                 <form action="">
                     <div class="form-group">
                         <label  class="elevenpx label font-weight-bold">Meta title</label>
-                        <input class="form-control" id="meta-title-input" aria-describedby="meta-title-input" maxlength="60">
+                        <input class="form-control tenpx" id="meta-title-input" aria-describedby="meta-title-input" maxlength="60">
                         <small id="meta-title-input-help" class="form-text text-muted text-right eightpx">0 / 60</small>
                     </div>
                     <div class="form-group">
                         <label  class="elevenpx label font-weight-bold">Meta description</label>
-                        <input class="form-control" id="meta-description-input" aria-describedby="meta-description-input" maxlength="160">
+                        <input class="form-control tenpx" id="meta-description-input" aria-describedby="meta-description-input" maxlength="160">
                         <small id="meta-description-input-help" class="form-text text-muted text-right eightpx">0 / 160</small>
                     </div>
                     <a href="https://bit.ly/3BK1sfO" class="tenpx text-primary"  style="text-decoration: underline;">Apa itu meta title & meta description?
@@ -194,12 +189,12 @@
                     <div class="form-group mb-5">
                         <label  class="elevenpx label font-weight-bold">Facebook Pixel ID
                         </label>
-                        <input class="form-control" id="facebookID-input" aria-describedby="facebookID-input">
+                        <input class="form-control tenpx" id="facebookID-input" aria-describedby="facebookID-input">
                     </div>
                     <div>
                         <label  class="elevenpx label font-weight-bold">TikTok Pixel ID
                         </label>
-                        <input class="form-control" id="tiktokID-input" aria-describedby="tiktokID-input">
+                        <input class="form-control tenpx" id="tiktokID-input" aria-describedby="tiktokID-input">
                     </div> 
                 </form>
             </div>
@@ -230,5 +225,6 @@
     <!---------------- Footer --------------------->
     <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
     <script src="./src/js/lib/bootstrap.min.js"></script>
+    <script src="./src/js/settingsPage/main.js"></script>
     </body>
 </html>
