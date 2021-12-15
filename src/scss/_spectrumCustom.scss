@@ -13,10 +13,12 @@
   font-size: 12px;
   text-transform: capitalize;
   border-radius: 3px;
+  border: none;
 
   &:hover {
     text-decoration: none;
     background: $dark-hover !important;
+    border: none;
   }
 }
 
@@ -43,7 +45,6 @@
 
 .sp-replacer {
   margin: 0;
-  overflow: hidden;
   cursor: pointer;
   padding: 4px;
   display: inline-block;
