@@ -670,16 +670,11 @@
           <h2 class="section-title text-primary mb-4">Font</h2>
           <div class="select-container mb-4">
             <select id="select2-font" class="select2" name="select2"  tabindex="2" selected="Open sans">
-              <option value="Open sans">Open sans</option>
-              <option value="1">George Washington</option>
-              <option value="2">John Adams</option>
-              <option value="3">Thomas Jefferson</option>
-              <option value="4">James Madison</option>
-              <option value="5">James Monroe</option>
-              <option value="6">John Quincy Adams</option>
-              <option value="7">Andrew Jackson</option>
-              <option value="8">Martin Van Buren</option>
-              <option value="9">William Henry Harrison</option>
+              <option value="Open sans" data-style="font-family: Open sans;">Open sans</option>
+              <option value="Roboto" data-style="font-family: Roboto;">Roboto</option>
+              <option value="Oswald" data-style="font-family: Oswald;">Oswald</option>
+              <option value="Quicksand" data-style="font-family: Quicksand;">Quicksand</option>
+              <option value="Quicksand" data-style="font-family: Poppins;">Poppins</option>
             </select>
             <span class="arrow-icon">
               <i class="fas fa-chevron-down"></i>
@@ -689,12 +684,12 @@
             <p class="elevenpx font-weight-bold mb-0">Ketebalan font</p>
             <label class="radio-container">
               Normal
-              <input type="radio" name="radio" checked/>
+              <input type="radio" name="font-weight" value="normal"/>
               <span class="fake-radio"></span>
             </label>
             <label class="radio-container">
               Bold
-              <input type="radio" name="radio"/>
+              <input type="radio" name="font-weight" value="bold" checked/>
               <span class="fake-radio"></span>
             </label>
           </div>
@@ -763,10 +758,10 @@
     <script src="./src/js/lib/jquery-3.3.1.min.js"></script>
     <script src="./src/js/lib/popper.min.js"></script>
     <script src="./src/js/lib/bootstrap.min.js"></script>
+    <script src="./src/js/lib/select2.full.min.js"></script>
     <script src="./src/js/lib/spectrum.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./src/js/lib/select2.full.min.js"></script>
     <script type="module" src="./src/js/stylePage/main.js"></script>
   </body>
 </html>

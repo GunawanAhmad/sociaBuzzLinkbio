@@ -2,7 +2,7 @@ import { profileSection } from "./profileSection.js";
 import { extraPageSection } from "./extraPageAndThemeSection.js";
 import { themeSection } from "./extraPageAndThemeSection.js";
 import { backgroundSection } from "./backgroundSection.js";
-import { buttonSection } from "./buttonSection.js";
+import { buttonSection, fontSection } from "./buttonAndFontSection.js";
 import { previewHandler } from "../globalHandler/previewHandler.js";
 
 //color input lib
@@ -29,6 +29,7 @@ extraPageSection();
 themeSection();
 backgroundSection();
 buttonSection();
+fontSection();
 previewHandler();
 
 function isTouchDevice() {
