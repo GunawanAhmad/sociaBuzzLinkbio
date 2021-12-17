@@ -67,7 +67,7 @@ new Chart(ctx, {
     labels: ["category 1", "category 2", "category 3", "category 4"],
     datasets: [
       {
-        label: "A",
+        label: "Clicks",
         yAxisID: "B",
         type: "bar",
         backgroundColor: "#5daadd",
@@ -76,7 +76,7 @@ new Chart(ctx, {
         order: 3,
       },
       {
-        label: "B",
+        label: "Views",
         yAxisID: "A",
         data: [200000, 200000, 300000, 500000],
         hoverBackgroundColor: "#8ccb59",
@@ -85,7 +85,7 @@ new Chart(ctx, {
         order: 2,
       },
       {
-        label: "C",
+        label: "CTR",
         data: [200000, 200000, 300000, 500000],
         type: "line",
         backgroundColor: "#e94151",
@@ -97,6 +97,9 @@ new Chart(ctx, {
     ],
   },
   options: {
+    legend: {
+      position: "bottom",
+    },
     scales: {
       yAxes: [
         {
