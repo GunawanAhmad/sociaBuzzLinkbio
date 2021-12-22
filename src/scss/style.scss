@@ -708,8 +708,7 @@
           height: 100%;
           width: 100%;
           left: 0;
-          top: 0;
-          border-radius: 20px;
+          border-radius: 10px;
           font-size: 3.5rem;
           color: $gray;
 
@@ -720,7 +719,6 @@
             left: 0;
             top: 0;
             opacity: 0;
-            z-index: 2;
           }
 
           img,
@@ -728,15 +726,14 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            left: 0;
-            top: 0;
-            z-index: 5;
             visibility: visible;
             background-position: center center;
             background-repeat: no-repeat;
             object-fit: cover;
             object-position: center;
             border-radius: $border-radius-input;
+            // border: 1px solid $gray;
+            background-color: $gray;
           }
 
           img[src=""],
