@@ -506,7 +506,7 @@
                 color: $dark-gray;
                 padding: 0;
                 display: inline-block;
-                height: 45px;
+                min-height: 45px;
                 min-width: 45px;
                 display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
                 display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
@@ -515,6 +515,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                word-break: break-all;
 
                 span.double-chevron {
                     margin-top: -0.15rem;
@@ -908,8 +909,8 @@
 
 @media screen and (max-width: 500px) {
     .theme-section .pagination .page-item .page-link {
-        height: 40px;
-        width: 40px;
+        min-width: 40px;
+        padding: 0;
     }
 
     .button-section .btn-list-wrapper .btn-style {
@@ -919,14 +920,12 @@
 
 @media screen and (max-width: 374px) {
     .theme-section .pagination .page-item .page-link {
-        height: 37px;
-        width: 37px;
+        min-width: 37px;
     }
 }
 @media screen and (max-width: 335px) {
     .theme-section .pagination .page-item .page-link {
-        height: 30px;
-        width: 30px;
+        min-width: 30px;
         font-size: $tenpx;
 
         span.chevron {
