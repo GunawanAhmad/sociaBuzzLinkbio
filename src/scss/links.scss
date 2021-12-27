@@ -376,6 +376,11 @@
     .input-container {
       width: 100%;
 
+      p,
+      .help-text {
+        word-break: break-all;
+      }
+
       .form-group {
         .select-container {
           position: relative;

@@ -106,4 +106,11 @@ export function profileSection() {
       uploadProfileImg();
     }
   }
+
+  $(document).ready(function () {
+    $(".select2-no-search").select2({
+      tags: true,
+      minimumResultsForSearch: Infinity,
+    });
+  });
 }

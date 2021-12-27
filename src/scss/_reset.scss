@@ -75,6 +75,20 @@ input {
   }
 }
 
+p,
+label,
+small {
+  word-break: break-all;
+}
+
+select {
+  text-overflow: ellipsis;
+}
+
+option {
+  max-width: 200px;
+}
+
 @media (max-width: 500px) {
   input::placeholder {
     font-size: 0.7rem;

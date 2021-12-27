@@ -24,8 +24,8 @@ $(".colorPicker").spectrum({
   ],
 });
 
-profileSection();
 extraPageSection();
+profileSection();
 themeSection();
 backgroundSection();
 buttonSection();

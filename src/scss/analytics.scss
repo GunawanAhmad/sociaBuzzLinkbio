@@ -35,6 +35,7 @@
   .section-title {
     font-weight: 700;
     font-size: $sixteen;
+    word-break: break-all;
   }
 }
 
@@ -43,14 +44,14 @@
   margin-bottom: -1.5rem;
   .content {
     flex-basis: 50%;
-    height: 50px;
+    min-height: 50px;
     margin-bottom: 1.5rem;
 
     .block-color {
       height: 100%;
-      width: 15px;
       background-color: red;
       margin-right: 0.5rem;
+      flex: 0 0 15px;
     }
 
     &.views {

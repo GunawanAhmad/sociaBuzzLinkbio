@@ -17,7 +17,7 @@ export function deleteHandler(
       cb_1(obj.elm);
       cb_2(obj.index);
     } else if (inputType == "form-link") {
-      elm_global.remove();
+      elm.remove();
     } else if (inputType == "background") {
       $(elm).attr("src", "");
       cb_1();

@@ -30,36 +30,6 @@ $(function () {
   cb(start, end);
 });
 
-var chartData = {
-  labels: ["Category1", "Category2", "Category3", "Category4"],
-  datasets: [
-    {
-      type: "line",
-      label: "Dataset 1",
-      backgroundColor: "#e94151",
-      borderColor: "#e94151",
-      borderWidth: 2,
-      fill: false,
-      data: [200000, 200000, 300000, 500000],
-    },
-    {
-      type: "bar",
-      label: "Dataset 2",
-      backgroundColor: "#8ccb59",
-      data: [420000, 230000, 350000, 450000],
-      borderColor: "white",
-      borderWidth: 2,
-      yAxisID: "left-y-axis",
-    },
-    {
-      type: "bar",
-      label: "Dataset 3",
-      backgroundColor: "#5daadd",
-      data: [10, 40, 20, 80],
-      yAxisID: "right-y-axis",
-    },
-  ],
-};
 var ctx = document.getElementById("myChart").getContext("2d");
 new Chart(ctx, {
   type: "bar",

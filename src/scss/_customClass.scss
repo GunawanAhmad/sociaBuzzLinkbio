@@ -1,5 +1,13 @@
 @import "_variable.scss";
 
+.button {
+  width: fit-content !important;
+  font-size: $tenpx;
+  font-weight: 400 !important;
+  padding: 0.3rem 0.7rem !important;
+  cursor: pointer !important;
+}
+
 .d-flex {
   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
@@ -80,6 +88,10 @@
   cursor: pointer;
 }
 
+.break-word {
+  word-break: break-all;
+}
+
 .btn-primary {
   min-height: 46px;
   padding: 0 36px;
@@ -108,10 +120,11 @@
   min-height: 46px;
   padding: 0 36px;
   border-radius: 4px;
-  font-size: 1rem;
   font-weight: 800;
   border-color: $primary;
   color: $primary;
+  border: 1px solid $primary;
+  outline: none;
 }
 
 .btn-fill-light.active {
@@ -127,7 +140,6 @@
 .btn-fill-light:hover,
 .btn-edit-sm:hover {
   background-color: $primary;
-  border: 1px solid $primary;
 }
 
 a.btn.btn-primary {
