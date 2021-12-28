@@ -1,13 +1,13 @@
 export function regularInputLink(count) {
-  return `<div class="container d-flex form-group " id="regular-link-${count}">
+    return `<div class="container d-flex form-group " id="regular-link-${count}">
     <div >   
       <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
         <i class="fas fa-ellipsis-v"></i>
       </button>
     </div>
     <div class="d-flex flex-column input-container p-3">
-      <input class="form-control  mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
-      <input class="form-control  mb-3 tenpx" type="text" placeholder="Link">
+      <input class="form-control  mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+      <input class="form-control  mb-3" type="text" placeholder="Link">
       <div class="icon-container d-flex align-items-center">
         <div class="switch mr-3 mr-sm-4">
           <input type="checkbox" id="switch-1" /><label for="switch-1">Toggle</label>
@@ -27,7 +27,7 @@ export function regularInputLink(count) {
 }
 
 export function headerInputLink(count) {
-  return ` <div class="container d-flex form-group " id="header-link-${count}">
+    return ` <div class="container d-flex form-group " id="header-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -37,7 +37,7 @@ export function headerInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Header / Section Title
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -52,7 +52,7 @@ export function headerInputLink(count) {
 }
 
 export function donasiInputLink(count) {
-  return `<div class="container d-flex form-group " id="donasi-link-${count}">
+    return `<div class="container d-flex form-group " id="donasi-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -62,7 +62,7 @@ export function donasiInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Terima Dukungan / Donasi <a class="font-weight-light text-primary" href=""><u>Settings</u></a>
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -83,7 +83,7 @@ export function donasiInputLink(count) {
 }
 
 export function produkDigitalInputLink(count) {
-  return `<div class="container d-flex form-group" id="produk-digital-${count}">
+    return `<div class="container d-flex form-group" id="produk-digital-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -114,7 +114,7 @@ export function produkDigitalInputLink(count) {
         </span>
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -135,7 +135,7 @@ export function produkDigitalInputLink(count) {
 }
 
 export function kontenInputLink(count) {
-  return `<div class="container d-flex form-group " id="konten-link-${count}">
+    return `<div class="container d-flex form-group " id="konten-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -169,7 +169,7 @@ export function kontenInputLink(count) {
         
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -190,7 +190,7 @@ export function kontenInputLink(count) {
 }
 
 export function paketJasaInputLink(count) {
-  return `<div class="container d-flex form-group " id="paketJasa-link-${count}">
+    return `<div class="container d-flex form-group " id="paketJasa-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -221,7 +221,7 @@ export function paketJasaInputLink(count) {
         </span>
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -242,7 +242,7 @@ export function paketJasaInputLink(count) {
 }
 
 export function kerjasamaInputLink(count) {
-  return `<div class="container d-flex form-group "  id="kerjasama-link-${count}">
+    return `<div class="container d-flex form-group "  id="kerjasama-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -273,7 +273,7 @@ export function kerjasamaInputLink(count) {
         </span>
       </div>
     </div>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">
@@ -294,7 +294,7 @@ export function kerjasamaInputLink(count) {
 }
 
 export function embedInputLink(count) {
-  return `<div class="container d-flex form-group " id="embed-link-${count}">
+    return `<div class="container d-flex form-group " id="embed-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -304,9 +304,9 @@ export function embedInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Embed Video/Musik
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     <div class="mb-3">
-      <input class="form-control tenpx" type="text" placeholder="Link">
+      <input class="form-control" type="text" placeholder="Link">
       <span class="eightpx help-text">Masukkan link YouTube / Spotify
       </span>
     </div>
@@ -329,7 +329,7 @@ export function embedInputLink(count) {
 }
 
 export function whatsappInputLink(count) {
-  return `<div class="container d-flex form-group " id="whatsapp-link-${count}">
+    return `<div class="container d-flex form-group " id="whatsapp-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -339,14 +339,14 @@ export function whatsappInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Whatsapp
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     <div class="mb-3">
-      <input class="form-control tenpx" type="text" placeholder="Nomor Whatsapp">
+      <input class="form-control" type="text" placeholder="Nomor Whatsapp">
       <span class="eightpx help-text">Awali dengan kode negara | Contoh: <span class="text-primary" >62</span>87528371029
       </span>
     </div>
     <div class="mb-3">
-      <input class="form-control tenpx" type="text" placeholder="Template pesan">
+      <input class="form-control" type="text" placeholder="Template pesan">
       <span class="eightpx help-text">Optional
 
       </span>
@@ -370,7 +370,7 @@ export function whatsappInputLink(count) {
 }
 
 export function emailInputLink(count) {
-  return `<div class="container d-flex form-group " id="email-link-${count}">
+    return `<div class="container d-flex form-group " id="email-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -380,11 +380,11 @@ export function emailInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Email
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Alamat email">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Alamat email">
     
     <div class="mb-3">
-      <input class="form-control tenpx" type="text" placeholder="Template judul email">
+      <input class="form-control" type="text" placeholder="Template judul email">
       <span class="eightpx help-text">Optional
       </span>
     </div>
@@ -407,7 +407,7 @@ export function emailInputLink(count) {
 }
 
 export function emailColletionInputLink(count) {
-  return `<div class="container d-flex form-group " id="emailCollection-link-${count}">
+    return `<div class="container d-flex form-group " id="emailCollection-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -418,8 +418,8 @@ export function emailColletionInputLink(count) {
       Email Collection
      
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol subscribe
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol subscribe
     ">
     
     <div class="icon-container d-flex align-items-center">
@@ -441,7 +441,7 @@ export function emailColletionInputLink(count) {
 }
 
 export function videoRequestInputLink(count) {
-  return `<div class="container d-flex form-group " id="videoUcapan-link-${count}">
+    return `<div class="container d-flex form-group " id="videoUcapan-link-${count}">
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -451,7 +451,7 @@ export function videoRequestInputLink(count) {
     <p class="title  mb-3 elevenpx font-weight-bold">
       Terima Request Video Ucapan  <a class="font-weight-light text-primary" href=""><u>Settings</u></a>
     </p>
-    <input class="form-control mb-3 tenpx" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
+    <input class="form-control mb-3" type="text" placeholder="Tulisan pada tombol" id="tombol-input">
     
     <div class="icon-container d-flex align-items-center">
       <div class="switch mr-3 mr-sm-4">

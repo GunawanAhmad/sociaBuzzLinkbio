@@ -11,174 +11,161 @@
 @import "./_modalCustom.scss";
 
 .style-wrapper {
-  max-width: 1200px;
-  margin: auto;
-  min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 100vh;
 }
 
 .modal {
-  .modal-content {
-    border-radius: 20px;
-  }
+    .modal-content {
+        border-radius: 20px;
+    }
 }
 
 .section {
-  border: 1px solid $gray;
-  border-radius: 20px;
-  padding: 2rem;
-  margin-bottom: 2rem;
+    border: 1px solid $gray;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+    &:last-child {
+        margin-bottom: 0;
+    }
 
-  .section-title {
-    font-weight: 700;
-    font-size: $sixteen;
-    word-break: break-all;
-  }
+    .section-title {
+        font-weight: 700;
+        font-size: $sixteen;
+        word-break: break-all;
+    }
 }
 
 //number stats
 .content-wrapper {
-  margin-bottom: -1.5rem;
-  .content {
-    flex-basis: 50%;
-    min-height: 50px;
-    margin-bottom: 1.5rem;
+    margin-bottom: -1.5rem;
+    .content {
+        flex-basis: 50%;
+        min-height: 50px;
+        margin-bottom: 1.5rem;
 
-    .block-color {
-      height: 100%;
-      background-color: red;
-      margin-right: 0.5rem;
-      flex: 0 0 15px;
-    }
+        .block-color {
+            height: 100%;
+            background-color: red;
+            margin-right: 0.5rem;
+            flex: 0 0 15px;
+        }
 
-    &.views {
-      .block-color {
-        background-color: #8ccb59;
-      }
+        &.views {
+            .block-color {
+                background-color: #8ccb59;
+            }
+        }
+        &.clicks {
+            .block-color {
+                background-color: #5daadd;
+            }
+        }
+        &.ctr {
+            .block-color {
+                background-color: $primary;
+            }
+        }
+        &.avg-click {
+            .block-color {
+                background-color: $gray;
+            }
+        }
     }
-    &.clicks {
-      .block-color {
-        background-color: #5daadd;
-      }
-    }
-    &.ctr {
-      .block-color {
-        background-color: $primary;
-      }
-    }
-    &.avg-click {
-      .block-color {
-        background-color: $gray;
-      }
-    }
-  }
 }
 
 .date-pick {
-  width: 100%;
-  border: 1px solid $gray;
-  padding: 5px 10px;
-  font-size: $elevenpx;
-  border-radius: 5px;
-}
-
-.sejak-awal-section {
-}
-
-.periode-ini-section {
-  .date-pick {
     width: 100%;
     border: 1px solid $gray;
     padding: 5px 10px;
-    font-size: $elevenpx;
+    font-size: 1rem;
     border-radius: 5px;
-  }
 }
 
 .clicks-section {
-  .stats-wrapper {
-    .stat {
-      margin: 0.5rem 0;
-      align-items: center;
+    .stats-wrapper {
+        .stat {
+            margin: 0.5rem 0;
+            align-items: center;
 
-      .label {
-        flex: 90%;
-        padding: 0.5rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        position: relative;
+            .label {
+                flex: 90%;
+                padding: 0.5rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: relative;
 
-        .bg {
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
-          width: 100%;
-          background-color: $pink;
-          z-index: -1;
+                .bg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $pink;
+                    z-index: -1;
+                }
+            }
+
+            .number-count {
+                flex-basis: 8%;
+                text-align: end;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &:first-of-type {
+                margin-top: 0;
+            }
         }
-      }
-
-      .number-count {
-        flex-basis: 8%;
-        text-align: end;
-      }
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-
-      &:first-of-type {
-        margin-top: 0;
-      }
     }
-  }
 }
 
 @media screen and (max-width: 420px) {
-  .section {
-    padding: 1rem;
-  }
+    .section {
+        padding: 1rem;
+    }
 
-  .content {
-    height: 40px;
-    .result {
-      font-size: 1rem;
+    .content {
+        height: 40px;
+        .result {
+            font-size: 1rem;
+        }
+        .label {
+            font-size: $tenpx;
+        }
     }
-    .label {
-      font-size: $tenpx;
-    }
-  }
 }
 
 @media screen and (max-width: 750px) {
-  .clicks-section {
-    .stats-wrapper .stat .label {
-      flex: 80%;
+    .clicks-section {
+        .stats-wrapper .stat .label {
+            flex: 80%;
+        }
+        .stats-wrapper .stat .number-count {
+            flex: 10%;
+        }
     }
-    .stats-wrapper .stat .number-count {
-      flex: 10%;
-    }
-  }
 }
 
 .user-link {
-  border-radius: 20px;
+    border-radius: 20px;
 
-  a:hover {
-    color: $dark-hover;
-  }
+    a:hover {
+        color: $dark-hover;
+    }
 }
 
 .head-logo {
-  max-width: 300px;
-  max-height: 35px;
-  height: auto;
-  width: auto;
+    max-width: 300px;
+    max-height: 35px;
+    height: auto;
+    width: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
