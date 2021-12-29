@@ -20,10 +20,23 @@
     min-height: 100vh;
 }
 
+<<<<<<< HEAD
 .modal {
     .modal-content {
         border-radius: 20px;
     }
+=======
+#deleteModal {
+  width: auto;
+
+  .modal-content {
+    width: auto !important;
+
+    .btn-fill-light {
+      min-width: 120px;
+    }
+  }
+>>>>>>> parent of f2ef326... fixing margin and padding for main
 }
 
 #socialIconsEditModal {

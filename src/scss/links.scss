@@ -353,12 +353,43 @@
     width: auto;
 }
 
+<<<<<<< HEAD
 .form-wrapper div.container:last-child {
     margin-bottom: 0rem !important;
 }
 
 .form-wrapper {
     padding: 0;
+=======
+.form-wrapper {
+  padding: 0;
+  .container {
+    border: 1px solid $gray;
+    padding: 0;
+    border-radius: 20px;
+    max-width: 100% !important;
+    background-color: white;
+    .drag-btn {
+      background: none;
+      outline: none;
+      border: none;
+      height: 100%;
+      width: 30px;
+      display: block;
+      flex: 1 1 100%;
+      align-self: stretch;
+      border-right: 1px solid $gray;
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Chrome */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $gray;
+      cursor: grab;
+    }
+>>>>>>> parent of f2ef326... fixing margin and padding for main
 
     &.container:last-of-type {
         margin-bottom: 0 !important;
@@ -488,6 +519,35 @@
             }
         }
     }
+<<<<<<< HEAD
+=======
+  }
+
+  .modal-content {
+    width: auto;
+    padding: 0;
+    .modal-body {
+      padding: 2rem;
+
+      .btn-fill-light {
+        background-color: transparent;
+        min-width: 120px;
+
+        &:hover {
+          background-color: $primary;
+        }
+
+        &.active {
+          background-color: $primary;
+
+          &:hover {
+            background-color: $dark-hover;
+          }
+        }
+      }
+    }
+  }
+>>>>>>> parent of f2ef326... fixing margin and padding for main
 }
 
 /*# sourceMappingURL=main.css.map */
