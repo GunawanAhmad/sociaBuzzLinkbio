@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="./src/css/links.css" />
 
@@ -34,6 +35,84 @@
       </div>
     </div>
     <!-- Modal for delete -->
+
+
+    <!--Image input Modal-->
+    <div class="modal croppie-img-modal" id="thumbnail-img-modal" tabindex="1" role="dialog" aria-labelledby="thumbnail-img-modal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="crop-container">
+              <div class="upload-thumbnail-img-wrap">
+                <div id="upload-thumbnail-img"></div>
+              </div>
+            </div>
+            <div class="file-input-container">
+              <label for="upload">Choose file</label>
+              <input type="file" name='cropped' id="upload" accept="image/x-png,image/gif,image/jpeg">
+              <p class="file-name">No file selected</p>
+            </div>
+            <p class="tenpx gray-font mb-0 mt-2">Hanya format JPG, JPEG, PNG | Max 1MB | Min width 150px | Min height 150px</p>
+            <p class="image-error-msg mb-0 text-primary tenpx"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="get-cropped-img pointer btn-fill-light active py-2" class="close" data-dismiss="modal" aria-label="Close">Simpan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Image input Modal-->
+
+    <!-- Modal Thumbnail -->
+    <div class="modal" id="thumbnailModal" tabindex="-1" role="dialog" aria-labelledby="thumbnailModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <button type="button" class="btn btn-fill-light active mb-3 text-left" data-target="#thumbnail-img-modal" data-toggle="modal" data-dismiss="modal"><span>
+              <i class="fas fa-image"></i>
+            </span> Upload image</button>
+            <button type="button" class="btn btn-fill-light active text-left" data-target="#thumbnail-icon-modal" data-toggle="modal" data-dismiss="modal"><span>
+              <i class="fas fa-icons"></i>
+            </span> Plih Icon</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Modal Thumbnail -->
+
+    <!-- Modal Thumbnail Icon-->
+    <div class="modal" id="thumbnail-icon-modal" tabindex="1" role="dialog" aria-labelledby="thumbnail-img-modal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="font-weight-bold twelvepx">Pilih icon</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="search">
+              <span class="icon"><i class="fas fa-search"></i></span>
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <input type="text" placeholder="search">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Thumbnail Icon-->
+    
 
     <!-- Header Section Start -->
     <header>
@@ -406,12 +485,12 @@
             <div class="content-wrapper">
               <div class="content-box">
                 <div class="content">
-                  <iframe
+                  <!-- <iframe
                   src="https://linkbio-azure.vercel.app/"
                   frameborder="0"
                   width="100%"
                   height="100%"
-                ></iframe>
+                ></iframe> -->
                 
                 </div>
               </div>
@@ -458,6 +537,8 @@
     <script src="./src/js/lib/Sortable.min.js"></script>
     <script src="./src/js/lib/bootstrap.min.js"></script>
     <script src="./src/js/lib/select2.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="./src/js/linkPage/main.js" ></script>
     <!-- <script src="./src/js/linkPage/bundle.js"></script> -->
 </html>

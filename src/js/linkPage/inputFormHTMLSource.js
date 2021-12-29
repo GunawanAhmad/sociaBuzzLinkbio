@@ -15,7 +15,7 @@ export function regularInputLink(count) {
         <button class="mr-3 mr-sm-4" id="del-btn" data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete" data-tooltip="tooltip" data-placement="top" title="Delete">
           <i class="fas fa-trash-alt"></i>
         </button>
-        <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+        <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
           <i class="fas fa-image"></i>
         </button>
         <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -71,7 +71,7 @@ export function donasiInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -123,7 +123,7 @@ export function produkDigitalInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -178,7 +178,7 @@ export function kontenInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -230,7 +230,7 @@ export function paketJasaInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -282,7 +282,7 @@ export function kerjasamaInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -317,7 +317,7 @@ export function embedInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
       <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -358,7 +358,7 @@ export function whatsappInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
       <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -395,7 +395,7 @@ export function emailInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -429,7 +429,7 @@ export function emailColletionInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -460,7 +460,7 @@ export function videoRequestInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
