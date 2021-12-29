@@ -89,6 +89,12 @@ option {
     max-width: 200px;
 }
 
+@media (max-width: 500px) {
+    input::placeholder {
+        font-size: 0.7rem;
+    }
+}
+
 main {
 <<<<<<< HEAD
     min-height: calc(100vh - 40px);
