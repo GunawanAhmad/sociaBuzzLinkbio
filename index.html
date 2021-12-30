@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="./src/css/links.css" />
 
@@ -20,7 +21,6 @@
 
   </head>
   <body>
-<<<<<<< HEAD
 
     <!-- Modal for delete -->
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
@@ -36,7 +36,6 @@
     </div>
     <!-- Modal for delete -->
 
-<<<<<<< HEAD
 
     <!--Image input Modal-->
     <div class="modal croppie-img-modal" id="thumbnail-img-modal" tabindex="1" role="dialog" aria-labelledby="thumbnail-img-modal" aria-hidden="true">
@@ -103,11 +102,373 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="search">
+            <div class="search mb-3">
               <span class="icon"><i class="fas fa-search"></i></span>
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Search" id="thumbnail_icon_search_input">
             </div>
-            <input type="text" placeholder="search">
+            <div class="icons-wrapper">
+
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="bolt">
+                  <i class="fas fa-bolt fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="image">
+                  <i class="fas fa-image fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="car">
+                  <i class="fas fa-car fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="biking">
+                  <i class="fas fa-biking fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="train">
+                  <i class="fas fa-train fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="plane">
+                  <i class="fas fa-plane fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="cat">
+                  <i class="fas fa-cat fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="dog">
+                  <i class="fas fa-dog fa-fw"></i>
+                </span>
+              </button>
+              <button class="icon-container">
+                <span class="icon" data-search="code">
+                  <i class="fas fa-code fa-fw"></i>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -115,10 +476,6 @@
     <!-- Modal Thumbnail Icon-->
     
 
-=======
->>>>>>> parent of f2ef326... fixing margin and padding for main
-=======
->>>>>>> parent of 0753b63... add thumbnail modal
     <!-- Header Section Start -->
     <header>
       
@@ -194,7 +551,7 @@
 
     <!---------------- main--------------------->
     <main class="">
-      <section class="links-wrapper d-flex justify-content-center pt-5 ">
+      <section class="links-wrapper d-flex justify-content-center">
         <div class="col-sm-10 col-lg-8">
           <div class="d-flex justify-content-center mb-5">
             <img
@@ -478,18 +835,8 @@
           <div class="form-wrapper">
             
             
-            <!-- Modal for delete -->
-            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <button type="button" class="btn btn-fill-light active mb-3" data-dismiss="modal" id="confirm-delete-btn">Hapus</button>
-                    <button type="button" class="btn btn-fill-light" data-dismiss="modal" id="cancel-delete-btn">Cancel</button>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
+            
+
           </div>
           <!-- All the input form -->
         </div>
@@ -552,6 +899,8 @@
     <script src="./src/js/lib/Sortable.min.js"></script>
     <script src="./src/js/lib/bootstrap.min.js"></script>
     <script src="./src/js/lib/select2.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="./src/js/linkPage/main.js" ></script>
     <!-- <script src="./src/js/linkPage/bundle.js"></script> -->
 </html>

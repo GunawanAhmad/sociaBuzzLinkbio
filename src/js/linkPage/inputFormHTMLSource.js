@@ -1,9 +1,5 @@
 export function regularInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="regular-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="regular-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
     <div >   
       <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
         <i class="fas fa-ellipsis-v"></i>
@@ -19,7 +15,7 @@ export function regularInputLink(count) {
         <button class="mr-3 mr-sm-4" id="del-btn" data-toggle="modal" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete" data-tooltip="tooltip" data-placement="top" title="Delete">
           <i class="fas fa-trash-alt"></i>
         </button>
-        <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+        <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
           <i class="fas fa-image"></i>
         </button>
         <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -31,11 +27,7 @@ export function regularInputLink(count) {
 }
 
 export function headerInputLink(count) {
-<<<<<<< HEAD
     return ` <div class="container d-flex form-group " id="header-link-${count}">
-=======
-  return ` <div class="container d-flex form-group mb-4" id="header-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -60,11 +52,7 @@ export function headerInputLink(count) {
 }
 
 export function donasiInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="donasi-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="donasi-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -83,7 +71,7 @@ export function donasiInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -94,13 +82,8 @@ export function donasiInputLink(count) {
 </div>`;
 }
 
-<<<<<<< HEAD
 export function produkDigitalInputLink(count) {
     return `<div class="container d-flex form-group" id="produk-digital-${count}">
-=======
-export function digitalAksesInputLink(count) {
-  return `<div class="container d-flex form-group mb-4" id="akses-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -140,7 +123,7 @@ export function digitalAksesInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -152,11 +135,7 @@ export function digitalAksesInputLink(count) {
 }
 
 export function kontenInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="konten-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="konten-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -199,7 +178,7 @@ export function kontenInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -211,11 +190,7 @@ export function kontenInputLink(count) {
 }
 
 export function paketJasaInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="paketJasa-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="paketJasa-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -255,7 +230,7 @@ export function paketJasaInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -267,11 +242,7 @@ export function paketJasaInputLink(count) {
 }
 
 export function kerjasamaInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group "  id="kerjasama-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4"  id="kerjasama-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -311,7 +282,7 @@ export function kerjasamaInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -323,11 +294,7 @@ export function kerjasamaInputLink(count) {
 }
 
 export function embedInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="embed-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="embed-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -350,7 +317,7 @@ export function embedInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
       <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -362,11 +329,7 @@ export function embedInputLink(count) {
 }
 
 export function whatsappInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="whatsapp-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="whatsapp-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -395,7 +358,7 @@ export function whatsappInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
       <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -407,11 +370,7 @@ export function whatsappInputLink(count) {
 }
 
 export function emailInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="email-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="email-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -436,7 +395,7 @@ export function emailInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -448,11 +407,7 @@ export function emailInputLink(count) {
 }
 
 export function emailColletionInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="emailCollection-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="emailCollection-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -474,7 +429,7 @@ export function emailColletionInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
@@ -486,11 +441,7 @@ export function emailColletionInputLink(count) {
 }
 
 export function videoRequestInputLink(count) {
-<<<<<<< HEAD
     return `<div class="container d-flex form-group " id="videoUcapan-link-${count}">
-=======
-  return `<div class="container d-flex form-group mb-4" id="videoUcapan-link-${count}">
->>>>>>> parent of f2ef326... fixing margin and padding for main
   <div >   
     <button class="drag-btn" data-tooltip="tooltip" data-placement="left" title="Drag to reorder">
       <i class="fas fa-ellipsis-v"></i>
@@ -509,7 +460,7 @@ export function videoRequestInputLink(count) {
       <button class="mr-3 mr-sm-4"  data-toggle="modal" id="del-btn" data-target="#deleteModal" data-tooltip="tooltip" data-placement="top" title="Delete"  data-tooltip="tooltip" data-placement="top" title="Delete">
         <i class="fas fa-trash-alt"></i>
       </button>
-      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn">
+      <button class="mr-3 mr-sm-4" data-tooltip="tooltip" data-placement="top" title="Thumbnail" id="thumbnail-btn" data-target="#thumbnailModal" data-toggle="modal">
         <i class="fas fa-image"></i>
       </button>
       <button class="mr-3 mr-sm-4 chart" data-tooltip="tooltip" data-placement="top" title="Analytics" id="analytics-btn">
