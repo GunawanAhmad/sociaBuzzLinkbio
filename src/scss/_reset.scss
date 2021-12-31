@@ -78,7 +78,7 @@ input {
 p,
 label,
 small {
-    word-break: break-all;
+    word-wrap: break-word;
 }
 
 select {
@@ -94,18 +94,14 @@ main {
     padding: 2rem 0 4rem 0;
 }
 
+input::placeholder {
+    font-size: $tenpx !important;
+}
+
 [placeholder] {
     text-overflow: ellipsis;
 }
 
-input::-webkit-input-placeholder {
-    vertical-align: middle;
-    transform: translate(0, -5%);
-}
-
-::placeholder {
-    font-size: $tenpx;
-}
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     text-overflow: ellipsis;

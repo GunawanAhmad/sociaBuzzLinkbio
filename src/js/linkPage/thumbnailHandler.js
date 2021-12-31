@@ -94,9 +94,9 @@ function filter(list, filterValue) {
     for (let i = 0; i < list.length; i++) {
         let val = $(list[i]).attr("data-search").toLowerCase();
         if (val.indexOf(filterValue.toLowerCase()) > -1) {
-            $(list[i]).parent().css("display", "");
+            $(list[i]).parent().parent().css("display", "");
         } else {
-            $(list[i]).parent().css("display", "none");
+            $(list[i]).parent().parent().css("display", "none");
         }
     }
 }

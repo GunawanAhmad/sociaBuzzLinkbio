@@ -108,57 +108,58 @@
     .icons-wrapper {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
-        grid-template-rows: repeat(auto-fill, 72px);
-        gap: 8px;
+        margin: -8px;
+        place-items: center;
+        align-content: start;
         height: 300px;
         overflow-y: auto;
 
-        &:hover {
-            &::-webkit-scrollbar {
-                width: 10px;
-            }
-        }
+        margin: 0px;
 
-        /* width */
         &::-webkit-scrollbar {
             width: 10px;
         }
-
-        /* Track */
         &::-webkit-scrollbar-track {
-            border-radius: 10px;
+            border-radius: 15px;
             background-color: #ccc;
-
-            // &:hover {
-            // }
         }
-
-        /* Handle */
         &::-webkit-scrollbar-thumb {
             background: $dark-gray;
-            border-radius: 10px;
+            border-radius: 15px;
         }
 
-        // &:hover {
-        //     overflow-y: scroll;
-        // }
-
         .icon-container {
-            height: 72px;
-            width: 76px;
-            padding: 1rem;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 4px;
             background: none;
-            border: 1px solid $gray;
+            border: none;
             outline: none;
             cursor: pointer;
-            border-radius: 10px;
             color: $gray;
+            grid-column: span 1;
+            padding-bottom: 95%;
 
-            &:hover {
-                border: 1px solid $dark-gray;
+            .inner-container {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border: 1px solid $gray;
+                height: 90%;
+                width: 90%;
+                border-radius: 10px;
+                &:hover {
+                    border: 1px solid $dark-gray;
+                }
             }
 
             .icon {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
                 font-size: 1.5rem;
                 line-height: normal;
             }

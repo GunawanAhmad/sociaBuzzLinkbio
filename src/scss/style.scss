@@ -40,6 +40,25 @@
                 height: 100%;
                 width: 100%;
                 padding-left: 2rem;
+
+                &::placeholder {
+                    font-size: $elevenpx !important;
+                }
+                &::-webkit-input-placeholder {
+                    font-size: $elevenpx !important;
+                }
+                &::-moz-placeholder {
+                    font-size: $elevenpx !important;
+                }
+                &:-ms-input-placeholder {
+                    font-size: $elevenpx !important;
+                }
+                &::-ms-input-placeholder {
+                    font-size: $elevenpx !important;
+                }
+                &::placeholder {
+                    font-size: $elevenpx !important;
+                }
             }
 
             span {
@@ -59,17 +78,17 @@
     }
 }
 
-@media screen and (max-width: 500px) {
-    #socialIconsEditModal .modal-body .input-container input {
-        font-size: $elevenpx;
-    }
+// @media screen and (max-width: 500px) {
+//     #socialIconsEditModal .modal-body .input-container input {
+//         font-size: $elevenpx;
+//     }
 
-    #socialIconsEditModal {
-        ::placeholder {
-            font-size: $elevenpx;
-        }
-    }
-}
+//     #socialIconsEditModal {
+//         ::placeholder {
+//             font-size: $elevenpx;
+//         }
+//     }
+// }
 
 .section {
     border: 1px solid $gray;
