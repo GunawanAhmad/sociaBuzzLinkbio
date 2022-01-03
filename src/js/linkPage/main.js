@@ -27,3 +27,20 @@ function isTouchDevice() {
 if (isTouchDevice() === false) {
     $('[data-tooltip="tooltip"]').tooltip({ trigger: "hover" });
 }
+
+let inputs = document.querySelectorAll("[placeholder]");
+inputs.forEach((e) => {
+    e.addEventListener("focus", () => checkInput(e));
+
+    e.addEventListener("outfocus", () => checkInput(e));
+
+    e.addEventListener("input", () => checkInput(e));
+});
+
+function checkInput(e) {
+    if (e.value != "") {
+        e.style.fontSize = "1rem";
+    } else {
+        e.style.fontSize = "0.833rem";
+    }
+}

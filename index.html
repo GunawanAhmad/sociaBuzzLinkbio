@@ -80,10 +80,10 @@
           <div class="modal-body">
             <button type="button" class="btn btn-fill-light active mb-3 text-left" data-target="#thumbnail-img-modal" data-toggle="modal" data-dismiss="modal"><span>
               <i class="fas fa-image"></i>
-            </span> Upload image</button>
-            <button type="button" class="btn btn-fill-light active text-left" data-target="#thumbnail-icon-modal" data-toggle="modal" data-dismiss="modal"><span>
+            </span> <span>Upload image</span></button>
+            <button type="button" class="btn btn-fill-light active text-left break-word" data-target="#thumbnail-icon-modal" data-toggle="modal" data-dismiss="modal"><span>
               <i class="fas fa-icons"></i>
-            </span> Plih Icon</button>
+            </span> Plih Icon </button>
           </div>
           
         </div>
@@ -749,12 +749,12 @@
             <div class="content-wrapper">
               <div class="content-box">
                 <div class="content">
-                  <!-- <iframe
+                  <iframe
                   src="https://linkbio-azure.vercel.app/"
                   frameborder="0"
                   width="100%"
                   height="100%"
-                ></iframe> -->
+                ></iframe>
                 
                 </div>
               </div>
@@ -803,6 +803,9 @@
     <script src="./src/js/lib/select2.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="./src/js/linkPage/main.js" ></script>
-    <!-- <script src="./src/js/linkPage/bundle.js"></script> -->
+    <!-- <script type="module" src="./src/js/linkPage/main.js" ></script> -->
+
+    <!-- User bundler for old browser that does not support Javascript ES6 Modules -->
+    <!-- Bundler using minipack in tool folder by running node minipack.js -->
+    <script src="./src/js/linkPage/bundle.js"></script>
 </html>
