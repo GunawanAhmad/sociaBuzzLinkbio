@@ -14,6 +14,14 @@
 @import "./_modalCustom.scss";
 @import "./_select2.scss";
 
+#thumbnailModal {
+    .btn {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
 .ghost {
     opacity: 0;
 }
