@@ -57,8 +57,8 @@ export function profileSection() {
                         URL.revokeObjectURL(objectUrl);
                         if (
                             isValidSize &&
-                            this.height > 300 &&
-                            this.width > 300
+                            this.height > 320 &&
+                            this.width > 320
                         ) {
                             $(".file-name").html(_this.files[0].name);
                             $(".modal .image-error-msg").html("");
