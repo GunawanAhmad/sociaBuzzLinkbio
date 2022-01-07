@@ -544,6 +544,12 @@ function searchIcons() {
       e.preventDefault();
     });
   }
+
+  //clear search input
+  $(".clear-icon-search").click(function (e) {
+    $("#thumbnail_icon_search_input").val("");
+    filter(icons, "");
+  });
 }
 
 function filter(list, filterValue) {
