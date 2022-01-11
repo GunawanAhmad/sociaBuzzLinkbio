@@ -402,13 +402,12 @@
 
 .theme-section {
     .card-list-wrapper {
-        flex-wrap: wrap;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         margin: 0 -1rem;
 
         .card-container {
             margin: 0 1rem;
-            flex: 1 0 19%;
-            max-width: 19%;
 
             .card {
                 border-radius: $border-radius-input;
@@ -667,18 +666,27 @@
 
 .background-section {
     .card-list-wrapper {
-        flex-wrap: wrap;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         margin: 0 -1rem;
+        margin-bottom: -2rem;
 
         .card-container {
             $circleSize: 30px;
             margin: 0 1rem;
-            flex: 1 0 19%;
-            max-width: 19%;
+            margin-bottom: 2rem;
+
+            .color-input-wrapper:nth-child(2) {
+                margin: 0 0.5rem;
+            }
 
             .sp-preview {
                 height: $circleSize;
                 width: $circleSize;
+                margin: 0 !important;
+            }
+            .sp-replacer {
+                padding: 0;
             }
 
             .card {
@@ -748,9 +756,11 @@
             .rotated-img {
                 height: $circleSize;
                 width: $circleSize;
+                // position: relative;
                 img {
                     height: 100%;
                     width: 100%;
+                    // position: absolute;
                 }
             }
 
@@ -959,6 +969,7 @@
 @media screen and (max-width: 800px) {
     .background-section .card-list-wrapper .card-container {
         $circleSize: 25px;
+
         .sp-preview {
             height: $circleSize;
             width: $circleSize;
@@ -976,17 +987,39 @@
 }
 
 @media screen and (max-width: 735px) {
-    .theme-section .card-list-wrapper .card-container {
-        max-width: 50%;
-        flex: 1 0 28%;
+    .theme-section .card-list-wrapper,
+    .background-section .card-list-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
-
     .background-section .card-list-wrapper .card-container {
-        max-width: 50%;
-        flex: 1 0 28%;
-        margin-bottom: 2rem;
+        $circleSize: 30px;
+        .sp-preview {
+            height: $circleSize;
+            width: $circleSize;
+        }
 
-        $circleSize: 40px;
+        .rotated-img {
+            height: $circleSize;
+            width: $circleSize;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .theme-section .card-list-wrapper .card-container,
+    .background-section .card-list-wrapper .card-container {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .background-section .card-list-wrapper .card-container {
+        $circleSize: 25px;
         .sp-preview {
             height: $circleSize;
             width: $circleSize;
@@ -1005,10 +1038,6 @@
 
 @media screen and (max-width: 460px) {
     .background-section .card-list-wrapper .card-container {
-        max-width: 50%;
-        flex: 1 0 28%;
-        margin-bottom: 2rem;
-
         $circleSize: 30px;
         .sp-preview {
             height: $circleSize;
@@ -1027,15 +1056,7 @@
 }
 
 @media screen and (max-width: 350px) {
-    .theme-section .card-list-wrapper .card-container {
-        margin: 0 0.5rem;
-    }
-
     .background-section .card-list-wrapper .card-container {
-        max-width: 50%;
-        flex: 1 0 28%;
-        margin-bottom: 2rem;
-
         $circleSize: 25px;
         .sp-preview {
             height: $circleSize;
@@ -1055,7 +1076,7 @@
 
 @media screen and (max-width: 320px) {
     .background-section .card-list-wrapper .card-container {
-        $circleSize: 20px;
+        $circleSize: 25px;
         .sp-preview {
             height: $circleSize;
             width: $circleSize;
