@@ -236,6 +236,7 @@ function inputForm(elm) {
   this.tombolInput = this.containerElm.querySelector("#tombol-input");
   this.thumbnailBtn = this.containerElm.querySelector("#thumbnail-btn");
   this.analyticsBtn = this.containerElm.querySelector("#analytics-btn");
+  this.dragBtn = this.containerElm.querySelector('.drag-btn');
   this.selectInputFormForDelete = function () {
     (0, _deleteHandler.deleteHandler)(elm, "form-link");
   };
@@ -349,6 +350,7 @@ function inputFormHandler() {
       $(Obj.deleteBtn).tooltip({ trigger: "hover" });
       $(Obj.thumbnailBtn).tooltip({ trigger: "hover" });
       $(Obj.analyticsBtn).tooltip({ trigger: "hover" });
+      $(Obj.dragBtn).tooltip({ trigger: "hover" });
     }
   }
 
@@ -438,14 +440,21 @@ exports.previewHandler = previewHandler;
 var previewBtn = document.querySelector(".preview-btn");
 var phoneWrapper = document.querySelector(".phone-wrapper");
 var closePreviewBtn = document.querySelector(".close-preview-btn");
+var mainContentWrapper = document.querySelector('.content-wrapper');
+var header = document.querySelector('header');
+var footer = document.querySelector('footer');
 function previewHandler() {
   function togglePreview() {
     phoneWrapper.classList.toggle("show");
+    mainContentWrapper.classList.toggle("hide");
+    header.classList.toggle("hide");
+    footer.classList.toggle("hide");
   }
 
   phoneWrapper.addEventListener("click", function (element) {
     if (element.target == this) togglePreview();
   });
+
   previewBtn.addEventListener("click", togglePreview);
   closePreviewBtn.addEventListener("click", togglePreview);
 }

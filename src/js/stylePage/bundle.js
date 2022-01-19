@@ -142,7 +142,7 @@ function profileSection() {
           if (this.height > 300 && this.width > 300) {
             readFile(_this);
             URL.revokeObjectURL(objectUrl);
-            if (isValidSize && this.height > 300 && this.width > 300) {
+            if (isValidSize && this.height > 320 && this.width > 320) {
               $(".file-name").html(_this.files[0].name);
               $(".modal .image-error-msg").html("");
             }
@@ -461,14 +461,21 @@ exports.previewHandler = previewHandler;
 var previewBtn = document.querySelector(".preview-btn");
 var phoneWrapper = document.querySelector(".phone-wrapper");
 var closePreviewBtn = document.querySelector(".close-preview-btn");
+var mainContentWrapper = document.querySelector('.content-wrapper');
+var header = document.querySelector('header');
+var footer = document.querySelector('footer');
 function previewHandler() {
   function togglePreview() {
     phoneWrapper.classList.toggle("show");
+    mainContentWrapper.classList.toggle("hide");
+    header.classList.toggle("hide");
+    footer.classList.toggle("hide");
   }
 
   phoneWrapper.addEventListener("click", function (element) {
     if (element.target == this) togglePreview();
   });
+
   previewBtn.addEventListener("click", togglePreview);
   closePreviewBtn.addEventListener("click", togglePreview);
 }
