@@ -47,6 +47,7 @@ function inputForm(elm) {
   this.tombolInput = this.containerElm.querySelector("#tombol-input");
   this.thumbnailBtn = this.containerElm.querySelector("#thumbnail-btn");
   this.analyticsBtn = this.containerElm.querySelector("#analytics-btn");
+  this.dragBtn = this.containerElm.querySelector('.drag-btn')
   this.selectInputFormForDelete = function () {
     deleteHandler(elm, "form-link");
   };
@@ -162,6 +163,7 @@ export function inputFormHandler() {
       $(Obj.deleteBtn).tooltip({ trigger: "hover" });
       $(Obj.thumbnailBtn).tooltip({ trigger: "hover" });
       $(Obj.analyticsBtn).tooltip({ trigger: "hover" });
+      $(Obj.dragBtn).tooltip({ trigger: "hover" });
     }
   }
 
