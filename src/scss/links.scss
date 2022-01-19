@@ -37,11 +37,26 @@
     cursor: grabbing !important; /* W3C standards syntax, should come least */
 }
 
-.links-wrapper {
+main {
+    display: flex;
+    justify-content: center;
     max-width: 1200px;
     margin: auto;
-    min-height: 100vh;
+
+    .content-wrapper {
+        max-width: 800px;
+        margin: auto;
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 1rem;
+
+        &.hide {
+            display: none;
+        }
+    }
 }
+
+
 
 .new-input-section-wrapper {
     .btn-container {
