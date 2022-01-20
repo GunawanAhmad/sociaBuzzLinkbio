@@ -484,36 +484,22 @@ main {
 
 .button-section {
     .btn-list-wrapper {
-        margin: 0 -1rem;
+        margin: 0 -.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        justify-content: center;
         .btn-style {
             background-color: $gray;
             height: 3rem;
-            width: 28.86%;
-            min-width: 210px;
-            margin: 1rem 1rem;
+            margin: 1rem .5rem;
 
             &.hard-shadow {
-                min-width: 205px;
                 box-shadow: 5px 5px 0px $gray;
                 position: relative;
                 background: transparent;
                 border: 2px solid $gray;
-                /* Firefox */
-                height: -moz-calc(3rem - 5px);
-                /* WebKit */
-                height: -webkit-calc(3rem - 5px);
-                /* Opera */
-                height: -o-calc(3rem - 5px);
-                /* Standard */
                 height: calc(3rem - 5px);
-
-                /* Firefox */
-                width: -moz-calc(28.86% - 5px);
-                /* WebKit */
-                width: -webkit-calc(28.86% - 5px);
-                /* Opera */
-                width: -o-calc(28.86% - 5px);
-                width: calc(28.86% - 5px);
+                width: calc(100% - 20px);
             }
 
             &.style-1 {
@@ -566,14 +552,7 @@ main {
                 }
             }
             &.style-7 {
-                /* Firefox */
-                margin-right: -moz-calc(1rem - 5px);
-                /* WebKit */
-                margin-right: -webkit-calc(1rem - 5px);
-                /* Opera */
-                margin-right: -o-calc(1rem - 5px);
-                margin-right: calc(1rem - 5px);
-                margin-right: calc(1rem + 5px);
+                margin-right: calc(.5rem + 5px);
 
                 &::before {
                     content: "";
@@ -594,7 +573,7 @@ main {
             }
 
             &.style-8 {
-                margin-right: calc(1rem + 5px);
+                margin-right: calc(.5rem + 5px);
                 border-radius: 10px;
 
                 &::before {
@@ -617,7 +596,7 @@ main {
             }
             &.style-9 {
                 border-radius: 30px;
-                margin-right: calc(1rem + 2.5px);
+                margin-right: calc(.5rem + 2.5px);
 
                 &::before {
                     content: "";
@@ -935,13 +914,13 @@ main {
 }
 
 @media screen and (max-width: 550px) {
-    .button-section .btn-list-wrapper .btn-style {
-        min-width: 250px;
+    // .button-section .btn-list-wrapper .btn-style {
+    //     min-width: 250px;
 
-        &.hard-shadow {
-            min-width: 240px;
-        }
-    }
+    //     &.hard-shadow {
+    //         min-width: 240px;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 374px) {
@@ -1028,6 +1007,11 @@ main {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
+    .theme-section, .background-section {
+        .card-list-wrapper {
+            margin: 0 -0.5rem;
+        }
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -1045,6 +1029,16 @@ main {
                 height: 100%;
                 width: 100%;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 615px) {
+
+    .button-section {
+        .btn-list-wrapper {
+        grid-template-columns: repeat(1, minmax(120px, 270px));
+
         }
     }
 }
