@@ -7,6 +7,10 @@
     text-shadow: none;
 }
 
+.sp-container {
+    z-index: 88;
+}
+
 .sp-container button {
     background: $primary;
     color: white;
