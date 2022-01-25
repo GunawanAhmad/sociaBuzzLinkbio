@@ -94,20 +94,21 @@ export function profileSection() {
     $(".profile-section #del-btn").click(function (e) {
         deleteConfirmation();
     });
-
+    
     function deleteConfirmation() {
         document
             .querySelector("#confirm-delete-btn")
             .addEventListener("click", removeAtr);
 
-        document
-            .querySelector("#confirm-delete-btn")
-            .removeEventListener("click", removeAtr, true);
+        
         function removeAtr() {
             $("#profile-img").attr("src", "");
             $("#upload-profile-img").croppie("destroy");
             $(".file-name").html("No file selected");
             uploadProfileImg();
+            document
+            .querySelector("#confirm-delete-btn")
+            .removeEventListener("click", removeAtr);
         }
     }
 

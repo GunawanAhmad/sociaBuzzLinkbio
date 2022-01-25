@@ -35,4 +35,31 @@ export function themeSection() {
   </div>`;
         $(".extra-tab-section .link-container").append(html);
     }
+
+
+  var extraTabImageInput = $(".extra-tab-section .image-option input");
+  var imageFile = null;
+  $(extraTabImageInput).change(function (e) {
+    imageFile = this.files[0];
+    e.preventDefault();
+  });
+
+  //delete image option
+  $(".extra-tab-section #del-btn").click(function (e) {
+    deleteConfirmation();
+  });
+
+    function deleteConfirmation() {
+    document
+        .querySelector("#confirm-delete-btn")
+        .addEventListener("click", deleteImage);
+
+    
+    function deleteImage() {
+      imageFile = null;
+      document
+        .querySelector("#confirm-delete-btn")
+        .removeEventListener("click", deleteImage);
+    }
+  }
 }
