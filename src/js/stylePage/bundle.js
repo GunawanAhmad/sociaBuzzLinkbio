@@ -179,12 +179,12 @@ function profileSection() {
   function deleteConfirmation() {
     document.querySelector("#confirm-delete-btn").addEventListener("click", removeAtr);
 
-    document.querySelector("#confirm-delete-btn").removeEventListener("click", removeAtr, true);
     function removeAtr() {
       $("#profile-img").attr("src", "");
       $("#upload-profile-img").croppie("destroy");
       $(".file-name").html("No file selected");
       uploadProfileImg();
+      document.querySelector("#confirm-delete-btn").removeEventListener("click", removeAtr);
     }
   }
 
@@ -239,6 +239,27 @@ function themeSection() {
     var html = "<div class=\"form-group mb-3\">\n    <input class=\"form-control\" id=\"link\" aria-describedby=\"link\" maxlength=\"160\" placeholder=\"Link\">\n    <small id=\"deskripsi-input-help\" class=\"form-text text-left eightpx mb-0\">Masukkan link YouTube / Spotify\n    </small>\n  </div>";
     $(".extra-tab-section .link-container").append(html);
   }
+
+  var extraTabImageInput = $(".extra-tab-section .image-option input");
+  var imageFile = null;
+  $(extraTabImageInput).change(function (e) {
+    imageFile = this.files[0];
+    e.preventDefault();
+  });
+
+  //delete image option
+  $(".extra-tab-section #del-btn").click(function (e) {
+    deleteConfirmation();
+  });
+
+  function deleteConfirmation() {
+    document.querySelector("#confirm-delete-btn").addEventListener("click", deleteImage);
+
+    function deleteImage() {
+      imageFile = null;
+      document.querySelector("#confirm-delete-btn").removeEventListener("click", deleteImage);
+    }
+  }
 }
       },
       {},
@@ -283,6 +304,27 @@ function themeSection() {
   function addLink() {
     var html = "<div class=\"form-group mb-3\">\n    <input class=\"form-control\" id=\"link\" aria-describedby=\"link\" maxlength=\"160\" placeholder=\"Link\">\n    <small id=\"deskripsi-input-help\" class=\"form-text text-left eightpx mb-0\">Masukkan link YouTube / Spotify\n    </small>\n  </div>";
     $(".extra-tab-section .link-container").append(html);
+  }
+
+  var extraTabImageInput = $(".extra-tab-section .image-option input");
+  var imageFile = null;
+  $(extraTabImageInput).change(function (e) {
+    imageFile = this.files[0];
+    e.preventDefault();
+  });
+
+  //delete image option
+  $(".extra-tab-section #del-btn").click(function (e) {
+    deleteConfirmation();
+  });
+
+  function deleteConfirmation() {
+    document.querySelector("#confirm-delete-btn").addEventListener("click", deleteImage);
+
+    function deleteImage() {
+      imageFile = null;
+      document.querySelector("#confirm-delete-btn").removeEventListener("click", deleteImage);
+    }
   }
 }
       },
@@ -375,11 +417,13 @@ function backgroundSection() {
   }
 
   $(backgroundImageDelBtn).click(function (e) {
+    backgroundImageInput.prop("value", "");
     (0, _deleteHandler.deleteHandler)(backgroundImage, "background", null, addEmptyClassFromMediaBg.bind(null, ".card-container-img"), null);
     e.preventDefault();
   });
 
   $(backgroundVideoDelBtn).click(function (e) {
+    backgroundVideoInput.prop("value", "");
     (0, _deleteHandler.deleteHandler)(backgroundVideo, "background", null, addEmptyClassFromMediaBg.bind(null, ".card-container-vid"), null);
     e.preventDefault();
   });
@@ -495,22 +539,29 @@ function deleteHandler(elm, inputType) {
   var cb_2 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
 
   var deleteConfirmation = document.querySelector("#confirm-delete-btn");
+  var cancelDelete = document.querySelector("#cancel-delete-btn");
   deleteConfirmation.addEventListener("click", deleteFunc);
-  deleteConfirmation.removeEventListener("click", deleteFunc, true);
+  cancelDelete.addEventListener("click", removeDeleteBtnEvent);
 
   function deleteFunc() {
     if (inputType == "circle") {
       obj.title = "";
       obj.imgSrc = "";
       obj.link = "";
-      cb_1(obj.elm);
-      cb_2(obj.index);
+      cb_1(obj.index);
+      cb_2(obj.elm, false);
     } else if (inputType == "form-link") {
       elm.remove();
     } else if (inputType == "background") {
       $(elm).attr("src", "");
       cb_1();
     }
+    removeDeleteBtnEvent();
+  }
+
+  function removeDeleteBtnEvent() {
+    deleteConfirmation.removeEventListener("click", deleteFunc);
+    cancelDelete.removeEventListener("click", removeDeleteBtnEvent);
   }
 }
       },
