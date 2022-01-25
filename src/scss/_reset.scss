@@ -86,8 +86,12 @@ input {
 
 p,
 label,
-small {
-    word-wrap: break-word;
+small, h1,h2 {
+    overflow-wrap: break-word;
+}
+
+label {
+    display: inline;
 }
 
 select {

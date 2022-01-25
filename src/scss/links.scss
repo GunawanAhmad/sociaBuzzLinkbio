@@ -56,8 +56,6 @@ main {
     }
 }
 
-
-
 .new-input-section-wrapper {
     .btn-container {
         width: 100%;
@@ -501,17 +499,12 @@ main {
         }
 
         .help-text {
-            display: inline-block;
+            overflow-wrap: break-word;
             line-height: 1rem;
         }
 
         .input-container {
-            width: 100%;
-
-            p,
-            .help-text {
-                word-break: break-all;
-            }
+            width: calc(100% - 30px);
 
             .form-group {
                 .select-container {

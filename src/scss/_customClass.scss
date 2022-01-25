@@ -6,6 +6,7 @@
     font-weight: 400 !important;
     padding: 0.3rem 0.7rem !important;
     cursor: pointer !important;
+    word-break: break-all;
 }
 
 .d-flex {
@@ -105,6 +106,7 @@
     background-color: $primary;
     border-color: $primary;
     color: #fff !important;
+    word-break: break-all;
 
     &:hover {
         background-color: $dark-hover;
@@ -129,6 +131,7 @@
     color: $primary;
     border: 1px solid $primary;
     outline: none;
+    word-break: break-all;
 }
 
 .btn-fill-light.active {
