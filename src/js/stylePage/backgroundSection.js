@@ -89,6 +89,7 @@ export function backgroundSection() {
   }
 
   $(backgroundImageDelBtn).click(function (e) {
+    backgroundImageInput.prop("value", "");
     deleteHandler(
       backgroundImage,
       "background",
@@ -100,6 +101,7 @@ export function backgroundSection() {
   });
 
   $(backgroundVideoDelBtn).click(function (e) {
+    backgroundVideoInput.prop("value", "");
     deleteHandler(
       backgroundVideo,
       "background",
