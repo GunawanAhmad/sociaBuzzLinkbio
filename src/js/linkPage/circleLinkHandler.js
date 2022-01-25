@@ -12,7 +12,7 @@ const ArrOfCircleLinkObj = [];
 
 export function circleLinkHandler() {
   getAllCircleValue();
-  let selectedCirlceLink = null;
+  let selectedCircleLink = null;
   let circleImg = {
     src: "",
     index: "",
@@ -20,17 +20,17 @@ export function circleLinkHandler() {
 
   cirlceLinkList.forEach((element, index) => {
     element.addEventListener("click", function () {
-      selectedCirlceLink = ArrOfCircleLinkObj[index];
-      circleModalImg.src = selectedCirlceLink.imgSrc;
+      selectedCircleLink = ArrOfCircleLinkObj[index];
+      circleModalImg.src = selectedCircleLink.imgSrc;
 
       circleImg.src = circleModalImg.src;
       circleImg.index = index;
 
-      circelModalTitle.value = selectedCirlceLink.title;
+      circelModalTitle.value = selectedCircleLink.title;
       currentLength = circelModalTitle.value.length;
       circleTitleLength.textContent = currentLength + " / " + MAX_LENGTH;
 
-      circelModalLink.value = selectedCirlceLink.link;
+      circelModalLink.value = selectedCircleLink.link;
     });
   });
 
@@ -57,22 +57,22 @@ export function circleLinkHandler() {
   document
     .getElementById("circle-link-save-btn")
     .addEventListener("click", function () {
-      selectedCirlceLink.imgSrc = tempImgSrc;
-      selectedCirlceLink.title = circelModalTitle.value;
-      selectedCirlceLink.link = circelModalLink.value;
+      selectedCircleLink.title = circelModalTitle.value;
+      selectedCircleLink.link = circelModalLink.value;
       if (tempImgSrc) {
-        selectedCirlceLink.elm
+        selectedCircleLink.imgSrc = tempImgSrc;
+        selectedCircleLink.elm
           .querySelector("img")
           .setAttribute("src", tempImgSrc);
         tempImgSrc = "";
       }
 
-      selectedCirlceLink.elm.querySelector(".cirlce-link-title").innerText =
+      selectedCircleLink.elm.querySelector(".cirlce-link-title").innerText =
         circelModalTitle.value;
 
-      selectedCirlceLink.elm.setAttribute("data-link", circelModalLink.value);
+      selectedCircleLink.elm.setAttribute("data-link", circelModalLink.value);
       if (tempImgSrc || circelModalTitle.value || circelModalLink.value) {
-        toggleTitleAndIcon(selectedCirlceLink.elm, true);
+        toggleTitleAndIcon(selectedCircleLink.elm, true);
       }
     });
 }
