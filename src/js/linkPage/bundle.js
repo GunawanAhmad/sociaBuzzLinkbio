@@ -146,7 +146,7 @@ function circleLinkHandler() {
 
     selectedCirlceLink.elm.setAttribute("data-link", circelModalLink.value);
     if (tempImgSrc || circelModalTitle.value || circelModalLink.value) {
-      toggleTitleAndIcon(selectedCirlceLink.elm, false);
+      toggleTitleAndIcon(selectedCirlceLink.elm, true);
     }
   });
 }
@@ -187,7 +187,13 @@ function updateCircleLinkElm(index) {
 }
 
 function toggleTitleAndIcon(elm) {
-  elm.classList.toggle("hide");
+  var isShow = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+  if (isShow) {
+    elm.classList.remove("hide");
+  } else {
+    elm.classList.add("hide");
+  }
 }
       },
       {"../globalHandler/deleteHandler.js":6},
@@ -587,22 +593,29 @@ function deleteHandler(elm, inputType) {
   var cb_2 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
 
   var deleteConfirmation = document.querySelector("#confirm-delete-btn");
+  var cancelDelete = document.querySelector("#cancel-delete-btn");
   deleteConfirmation.addEventListener("click", deleteFunc);
-  deleteConfirmation.removeEventListener("click", deleteFunc, true);
+  cancelDelete.addEventListener("click", removeDeleteBtnEvent);
 
   function deleteFunc() {
     if (inputType == "circle") {
       obj.title = "";
       obj.imgSrc = "";
       obj.link = "";
-      cb_1(obj.elm);
-      cb_2(obj.index);
+      cb_1(obj.index);
+      cb_2(obj.elm, false);
     } else if (inputType == "form-link") {
       elm.remove();
     } else if (inputType == "background") {
       $(elm).attr("src", "");
       cb_1();
     }
+    removeDeleteBtnEvent();
+  }
+
+  function removeDeleteBtnEvent() {
+    deleteConfirmation.removeEventListener("click", deleteFunc);
+    cancelDelete.removeEventListener("click", removeDeleteBtnEvent);
   }
 }
       },
@@ -689,22 +702,29 @@ function deleteHandler(elm, inputType) {
   var cb_2 = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
 
   var deleteConfirmation = document.querySelector("#confirm-delete-btn");
+  var cancelDelete = document.querySelector("#cancel-delete-btn");
   deleteConfirmation.addEventListener("click", deleteFunc);
-  deleteConfirmation.removeEventListener("click", deleteFunc, true);
+  cancelDelete.addEventListener("click", removeDeleteBtnEvent);
 
   function deleteFunc() {
     if (inputType == "circle") {
       obj.title = "";
       obj.imgSrc = "";
       obj.link = "";
-      cb_1(obj.elm);
-      cb_2(obj.index);
+      cb_1(obj.index);
+      cb_2(obj.elm, false);
     } else if (inputType == "form-link") {
       elm.remove();
     } else if (inputType == "background") {
       $(elm).attr("src", "");
       cb_1();
     }
+    removeDeleteBtnEvent();
+  }
+
+  function removeDeleteBtnEvent() {
+    deleteConfirmation.removeEventListener("click", deleteFunc);
+    cancelDelete.removeEventListener("click", removeDeleteBtnEvent);
   }
 }
       },

@@ -72,7 +72,7 @@ export function circleLinkHandler() {
 
       selectedCirlceLink.elm.setAttribute("data-link", circelModalLink.value);
       if (tempImgSrc || circelModalTitle.value || circelModalLink.value) {
-        toggleTitleAndIcon(selectedCirlceLink.elm, false);
+        toggleTitleAndIcon(selectedCirlceLink.elm, true);
       }
     });
 }
@@ -122,6 +122,10 @@ function updateCircleLinkElm(index) {
   cirlceLinkList[index].setAttribute("data-link", "");
 }
 
-function toggleTitleAndIcon(elm) {
-  elm.classList.toggle("hide");
+function toggleTitleAndIcon(elm, isShow = false) {
+  if(isShow) {
+    elm.classList.remove("hide");
+  } else {
+    elm.classList.add("hide");
+  }
 }
