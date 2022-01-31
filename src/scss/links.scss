@@ -129,6 +129,10 @@ main {
             line-height: normal;
         }
 
+        input:placeholder-shown + .clear-icon-search {
+            visibility: hidden;
+        }
+
         .clear-icon-search {
             position: absolute;
             right: 0.75rem;
@@ -140,6 +144,7 @@ main {
             outline: none;
             border: none;
             cursor: pointer;
+            visibility: visible;
         }
     }
 
